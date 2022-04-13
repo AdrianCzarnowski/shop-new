@@ -17,7 +17,7 @@ public class DriverFactory {
 
     private static Logger log = LoggerFactory.getLogger("DriverFactory.class");
 
-    private DriverFactory(){}
+    public DriverFactory(){}
 
     private static final Supplier<WebDriver> CHROME = ()->{
         WebDriverManager.chromedriver().setup();
