@@ -1,0 +1,20 @@
+activeBrowser: chrome
+browsers:
+  chrome:
+    browser:
+      browserName: chrome
+      appUrl: http://146.59.32.4/
+  firefox:
+    browser:
+      browserName: firefox
+      appUrl: http://146.59.32.4/
+  ie:
+    browser:
+      browserName: internet_explorer
+      appUrl: http://146.59.32.4/
+  edge:
+    browser:
+      browserName: edge
+      appUrl: http://146.59.32.4/
+
+

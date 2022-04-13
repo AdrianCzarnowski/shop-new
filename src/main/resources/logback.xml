@@ -1,0 +1,80 @@
+<configuration scan="true">
+    <property name="DEV_HOME" value="${user.dir}/log"/>
+    <property name="FILE_NAME" value="WebsiteRegressionTestLog"/>
+
+    <timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} %green([%thread]) %highlight(%-5level) - %highlight( %msg%n)
+            </Pattern>
+        </layout>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--        <file>${DEV_HOME}/mojPlikBezNazwy.log</file>&ndash;&gt;-->
+        <file>${DEV_HOME}/${FILE_NAME}_${bySecond}.log</file>  <!-- z timestamp-->
+        <!--        <file>${DEV_HOME}/timeBasedlogFile.log</file>-->
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${DEV_HOME}/${FILE_NAME}.%d{yyyy-MM-dd-HH-mm}.zip</fileNamePattern>
+            <maxHistory>3</maxHistory>
+            <totalSizeCap>30KB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+
+    </appender>
+
+    <!--    <appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">-->
+    <!--        <smtpHost>smtp.gmail.com</smtpHost>-->
+    <!--            <smtpPort>465</smtpPort>-->
+    <!--            <ssl>true</ssl>-->
+    <!--        <asynchronousSending>false</asynchronousSending>-->
+    <!--        <username>testerpolska1234567890@gmail.com</username>-->
+    <!--        <password>testerpolska_password</password>-->
+
+    <!--            <to>testerpolska1234567890@gmail.com</to>-->
+    <!--            <from>testerpolska1234567890@gmail.com</from>-->
+    <!--            <subject>Test: %logger{20} - %msg</subject>-->
+    <!--            <layout class="ch.qos.logback.classic.html.HTMLLayout"/>-->
+    <!--        <cyclicBufferTracker class="ch.qos.logback.core.spi.CyclicBufferTracker">-->
+    <!--             send just 10 log entry per email -->
+    <!--            <bufferSize>10</bufferSize>-->
+    <!--        </cyclicBufferTracker>-->
+    <!--    </appender>-->
+
+    <!--    <turboFilter>-->
+    <!--            class="ch.qos.logback.classic.turbo.DuplicateMessageFilter">-->
+    <!--        <AllowedRepetitions>3</AllowedRepetitions>-->
+    <!--    </turboFilter>-->
+
+
+    <appender name="HTML" class="ch.qos.logback.core.FileAppender">
+        <file>${DEV_HOME}/${FILE_NAME}_${bySecond}_log.html</file>
+        <!--        <file>log.html</file>-->
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.classic.html.HTMLLayout">
+                <pattern>%thread%level%logger%msg</pattern>
+            </layout>
+        </encoder>
+    </appender>
+
+    <!--        <logger name="sii.com.test" >-->
+    <!--            <appender-ref ref="FILE"/>-->
+    <!--        </logger>-->
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="HTML"/>
+        <!--        <appender-ref ref="EMAIL" />-->
+    </root>
+
+    <root level="info">
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
