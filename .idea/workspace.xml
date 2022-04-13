@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="initial">
-      <change afterPath="$PROJECT_DIR$/src/main/java/configuration/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factory/UserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BrowserTest.java" beforeDir="false" />
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with POP">
+      <change afterPath="$PROJECT_DIR$/src/main/java/configuration/models/UserBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/models/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/UserFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649837679004</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="with POP">
+      <created>1649840821577</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649840821577</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +105,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="with POP" />
+    <option name="LAST_COMMIT_MESSAGE" value="with POP" />
   </component>
 </project>
