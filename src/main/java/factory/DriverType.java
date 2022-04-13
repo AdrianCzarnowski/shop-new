@@ -1,6 +1,6 @@
 package factory;
 
-public enum BrowserType {
+public enum DriverType {
 
     CHROME,FIREFOX,IE,EDGE;
 

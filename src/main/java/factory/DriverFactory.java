@@ -1,7 +1,6 @@
 package factory;
 
 import java.util.EnumMap;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
@@ -33,15 +32,15 @@ public class DriverFactory {
         return new EdgeDriver();
     };
 
-    private static  final Map<BrowserType,Supplier<WebDriver>> MAP = new EnumMap<>(BrowserType.class);
+    private static  final Map<DriverType,Supplier<WebDriver>> MAP = new EnumMap<>(DriverType.class);
 
     static {
-        MAP.put(BrowserType.CHROME, CHROME);
-        MAP.put(BrowserType.FIREFOX, FIREFOX);
-        MAP.put(BrowserType.IE, IE);
-        MAP.put(BrowserType.EDGE, EDGE);
+        MAP.put(DriverType.CHROME, CHROME);
+        MAP.put(DriverType.FIREFOX, FIREFOX);
+        MAP.put(DriverType.IE, IE);
+        MAP.put(DriverType.EDGE, EDGE);
     }
-    public static WebDriver getDriver(BrowserType browser){
+    public static WebDriver getDriver(DriverType browser){
         return MAP.get(browser).get();
     }
 
