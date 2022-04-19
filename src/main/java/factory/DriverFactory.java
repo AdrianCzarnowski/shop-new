@@ -4,8 +4,8 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
+import configuration.Browsers;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import lombok.NoArgsConstructor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -14,10 +14,12 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@NoArgsConstructor
+
 public class DriverFactory {
 
     private static Logger log = LoggerFactory.getLogger("DriverFactory.class");
+
+    Browsers browsers;
 
     private static final Supplier<WebDriver> CHROME = ()->{
         WebDriverManager.chromedriver().setup();
@@ -45,8 +47,8 @@ public class DriverFactory {
         MAP.put(DriverType.EDGE, EDGE);
     }
 
-    public static WebDriver getDriver(DriverType browser){
-        return MAP.get(browser).get();
-    }
 
+    public Supplier<WebDriver> getDriver(Supplier<WebDriver> browser) {
+        return MAP.get(browser.getBrowserName());
+    }
 }
