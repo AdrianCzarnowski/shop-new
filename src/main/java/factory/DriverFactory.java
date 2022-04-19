@@ -4,6 +4,7 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
+import configuration.models.Browser;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -44,6 +45,8 @@ public class DriverFactory {
         MAP.put(DriverType.IE, IE);
         MAP.put(DriverType.EDGE, EDGE);
     }
+
+
     public static WebDriver getDriver(DriverType browser){
         return MAP.get(browser).get();
     }
