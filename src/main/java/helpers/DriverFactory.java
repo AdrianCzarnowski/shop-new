@@ -17,7 +17,8 @@ import org.slf4j.LoggerFactory;
 public class DriverFactory {
     private WebDriver driver;
     private  static Logger log = LoggerFactory.getLogger("DriverFactory");
-    String appUrl = System.getProperty("appUrl");
+
+
 
     public WebDriver getDriver(DriverEnum driverEnum) {
         switch (driverEnum) {
@@ -26,7 +27,8 @@ public class DriverFactory {
                 WebDriverManager.chromedriver().setup();
                 optionsChrome.addArguments("start-maximized");
                 driver = new ChromeDriver(optionsChrome);
-                driver.get("www.wp.pl");
+                String URL = System.getProperty("appUrl");
+                driver.get(URL);
                 break;
             case FIREFOX:
                 FirefoxOptions optionsFirefox = new FirefoxOptions();
@@ -36,20 +38,20 @@ public class DriverFactory {
                 driver.get(System.getProperty("appUrl"));
                 break;
             case IE:
-                InternetExplorerOptions optionsdefault = new InternetExplorerOptions();
+                InternetExplorerOptions optionsIe = new InternetExplorerOptions();
                 WebDriverManager.iedriver().setup();
-                driver = new InternetExplorerDriver(optionsdefault);
+                driver = new InternetExplorerDriver(optionsIe);
                 driver.get(System.getProperty("appUrl"));
             case EDGE:
-                EdgeOptions edgeOptions = new EdgeOptions();
+                EdgeOptions optionsEdge = new EdgeOptions();
                 WebDriverManager.edgedriver().setup();
-                edgeOptions.addArguments("start-maximized");
-                driver = new EdgeDriver(edgeOptions);
+                optionsEdge.addArguments("start-maximized");
+                driver = new EdgeDriver(optionsEdge);
                 driver.get(System.getProperty("appUrl"));
-
         }
 
-        return null;
+        this.driver=driver;
+        return driver;
     }
 }
 

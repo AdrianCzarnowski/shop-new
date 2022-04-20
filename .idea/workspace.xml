@@ -5,34 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with wrappers">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/DriverFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/DriverEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/properties/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/properties/BrowserConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TopPanelPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/properties/DriverEnvironment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/Browsers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/Browser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/UserBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/BrowserFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/DriverType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/UserFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/BrowserEnvironment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/BrowserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/EnvironmentModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Browsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasketPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SingInPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Environment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/properties/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/properties/YamlReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/reader/YamlReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650457705464</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="with wrappers">
+      <created>1650466463285</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1650466463285</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +250,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="with wrappers" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/helpers/DriverFactory.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/helpers/DriverFactory.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/properties/App.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/properties/App.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="optionsChrome.capabilityName" />
