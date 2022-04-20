@@ -11,9 +11,11 @@ import java.util.List;
 @NoArgsConstructor
 public class Environment {
     public EnvironmentModel prod;
+    public EnvironmentModel init;
     public List<EnvironmentModel> getEnvironments() {
         List<EnvironmentModel> environments = new ArrayList<>();
         environments.add(getProd());
+        environments.add(getInit());
         return environments;
     }
 }

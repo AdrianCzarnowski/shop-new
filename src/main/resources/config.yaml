@@ -5,6 +5,9 @@ environment:
   prod:
     appUrl: http://146.59.32.4
     active: true
+  init:
+    appUrl: http://146.59.32.4
+    active: true
 
 
 
