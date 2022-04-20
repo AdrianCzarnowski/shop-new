@@ -1,9 +1,13 @@
 package properties;
 
 import lombok.Data;
-import model.Browsers;
+import lombok.Getter;
+import model.Environment;
 
 @Data
+@Getter
 public class Config {
-    public Browsers browsers;
+    public Environment environment;
+    public BrowserConfig browserConfig;
+
 }

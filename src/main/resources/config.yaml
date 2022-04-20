@@ -1,19 +1,11 @@
-browsers:
-    chrome:
-      browserName: chrome
-      appUrl: http://146.59.32.4/
-      active: true
-    firefox:
-      browserName: firefox
-      appUrl: http://146.59.32.4/
-      active: false
-    ie:
-      browserName: internet_explorer
-      appUrl: http://146.59.32.4/
-      active: false
-    edge:
-      browserName: edge
-      appUrl: http://146.59.32.4/
-      active: false
+browserConfig:
+  driverEnum: CHROME
+
+environment:
+  prod:
+    appUrl: http://146.59.32.4/
+
+
+
 
 

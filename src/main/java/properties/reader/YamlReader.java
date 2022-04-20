@@ -1,12 +1,13 @@
-package properties;
+package properties.reader;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import configuration.models.Config;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import properties.Config;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,7 +17,7 @@ public class YamlReader {
 
     private static Logger log = LoggerFactory.getLogger("YamlReader.class");
 
-    public Config getConfiguration() {
+    public Config getConfig() {
         return config;
     }
 

@@ -4,20 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with logback">
-      <change afterPath="$PROJECT_DIR$/src/main/java/base/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/BrowserEnvironment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/BrowserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Browsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/properties/Config.java" afterDir="false" />
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with wrappers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/DriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/DriverEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/properties/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/properties/BrowserConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TopPanelPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/Browsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/Browsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/YamlReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/YamlReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/models/Browser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/models/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/BrowserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/DriverType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/DriverType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/Browsers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/Browser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/models/UserBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/BrowserFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/DriverType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/UserFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/BrowserEnvironment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/BrowserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/EnvironmentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Browsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Environment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasketPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SingInPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/properties/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/properties/YamlReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/reader/YamlReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +74,7 @@
       <recent name="C:\Users\aczarnowski\IdeaProjects\shop-exc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShopTest.shopLogin">
+  <component name="RunManager" selected="JUnit.TopPanelPageTest.shdh">
     <configuration name="BrowserTest.driverFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
@@ -81,8 +95,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TopPanelPageTest.shdh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson12Shop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TopPanelPageTest" />
+      <option name="METHOD_NAME" value="shdh" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TopPanelPageTest.shdh" />
         <item itemvalue="JUnit.ShopTest.shopLogin" />
         <item itemvalue="JUnit.BrowserTest.driverFactoryTest" />
       </list>
@@ -195,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650375735242</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="with wrappers">
+      <created>1650457705464</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1650457705464</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,7 +261,15 @@
     <MESSAGE value="with loginPage" />
     <MESSAGE value="with SingInPage" />
     <MESSAGE value="with logback" />
-    <option name="LAST_COMMIT_MESSAGE" value="with logback" />
+    <MESSAGE value="with wrappers" />
+    <option name="LAST_COMMIT_MESSAGE" value="with wrappers" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="optionsChrome.capabilityName" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

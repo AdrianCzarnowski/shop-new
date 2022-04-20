@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BrowserModel {
+public class EnvironmentModel {
 
     public boolean active;
 
@@ -17,11 +17,11 @@ public class BrowserModel {
     Map<String,Object> properties = new HashMap<>();
 
     @JsonAnySetter
-    void setBrowserProperties(String key, Object value){
+    void setEnvironmentProperties(String key, Object value){
         properties.put(key,value);
     }
     @JsonAnyGetter
-    public Map<String,Object> getBrowserProperties(){
+    public Map<String,Object> getEnvironmentProperties(){
         return properties;
     }
 
