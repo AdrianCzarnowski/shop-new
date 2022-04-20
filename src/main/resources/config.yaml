@@ -1,5 +1,5 @@
 browserConfig:
-  driverEnum: CHROME
+  driverEnum: EDGE
 
 environment:
   prod:
@@ -7,7 +7,7 @@ environment:
     active: true
   init:
     appUrl: http://146.59.32.4
-    active: true
+    active: false
 
 
 

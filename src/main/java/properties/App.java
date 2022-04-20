@@ -23,12 +23,12 @@ public class App {
         for (EnvironmentModel environmentModel : environments) {
             if (environmentModel.isActive()) {
                 foundActiveBrowser = true;
-                Map<String, Object> environmentUrl = environmentModel.getEnvironmentProperties();
-                for (Map.Entry entry : environmentUrl.entrySet()) {
+                Map<String, Object> properties = environmentModel.getEnvironmentProperties();
+                for (Map.Entry entry : properties.entrySet()) {
                     System.setProperty(entry.getKey().toString(), entry.getValue().toString());
-                    log.info("url loaded: " + environmentUrl);
+                    log.info("url loaded: " + properties);
                 }
-                log.info("Properties size: " + environmentUrl.size());
+                log.info("Properties size: " + properties.size());
                 break;
             }
         }
