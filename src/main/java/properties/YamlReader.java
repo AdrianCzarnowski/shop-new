@@ -1,4 +1,4 @@
-package configuration;
+package properties;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
@@ -16,7 +16,7 @@ public class YamlReader {
 
     private static Logger log = LoggerFactory.getLogger("YamlReader.class");
 
-    public Config getConfig() {
+    public Config getConfiguration() {
         return config;
     }
 

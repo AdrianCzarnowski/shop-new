@@ -10,20 +10,4 @@ public class Config {
 
     private static Logger log = LoggerFactory.getLogger("Config.class");
 
-    public HashMap<String, Browser> getBrowsers() {
-        return browsers;
-    }
-
-    public Browser getActiveBrowser() {
-        return activeBrowser;
-    }
-
-    String activeBrowser;
-    @JsonAnyGetter
-    private HashMap<String, Browser> browsers;
-
-    public void setBrowsers(HashMap<String, Browser> browsers) {
-        this.browsers = browsers;
-        log.info("<<<<<<<<<<<<<<<<<<<Number of test browsers available: " + browsers.size());
-    }
 }

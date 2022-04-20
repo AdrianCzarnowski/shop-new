@@ -10,13 +10,8 @@ import java.util.function.Supplier;
 
 @Data
 @NoArgsConstructor
-public class Browser implements Supplier<WebDriver> {
+public abstract class Browser implements Supplier<WebDriver> {
     private static Logger log = LoggerFactory.getLogger("Browser.class");
     private String browserName;
     private String appUrl;
-
-    @Override
-    public WebDriver get() {
-        return null;
-    }
 }
