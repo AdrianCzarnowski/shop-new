@@ -1,6 +1,7 @@
 
 import base.BasePage;
 import helpers.DriverFactory;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
 import org.openqa.selenium.WebDriver;
@@ -27,6 +28,10 @@ public class TestBase extends BasePage {
         app = new App();
         driver= driverFactory.getDriver
                 (yamlReader.getConfig().getBrowserConfig().getDriverEnum());
+    }
+    @AfterAll
+    static void afterAll(){
+        driver.close();
     }
 
 }

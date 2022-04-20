@@ -1,10 +1,11 @@
 browserConfig:
-  driverEnum: IE
+  driverEnum: CHROME
 
 environment:
   prod:
     appUrl: http://146.59.32.4
     active: true
+
 
 
 
