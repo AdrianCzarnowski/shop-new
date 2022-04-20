@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with flags">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/properties/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TopPanelPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TopPanelPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TopPanelPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetTittleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +48,32 @@
       <recent name="C:\Users\aczarnowski\IdeaProjects\shop-exc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TopPanelPageTest.sdajdas">
+  <component name="RunManager" selected="JUnit.GetTittleTest.getTittle">
     <configuration name="BrowserTest.driverFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BrowserTest" />
       <option name="METHOD_NAME" value="driverFactoryTest(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetTittleTest.getTittle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson12Shop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GetTittleTest" />
+      <option name="METHOD_NAME" value="getTittle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetTittleTest.shdh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson12Shop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GetTittleTest" />
+      <option name="METHOD_NAME" value="shdh" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,21 +89,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TopPanelPageTest.sdajdas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TopPanelPageTest.getTittle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TopPanelPageTest" />
-      <option name="METHOD_NAME" value="sdajdas" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TopPanelPageTest.shdh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lesson12Shop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TopPanelPageTest" />
-      <option name="METHOD_NAME" value="shdh" />
+      <option name="METHOD_NAME" value="getTittle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,8 +101,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TopPanelPageTest.sdajdas" />
-        <item itemvalue="JUnit.TopPanelPageTest.shdh" />
+        <item itemvalue="JUnit.GetTittleTest.getTittle" />
+        <item itemvalue="JUnit.TopPanelPageTest.getTittle" />
+        <item itemvalue="JUnit.GetTittleTest.shdh" />
         <item itemvalue="JUnit.ShopTest.shopLogin" />
         <item itemvalue="JUnit.BrowserTest.driverFactoryTest" />
       </list>
@@ -236,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650472144163</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="with flags">
+      <created>1650472920473</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1650472920473</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,6 +290,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="with flags" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/properties/App.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/helpers/DriverFactory.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="optionsChrome.capabilityName" />
