@@ -11,18 +11,18 @@ public class SearchResultTest extends TestBase {
     private static Logger log = LoggerFactory.getLogger("SearchResultTest.class");
     @Test
     public void searchResult_MatchTo_InputProductName() {
-        searchResultPage
+        searchPage
                 .fillSearchBox()
                 .clickSearchButton();
-        log.info("<<<<<<<<<<<<<Product name after after search: " + searchResultPage.getProductNameFromSearchField());
-        assertThat(searchResultPage.getProductNameFromSearchField(), containsString(searchResultPage.getProduct()));
+        log.info("<<<<<<<<<<<<<Product name after after search: " + searchPage.getProductNameFromSearchField());
+        assertThat(searchPage.getProductNameFromSearchField(), containsString(searchPage.getProduct()));
     }
     @Test
     public void dropDownResult_MatchTo_InputProductName(){
-        searchResultPage
+        searchPage
                 .fillSearchBox();
-        log.info("<<<<<<<<<<<<<Product name after after search: " + searchResultPage.getProductNameFromSearchField());
-        assertThat(searchResultPage.getProductsNameFromDropDownList(), containsString(searchResultPage.getProduct()));
+        log.info("<<<<<<<<<<<<<Product name after after search: " + searchPage.getProductNameFromSearchField());
+        assertThat(searchPage.getProductsNameFromDropDownList(), containsString(searchPage.getProduct()));
     }
 }
 
