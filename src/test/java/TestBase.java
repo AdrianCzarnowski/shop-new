@@ -18,8 +18,9 @@ public class TestBase  {
     private static App app;
     private static DriverFactory driverFactory = new DriverFactory();
     private static YamlReader yamlReader = new YamlReader();
-    HomePage homePage = new HomePage(driver);
+
     SearchPage searchResultPage = new SearchPage(driver);
+
 
 
     @BeforeAll

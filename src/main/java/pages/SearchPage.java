@@ -4,12 +4,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
 import java.util.List;
 
 
 public class SearchPage extends BasePage {
+
+    private static Logger log = LoggerFactory.getLogger("SearchPage.class");
+    HomePage homePage = new HomePage(driver);
 
 
 
@@ -44,5 +49,15 @@ public class SearchPage extends BasePage {
         return dropDownResult.getText();
     }
 
+    public String getProduct() {
+        return product;
+    }
+
+    String product = homePage.randomProductNameHomePage();
+    public SearchPage fillSearchBox_RandomProductFromTheList(){
+        log.info("<<<<<<Random product name: " + product);
+        fillSearchBox(product);
+        return this;
+    }
 
 }
