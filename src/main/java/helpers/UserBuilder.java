@@ -12,7 +12,7 @@ public class UserBuilder {
                 .firstName(FakeDataFactory.getFakeFirstName())
                 .lastName(FakeDataFactory.getFakeLastName())
                 .email(FakeDataFactory.getFakeEmail())
-                .password(FakeDataFactory.getPassword(8,24,true,true))
+                .password(FakeDataFactory.getPassword())
                 .birthDate(FakeDataFactory.getFakeBirthDate());
         return user;
     }

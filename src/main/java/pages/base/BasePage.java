@@ -16,24 +16,23 @@ import java.util.Random;
 
 public class BasePage {
     protected WebDriver driver;
-    private WebDriverWait driverWait;
+    protected WebDriverWait wait;
     protected Actions actions;
     private static Logger logger = LoggerFactory.getLogger("BasePage.class");
 
     public BasePage(WebDriver driver){
         this.driver = driver;
-        driverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         actions = new Actions(driver);
         PageFactory.initElements(driver, this);
     }
 
     public void clickOnElement(WebElement element){
-        driverWait.until(ExpectedConditions.elementToBeClickable(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
-        logger.info("<<<<<<<<<<<<<Click on element: " + element.getText());
     }
     public void cleanAndSendKeys (WebElement element, String value){
-        driverWait.until(ExpectedConditions.elementToBeClickable(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
         element.clear();
         element.sendKeys(value);
         logger.info("<<<<<<<<<<<<<Text in element: " + element.getText() + " is " + value);
