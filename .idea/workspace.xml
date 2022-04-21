@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with Data Faker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SearchResultTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchResultTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +48,17 @@
       <recent name="C:\Users\aczarnowski\IdeaProjects\shop-exc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SearchResultTest.resulOfDropDownMatchToInputProductName">
+  <component name="RunManager" selected="JUnit.SearchResultTest.dropDownResult_MatchTo_InputProductName">
+    <configuration name="SearchResultTest.dropDownResult_MatchTo_InputProductName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson12Shop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SearchResultTest" />
+      <option name="METHOD_NAME" value="dropDownResult_MatchTo_InputProductName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SearchResultTest.getTittle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
@@ -62,21 +69,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchResultTest.resulOfDropDownMatchToInputProductName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchResultTest.searchResult_MatchTo_InputProductName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SearchResultTest" />
-      <option name="METHOD_NAME" value="resulOfDropDownMatchToInputProductName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchResultTest.resultOfSearchMatchToInputProductName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lesson12Shop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SearchResultTest" />
-      <option name="METHOD_NAME" value="resultOfSearchMatchToInputProductName" />
+      <option name="METHOD_NAME" value="searchResult_MatchTo_InputProductName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -104,8 +101,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SearchResultTest.resulOfDropDownMatchToInputProductName" />
-        <item itemvalue="JUnit.SearchResultTest.resultOfSearchMatchToInputProductName" />
+        <item itemvalue="JUnit.SearchResultTest.dropDownResult_MatchTo_InputProductName" />
+        <item itemvalue="JUnit.SearchResultTest.searchResult_MatchTo_InputProductName" />
         <item itemvalue="JUnit.SearchResultTest.getTittle" />
         <item itemvalue="JUnit.TopPanelPageTest.getTittle" />
         <item itemvalue="JUnit.SearchResultTest.shdh" />
