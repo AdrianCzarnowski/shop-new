@@ -47,11 +47,11 @@ public class SearchPage extends BasePage {
         return dropDownResult.getText();
     }
 
+    String product = homePage.randomProductNameHomePage();
+
     public String getProduct() {
         return product;
     }
-
-    String product = homePage.randomProductNameHomePage();
     public SearchPage fillSearchBox(){
         log.info("<<<<<<Random product name: " + product);
         fillSearchBox(product);
