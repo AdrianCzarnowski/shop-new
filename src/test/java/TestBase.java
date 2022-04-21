@@ -10,17 +10,13 @@ import org.slf4j.LoggerFactory;
 import properties.App;
 import properties.reader.YamlReader;
 
-public class TestBase extends BasePage {
+public class TestBase  {
 
     private static Logger log = LoggerFactory.getLogger("TestBase.class");
     protected static WebDriver driver;
     private static App app;
     private static DriverFactory driverFactory = new DriverFactory();
     private static YamlReader yamlReader = new YamlReader();
-
-    public TestBase(WebDriver driver) {
-        super(driver);
-    }
 
 
     @BeforeAll
@@ -30,9 +26,8 @@ public class TestBase extends BasePage {
                 (yamlReader.getConfig().getBrowserConfig().getDriverEnum());
     }
     @AfterAll
-    static void afterAll(){
-        driver.close();
+    static void tearDown(){
+        driver.quit();
     }
-
 }
 
