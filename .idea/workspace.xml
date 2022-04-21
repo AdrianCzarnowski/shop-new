@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with User Builder">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/FakeDataFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/UserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/FakeData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/FakeDataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/FakeDataFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/UserBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GetTittleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchResultTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +54,7 @@
       <recent name="C:\Users\aczarnowski\IdeaProjects\shop-exc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GetTittleTest.getTittle">
+  <component name="RunManager" selected="JUnit.SearchResultTest.getTittle">
     <configuration name="BrowserTest.driverFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
@@ -62,20 +65,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetTittleTest.getTittle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchResultTest.getTittle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GetTittleTest" />
+      <option name="MAIN_CLASS_NAME" value="SearchResultTest" />
       <option name="METHOD_NAME" value="getTittle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetTittleTest.shdh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchResultTest.shdh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GetTittleTest" />
+      <option name="MAIN_CLASS_NAME" value="SearchResultTest" />
       <option name="METHOD_NAME" value="shdh" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -104,9 +107,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GetTittleTest.getTittle" />
+        <item itemvalue="JUnit.SearchResultTest.getTittle" />
         <item itemvalue="JUnit.TopPanelPageTest.getTittle" />
-        <item itemvalue="JUnit.GetTittleTest.shdh" />
+        <item itemvalue="JUnit.SearchResultTest.shdh" />
         <item itemvalue="JUnit.ShopTest.shopLogin" />
         <item itemvalue="JUnit.BrowserTest.driverFactoryTest" />
       </list>

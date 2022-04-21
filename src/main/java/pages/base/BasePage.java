@@ -1,4 +1,4 @@
-package base;
+package pages.base;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.time.Duration;
+import java.util.List;
+import java.util.Random;
 
 
 public class BasePage {
@@ -40,5 +42,9 @@ public class BasePage {
     public void scrollToElement(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
         logger.info("<<<<<<<<<<<<<<<<<Scroll to element: " + element.getText());
+    }
+    public WebElement randomValueFromList(List<WebElement> elementList){
+        int size = new Random().nextInt(elementList.size());
+        return elementList.get(size);
     }
 }
