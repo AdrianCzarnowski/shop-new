@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
+import java.util.List;
+
 
 public class SearchPage extends BasePage {
 
@@ -29,6 +31,8 @@ public class SearchPage extends BasePage {
     private WebElement searchResultProductName;
     @FindBy(css="#ui-id-1")
     private WebElement dropDownResult;
+    @FindBy(css ="#products")
+    private WebElement listOfSearchProduct;
 
     public SearchPage fillSearchBox(String value){
         cleanAndSendKeys(searchBox, value);
@@ -39,7 +43,7 @@ public class SearchPage extends BasePage {
     }
 
     public String getProductNameFromSearchField(){
-        wait.until(ExpectedConditions.visibilityOf(searchResultProductName));
+        wait.until(ExpectedConditions.visibilityOf(listOfSearchProduct));
         return searchResultProductName.getText();
     }
     public String getProductsNameFromDropDownList(){

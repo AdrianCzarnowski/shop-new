@@ -9,7 +9,7 @@ public class SearchResultTest extends TestBase {
 
     private static Logger log = LoggerFactory.getLogger("SearchResultTest.class");
     @Test
-    public void searchResult_MatchTo_InputProductName() {
+    public void searchResult_MatchTo_InputProductName(){
         searchPage
                 .fillSearchBox()
                 .clickSearchButton();
@@ -20,7 +20,6 @@ public class SearchResultTest extends TestBase {
     public void dropDownResult_MatchTo_InputProductName(){
         searchPage
                 .fillSearchBox();
-        log.info("<<<<<<<<<<<<<Product name after search: " + searchPage.getProductNameFromSearchField());
         assertThat(searchPage.getProductsNameFromDropDownList(), containsString(searchPage.getProduct()));
     }
 }
