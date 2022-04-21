@@ -12,7 +12,7 @@ public class SearchResultTest extends TestBase {
     @Test
     public void searchResult_MatchTo_InputProductName() {
         searchResultPage
-                .fillSearchBox_RandomProductFromTheList()
+                .fillSearchBox()
                 .clickSearchButton();
         log.info("<<<<<<<<<<<<<Product name after after search: " + searchResultPage.getProductNameFromSearchField());
         assertThat(searchResultPage.getProductNameFromSearchField(), containsString(searchResultPage.getProduct()));
@@ -20,7 +20,7 @@ public class SearchResultTest extends TestBase {
     @Test
     public void dropDownResult_MatchTo_InputProductName(){
         searchResultPage
-                .fillSearchBox_RandomProductFromTheList();
+                .fillSearchBox();
         log.info("<<<<<<<<<<<<<Product name after after search: " + searchResultPage.getProductNameFromSearchField());
         assertThat(searchResultPage.getProductsNameFromDropDownList(), containsString(searchResultPage.getProduct()));
     }

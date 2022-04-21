@@ -50,7 +50,7 @@
       <recent name="C:\Users\aczarnowski\IdeaProjects\shop-exc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SearchResultTest.dropDownResult_MatchTo_InputProductName">
+  <component name="RunManager" selected="JUnit.SearchResultTest.searchResult_MatchTo_InputProductName">
     <configuration name="SearchResultTest.dropDownResult_MatchTo_InputProductName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
@@ -103,8 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SearchResultTest.dropDownResult_MatchTo_InputProductName" />
         <item itemvalue="JUnit.SearchResultTest.searchResult_MatchTo_InputProductName" />
+        <item itemvalue="JUnit.SearchResultTest.dropDownResult_MatchTo_InputProductName" />
         <item itemvalue="JUnit.SearchResultTest.getTittle" />
         <item itemvalue="JUnit.TopPanelPageTest.getTittle" />
         <item itemvalue="JUnit.SearchResultTest.shdh" />

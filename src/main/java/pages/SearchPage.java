@@ -8,8 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
-import java.util.List;
-
 
 public class SearchPage extends BasePage {
 
@@ -54,7 +52,7 @@ public class SearchPage extends BasePage {
     }
 
     String product = homePage.randomProductNameHomePage();
-    public SearchPage fillSearchBox_RandomProductFromTheList(){
+    public SearchPage fillSearchBox(){
         log.info("<<<<<<Random product name: " + product);
         fillSearchBox(product);
         return this;
