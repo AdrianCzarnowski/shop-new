@@ -6,12 +6,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.base.BasePage;
 
-
-public class SearchResultPage extends BasePage {
-
+import java.util.List;
 
 
-    public SearchResultPage(WebDriver driver) {
+public class SearchPage extends BasePage {
+
+
+
+    public SearchPage(WebDriver driver) {
         super(driver);
     }
 
@@ -20,10 +22,12 @@ public class SearchResultPage extends BasePage {
     @FindBy(css = "form > button ")
     private WebElement searchButton;
 
-    @FindBy(css = "div.product-description > h2")
+    @FindBy(css = "div.product-description")
     private WebElement searchResultProductName;
+    @FindBy(css="#ui-id-1")
+    private WebElement dropDownResult;
 
-    public SearchResultPage fillSearchBox(String value){
+    public SearchPage fillSearchBox(String value){
         cleanAndSendKeys(searchBox, value);
         return this;
     }
@@ -35,4 +39,10 @@ public class SearchResultPage extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(searchResultProductName));
         return searchResultProductName.getText();
     }
+    public String getProductsNameFromDropDownList(){
+        wait.until(ExpectedConditions.visibilityOf(dropDownResult));
+        return dropDownResult.getText();
+    }
+
+
 }

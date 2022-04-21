@@ -35,12 +35,12 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.clear();
         element.sendKeys(value);
-        logger.info("<<<<<<<<<<<<<Text in element: " + element.getText() + " is " + value);
+        logger.info("<<<<<<<<<<<<<Text in element: " + value);
     }
 
     public void scrollToElement(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
-        logger.info("<<<<<<<<<<<<<<<<<Scroll to element: " + element.getText());
+        logger.info("<<<<<<<<<<<<<<<<<Scroll to element: " + element);
     }
     public WebElement randomValueFromList(List<WebElement> elementList){
         int size = new Random().nextInt(elementList.size());
