@@ -13,13 +13,14 @@ public class SearchResultTest extends TestBase {
         searchPage
                 .fillSearchBox()
                 .clickSearchButton();
-        log.info("<<<<<<<<<<<<<Product name after search: " + searchPage.getProductNameFromSearchField());
-        assertThat(searchPage.getProductNameFromSearchField(), containsString(searchPage.getProduct()));
+        log.info("<<<<<<<<<<<<<Product name after search: " + searchPage.getProductNameAfterSearch());
+        assertThat(searchPage.getProductNameAfterSearch(), containsString(searchPage.getProduct()));
     }
     @Test
     public void dropDownResult_MatchTo_InputProductName(){
         searchPage
                 .fillSearchBox();
+        log.info("<<<<<<<<<<<<<Random product name: " + searchPage.getTextFromSearchField());
         assertThat(searchPage.getProductsNameFromDropDownList(), containsString(searchPage.getProduct()));
     }
 }

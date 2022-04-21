@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with fix search test">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SearchResultTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchResultTest.java" afterDir="false" />
     </list>
@@ -50,7 +50,7 @@
       <recent name="C:\Users\aczarnowski\IdeaProjects\shop-exc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SearchResultTest.searchResult_MatchTo_InputProductName">
+  <component name="RunManager" selected="JUnit.SearchResultTest.dropDownResult_MatchTo_InputProductName">
     <configuration name="SearchResultTest.dropDownResult_MatchTo_InputProductName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
@@ -103,8 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SearchResultTest.searchResult_MatchTo_InputProductName" />
         <item itemvalue="JUnit.SearchResultTest.dropDownResult_MatchTo_InputProductName" />
+        <item itemvalue="JUnit.SearchResultTest.searchResult_MatchTo_InputProductName" />
         <item itemvalue="JUnit.SearchResultTest.getTittle" />
         <item itemvalue="JUnit.TopPanelPageTest.getTittle" />
         <item itemvalue="JUnit.SearchResultTest.shdh" />
@@ -323,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650552065446</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="with fix search test">
+      <created>1650554084916</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1650554084916</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

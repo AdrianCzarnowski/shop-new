@@ -8,8 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
-import java.util.List;
-
 
 public class SearchPage extends BasePage {
 
@@ -17,11 +15,11 @@ public class SearchPage extends BasePage {
     HomePage homePage = new HomePage(driver);
 
 
-
     public SearchPage(WebDriver driver) {
         super(driver);
     }
 
+    String product = homePage.randomProductNameHomePage();
     @FindBy(css = "input.ui-autocomplete-input")
     private WebElement searchBox;
     @FindBy(css = "form > button ")
@@ -29,37 +27,42 @@ public class SearchPage extends BasePage {
 
     @FindBy(css = "div.product-description")
     private WebElement searchResultProductName;
-    @FindBy(css="#ui-id-1")
+    @FindBy(css = "#ui-id-1")
     private WebElement dropDownResult;
-    @FindBy(css ="#products")
+    @FindBy(css = "#products")
     private WebElement listOfSearchProduct;
 
-    public SearchPage fillSearchBox(String value){
+    public SearchPage fillSearchBox(String value) {
         cleanAndSendKeys(searchBox, value);
         return this;
     }
-    public void clickSearchButton(){
+
+    public void clickSearchButton() {
         clickOnElement(searchButton);
     }
 
-    public String getProductNameFromSearchField(){
+    public String getTextFromSearchField() {
+        return searchResultProductName.getText();
+    }
+
+    public String getProductNameAfterSearch() {
         wait.until(ExpectedConditions.visibilityOf(listOfSearchProduct));
         return searchResultProductName.getText();
     }
-    public String getProductsNameFromDropDownList(){
+
+    public String getProductsNameFromDropDownList() {
         wait.until(ExpectedConditions.visibilityOf(dropDownResult));
         return dropDownResult.getText();
     }
 
-    String product = homePage.randomProductNameHomePage();
-
-    public String getProduct() {
-        return product;
-    }
-    public SearchPage fillSearchBox(){
+    public SearchPage fillSearchBox() {
         log.info("<<<<<<Random product name: " + product);
         fillSearchBox(product);
         return this;
+    }
+
+    public String getProduct() {
+        return product;
     }
 
 }

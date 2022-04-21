@@ -11,7 +11,6 @@ import java.util.List;
 
 public class HomePage extends BasePage {
 
-    private WebDriver driver;
     private static Logger log = LoggerFactory.getLogger("HomePage.class");
 
     public HomePage(WebDriver driver) {
