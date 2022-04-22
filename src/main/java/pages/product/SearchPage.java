@@ -21,9 +21,6 @@ public class SearchPage extends BasePage {
         super(driver);
     }
 
-
-
-
     @FindBy(css = "div.product-description")
     private WebElement searchResultProductName;
     @FindBy(css = "#ui-id-1")

@@ -16,7 +16,6 @@ public class CategoryPage extends BasePage {
     private static Logger log = LoggerFactory.getLogger("CategoriesPage.class");
     MenuPage menuPage = new MenuPage(driver);
 
-
     @FindBy(xpath = "//div[@itemprop='itemListElement']")
     private List<WebElement> productList;
 
