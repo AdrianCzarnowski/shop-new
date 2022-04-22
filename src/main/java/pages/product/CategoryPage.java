@@ -28,11 +28,10 @@ public class CategoryPage extends BasePage {
     private List<WebElement> subCategories;
 
 
-
-
     public CategoryPage(WebDriver driver) {
         super(driver);
     }
+
     private List<String> categoryNameDisplayed = new ArrayList<>();
 
 
@@ -42,7 +41,7 @@ public class CategoryPage extends BasePage {
         log.info("<<<<<<<<<<<<<<<<Category after click: " + categoryName);
     }
 
-    public CategoryPage categoriesCheck() {
+    public CategoryPage checkCategories_AndSubcategories() {
         for (int i = 0; i < menuPage.categories.size(); i++) {
             categoryNameDisplayed.add(getTextFromElement(menuPage.categories.get(i)));
             log.info("<<<<<<<<<<<<<<Chosen category: " + getTextFromElement(menuPage.categories.get(i)));
