@@ -5,7 +5,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 
 
-public class SearchResultTest extends TestBase {
+public class SearchPageTest extends TestBase {
 
     private static Logger log = LoggerFactory.getLogger("SearchResultTest.class");
     @Test

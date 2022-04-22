@@ -38,12 +38,23 @@ public class BasePage {
         logger.info("<<<<<<<<<<<<<Text in element: " + value);
     }
 
-    public void scrollToElement(WebElement element){
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
-        logger.info("<<<<<<<<<<<<<<<<<Scroll to element: " + element);
-    }
     public WebElement randomValueFromList(List<WebElement> elementList){
         int size = new Random().nextInt(elementList.size());
         return elementList.get(size);
+    }
+
+    public String getTextFromElement(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+       return element.getText();
+    }
+    public String clickOnElementAndGetText(WebElement element){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.getText();
+        element.click();
+        return element.getText();
+    }
+    public void scrollToElement(WebElement element){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+        logger.info("<<<<<<<<<<<<<<<<<Scroll to element: " + element);
     }
 }
