@@ -32,7 +32,6 @@ public class CategoryPage extends BasePage {
     private List<String> subCategoryNameDisplayed = new ArrayList<>();
 
 
-
     public CategoryPage(WebDriver driver) {
         super(driver);
     }
@@ -65,25 +64,18 @@ public class CategoryPage extends BasePage {
             log.info("<<<<<<<<<<<<<<<<Category after click: " + categoryName);
             countProductList();
             isDisplayedMenu();
+
+            actions.moveToElement(categories.get(i)).build().perform();
+            for (int j = 0; j < subCategories.size(); j++) {
+                subCategories.get(j).click();
+                String subCategoryName = getTextFromElement(title);
+                log.info("<<<<<<<<<<<<<<<<Category after click: " + subCategoryName);
+                countProductList();
+                isDisplayedMenu();
+            }
         }
         return this;
     }
-//    public CategoryPage subCategoriesCheck() {
-//
-//        for (int i = 0; i < categories.size(); i++) {
-//            categories.
-//            for (int j = 0; j < subCategories.size() ; j++) {
-//                subCategoryNameDisplayed.add(subCategories.get(j).getText());
-//                subCategories
-//
-//            }
-//            String categoryName = getTextFromElement(title);
-//            isDisplayedMenu();
-//            log.info("<<<<<<<<<<<<<<<<Category after click: " + categoryName);
-//            countProductList();
-//        }
-//        return this;
-//    }
 }
 
 
