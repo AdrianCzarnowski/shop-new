@@ -19,7 +19,7 @@ public class HomePage extends BasePage {
     @FindBy(css = "div.product-description > h3")
     private List<WebElement> productsList;
 
-    public String randomProductNameHomePage(){
+    public String randomProductNameFromHomePage(){
         return randomValueFromList(productsList).getText();
     }
 }

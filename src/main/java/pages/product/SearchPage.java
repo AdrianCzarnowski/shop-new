@@ -1,4 +1,4 @@
-package pages;
+package pages.product;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,24 +6,23 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pages.HomePage;
+import pages.MenuPage;
 import pages.base.BasePage;
 
 
 public class SearchPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("SearchPage.class");
-    HomePage homePage = new HomePage(driver);
+
 
 
     public SearchPage(WebDriver driver) {
         super(driver);
     }
 
-    String product = homePage.randomProductNameHomePage();
-    @FindBy(css = "input.ui-autocomplete-input")
-    private WebElement searchBox;
-    @FindBy(css = "form > button ")
-    private WebElement searchButton;
+
+
 
     @FindBy(css = "div.product-description")
     private WebElement searchResultProductName;
@@ -32,13 +31,18 @@ public class SearchPage extends BasePage {
     @FindBy(css = "#products")
     private WebElement listOfSearchProduct;
 
+    HomePage homePage = new HomePage(driver);
+    MenuPage menuPage = new MenuPage(driver);
+    String product = homePage.randomProductNameFromHomePage();
+
+
     public SearchPage fillSearchBox(String value) {
-        sendKeys(searchBox, value,false);
+        sendKeys(menuPage.searchBox, value,false);
         return this;
     }
 
     public void clickSearchButton() {
-        clickOnElement(searchButton);
+        clickOnElement(menuPage.searchButton);
     }
 
     public String getTextFromSearchField() {

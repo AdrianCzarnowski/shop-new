@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with categories">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CategoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CategoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CategoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/CategoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/properties/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CategoryPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CategoryPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +53,22 @@
       <recent name="C:\Users\aczarnowski\IdeaProjects\shop-exc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CategoryPageTest.categoryNameAfterClick">
+  <component name="RunManager" selected="JUnit.SearchPageTest.dropDownResult_MatchTo_InputProductName">
     <configuration name="CategoryPageTest.categoryNameAfterClick" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CategoryPageTest" />
       <option name="METHOD_NAME" value="categoryNameAfterClick" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson12Shop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SearchPageTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,23 +103,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TopPanelPageTest.getTittle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lesson12Shop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TopPanelPageTest" />
-      <option name="METHOD_NAME" value="getTittle" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CategoryPageTest.categoryNameAfterClick" />
         <item itemvalue="JUnit.SearchPageTest.dropDownResult_MatchTo_InputProductName" />
+        <item itemvalue="JUnit.SearchPageTest" />
+        <item itemvalue="JUnit.CategoryPageTest.categoryNameAfterClick" />
         <item itemvalue="JUnit.SearchPageTest.searchResult_MatchTo_InputProductName" />
         <item itemvalue="JUnit.SearchPageTest.getTittle" />
-        <item itemvalue="JUnit.TopPanelPageTest.getTittle" />
       </list>
     </recent_temporary>
   </component>
@@ -386,15 +390,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="with categories" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pages/CategoryPage.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="optionsChrome.capabilityName" />

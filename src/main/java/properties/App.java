@@ -12,10 +12,10 @@ public class App {
     private static Logger log = LoggerFactory.getLogger("AppProperties.class");
 
     public App() {
-        setSystemFromYaml();
+        setEnvironmentFromYaml();
     }
 
-    private void setSystemFromYaml() {
+    private void setEnvironmentFromYaml() {
         YamlReader yamlReader = new YamlReader();
         List<EnvironmentModel> environments = yamlReader.getConfig().getEnvironment().getEnvironments();
         boolean foundActiveBrowser = false;

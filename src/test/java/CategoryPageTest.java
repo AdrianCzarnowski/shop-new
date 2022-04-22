@@ -11,8 +11,6 @@ public class CategoryPageTest extends TestBase {
     public void categoryNameAfterClick() {
         categoryPage
                 .categoriesCheck();
-//                .subCategoriesCheck();
-
     }
 }
 
