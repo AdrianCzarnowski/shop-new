@@ -29,14 +29,12 @@ public class CategoryPage extends BasePage {
 
 
     private List<String> categoryNameDisplayed = new ArrayList<>();
-    private List<String> subCategoryNameDisplayed = new ArrayList<>();
-
 
     public CategoryPage(WebDriver driver) {
         super(driver);
     }
 
-    public boolean isDisplayedMenu() {
+    private boolean isDisplayedMenu() {
         if (sideMenu.isDisplayed()) {
             log.info("<<<<<<<<<<<<<<<<Side menu is displayed");
             return true;
@@ -46,7 +44,7 @@ public class CategoryPage extends BasePage {
         }
     }
 
-    public boolean countProductList() {
+    private boolean countProductList() {
         if (getTextFromElement(productQuantity).contains(String.valueOf(productList.size()))) {
             log.info("<<<<<<<<<<<<Products on this page is: " + productList.size());
             return true;
@@ -55,24 +53,30 @@ public class CategoryPage extends BasePage {
         }
     }
 
+    private void getCategoryName() {
+
+        String categoryName = getTextFromElement(title);
+        log.info("<<<<<<<<<<<<<<<<Category after click: " + categoryName);
+    }
+
+    private void amountOfProducts_AndSideMenuIsDisplayed() {
+        getCategoryName();
+        countProductList();
+        isDisplayedMenu();
+    }
+
     public CategoryPage categoriesCheck() {
         for (int i = 0; i < categories.size(); i++) {
             categoryNameDisplayed.add(categories.get(i).getText());
             log.info("<<<<<<<<<<<<<<Choosen category: " + categories.get(i).getText());
-            categories.get(i).click();
-            String categoryName = getTextFromElement(title);
-            log.info("<<<<<<<<<<<<<<<<Category after click: " + categoryName);
-            countProductList();
-            isDisplayedMenu();
+            clickOnElement(categories.get(i));
+            amountOfProducts_AndSideMenuIsDisplayed();
 
             actions.moveToElement(categories.get(i)).build().perform();
             for (int j = 0; j < subCategories.size(); j++) {
-                subCategories.get(j).click();
-                String subCategoryName = getTextFromElement(title);
-                log.info("<<<<<<<<<<<<<<<<Category after click: " + subCategoryName);
-                countProductList();
-                isDisplayedMenu();
-                categories.get(i).click();
+                clickOnElement(subCategories.get(j));
+                amountOfProducts_AndSideMenuIsDisplayed();
+                clickOnElement(categories.get(i));
             }
         }
         return this;
