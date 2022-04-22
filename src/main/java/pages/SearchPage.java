@@ -33,7 +33,7 @@ public class SearchPage extends BasePage {
     private WebElement listOfSearchProduct;
 
     public SearchPage fillSearchBox(String value) {
-        cleanAndSendKeys(searchBox, value);
+        sendKeys(searchBox, value,false);
         return this;
     }
 

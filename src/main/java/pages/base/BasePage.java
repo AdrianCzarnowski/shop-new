@@ -22,7 +22,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver){
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         actions = new Actions(driver);
         PageFactory.initElements(driver, this);
     }
@@ -31,11 +31,13 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
-    public void cleanAndSendKeys (WebElement element, String value){
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-        element.clear();
-        element.sendKeys(value);
-        logger.info("<<<<<<<<<<<<<Text in element: " + value);
+    public void sendKeys(WebElement element, String text, boolean clear){
+        if(clear){
+            element.clear();
+        }
+        wait.until(ExpectedConditions.visibilityOf(element));
+        element.sendKeys(text);
+        logger.info("<<<<<<<<<<<<<Text in element: " + text);
     }
 
     public WebElement randomValueFromList(List<WebElement> elementList){
@@ -47,12 +49,8 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
        return element.getText();
     }
-    public String clickOnElementAndGetText(WebElement element){
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-        element.getText();
-        element.click();
-        return element.getText();
-    }
+
+
     public void scrollToElement(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
         logger.info("<<<<<<<<<<<<<<<<<Scroll to element: " + element);
