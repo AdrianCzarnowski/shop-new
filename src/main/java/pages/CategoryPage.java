@@ -72,6 +72,7 @@ public class CategoryPage extends BasePage {
                 log.info("<<<<<<<<<<<<<<<<Category after click: " + subCategoryName);
                 countProductList();
                 isDisplayedMenu();
+                categories.get(i).click();
             }
         }
         return this;
