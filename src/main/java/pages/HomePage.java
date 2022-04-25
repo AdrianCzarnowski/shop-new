@@ -1,5 +1,6 @@
 package pages;
 
+import lombok.Data;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
 import java.util.List;
+
 
 public class HomePage extends BasePage {
 

@@ -35,7 +35,6 @@ public class CategoryPage extends BasePage {
 
 
     private void getCategoryName() {
-
         String categoryName = getTextFromElement(title);
         log.info("<<<<<<<<<<<<<<<<Category after click: " + categoryName);
     }

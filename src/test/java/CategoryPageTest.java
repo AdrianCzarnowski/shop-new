@@ -14,6 +14,13 @@ public class CategoryPageTest extends TestBase {
         categoryPage
                 .checkCategories_AndSubcategories();
     }
+
+    @Test
+    public void artCategories(){
+        artPage
+                .clickArtCategory()
+                .priceStart9$Ends10$();
+    }
 }
 
 

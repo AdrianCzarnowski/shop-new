@@ -1,5 +1,5 @@
 browserConfig:
-  driverEnum: EDGE
+  driverEnum: CHROME
 
 environment:
   prod:
