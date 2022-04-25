@@ -21,6 +21,7 @@ public class BasePage {
     protected JavascriptExecutor js;
     private static Logger logger = LoggerFactory.getLogger("BasePage.class");
 
+
     public BasePage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -66,6 +67,9 @@ public class BasePage {
     }
     public void waitToBeVisible (WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
+    }
+    public void waitToBeInvisible (WebElement element){
+        wait.until(ExpectedConditions.invisibilityOf(element));
     }
     public void waitToBeClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));

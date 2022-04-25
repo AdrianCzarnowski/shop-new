@@ -16,10 +16,10 @@ public class CategoryPageTest extends TestBase {
     }
 
     @Test
-    public void artCategories(){
+    public void artCategories() throws InterruptedException {
         artPage
                 .clickArtCategory()
-                .priceStart9$Ends10$()
+                .priceFirstFilter()
                 .matchedProductsList()
                 .clearFilters();
     }

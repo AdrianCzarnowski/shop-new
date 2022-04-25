@@ -1,6 +1,5 @@
 package pages.product;
 
-import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +11,7 @@ import pages.base.BasePage;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.openqa.selenium.Keys.ENTER;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 
 public class ArtPage extends BasePage {
@@ -33,6 +32,8 @@ public class ArtPage extends BasePage {
     private WebElement clearButton;
     @FindBy(css = "#search_filters > p")
     private WebElement fliters;
+    @FindBy(css = "#category > div")
+    private WebElement reload;
 
     public ArtPage(WebDriver driver) {
         super(driver);
@@ -47,7 +48,7 @@ public class ArtPage extends BasePage {
         return this;
     }
 
-    public ArtPage priceStart9$Ends10$() {
+    public ArtPage priceFirstFilter(){
 
         while (!price.getText().endsWith("$10.00")) {
             waitToBeVisible(rightSlider);
@@ -57,16 +58,19 @@ public class ArtPage extends BasePage {
             log.info(getTextFromElement(price));
         }
         clickOnElement(rightSlider);
+        waitToBeInvisible(reload);
         return this;
     }
 
     public ArtPage matchedProductsList() {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displatedProductsPrice.size(); j++) {
-            products.add(displatedProductsPrice.get(j).getText());
-            log.info("<<<<<<<<<<<<<<Products: " + displatedProductsPrice.get(j).getText());
-
+            products.add(getTextFromElement(displatedProductsPrice.get(j)));
+            log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
+            String value = displatedProductsPrice.get(j).getText();
+            assert(value.contains("$9.00") || value.contains("$10.00"));
         }
+        log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
         return this;
     }
     public ArtPage clearFilters(){
