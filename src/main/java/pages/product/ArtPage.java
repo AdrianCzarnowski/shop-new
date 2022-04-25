@@ -64,7 +64,7 @@ public class ArtPage extends BasePage {
 
     public ArtPage priceSecondFilter() {
 
-        while (!price.getText().startsWith("$10.00")) {
+        while (!price.getText().startsWith(System.getProperty("max_value_first_filter"))) {
             waitToBeVisible(leftSlider);
             waitToBeClickable(leftSlider);
             clickAndHold(leftSlider);
@@ -76,28 +76,28 @@ public class ArtPage extends BasePage {
         return this;
     }
 
-    public ArtPage matchedProductsList() {
+    public ArtPage matchedProductsFirstFiltr() {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displatedProductsPrice.size(); j++) {
             products.add(getTextFromElement(displatedProductsPrice.get(j)));
             log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
             String value = displatedProductsPrice.get(j).getText();
-            assert (value.contains("$9.00") || value.contains("$10.00"));
+            assert (value.contains(System.getProperty("min_value_first_filter")) || value.contains(System.getProperty("max_value_first_filter")));
         }
         log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
         return this;
     }
-//    public ArtPage matchedProductsList1() {
-//        List<String> products = new ArrayList<>();
-//        for (int j = 0; j < displatedProductsPrice.size(); j++) {
-//            products.add(getTextFromElement(displatedProductsPrice.get(j)));
-//            log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
-//            String value = displatedProductsPrice.get(j).getText();
-//            assert (value.contains("$9.00") || value.contains("$29.00"));
-//        }
-//        log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
-//        return this;
-//    }
+    public ArtPage matchedProductsSecondFiltr() {
+        List<String> products = new ArrayList<>();
+        for (int j = 0; j < displatedProductsPrice.size(); j++) {
+            products.add(getTextFromElement(displatedProductsPrice.get(j)));
+            log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
+            String value = displatedProductsPrice.get(j).getText();
+            assert (value.contains(System.getProperty("min_value_second_filter")) || value.contains(System.getProperty("max_value_second_filter")));
+        }
+        log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
+        return this;
+    }
 
     public ArtPage clearFilters() {
         clickOnElement(clearButton);
