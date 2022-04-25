@@ -48,7 +48,7 @@ public class ArtPage extends BasePage {
         return this;
     }
 
-    public ArtPage priceFirstFilter(){
+    public ArtPage priceFirstFilter() {
 
         while (!price.getText().endsWith("$10.00")) {
             waitToBeVisible(rightSlider);
@@ -62,18 +62,44 @@ public class ArtPage extends BasePage {
         return this;
     }
 
+    public ArtPage priceSecondFilter() {
+
+        while (!price.getText().startsWith("$10.00")) {
+            waitToBeVisible(leftSlider);
+            waitToBeClickable(leftSlider);
+            clickAndHold(leftSlider);
+            actions.moveByOffset(10, 0).perform();
+            log.info(getTextFromElement(price));
+        }
+        clickOnElement(rightSlider);
+        waitToBeInvisible(reload);
+        return this;
+    }
+
     public ArtPage matchedProductsList() {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displatedProductsPrice.size(); j++) {
             products.add(getTextFromElement(displatedProductsPrice.get(j)));
             log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
             String value = displatedProductsPrice.get(j).getText();
-            assert(value.contains("$9.00") || value.contains("$10.00"));
+            assert (value.contains("$9.00") || value.contains("$10.00"));
         }
         log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
         return this;
     }
-    public ArtPage clearFilters(){
+//    public ArtPage matchedProductsList1() {
+//        List<String> products = new ArrayList<>();
+//        for (int j = 0; j < displatedProductsPrice.size(); j++) {
+//            products.add(getTextFromElement(displatedProductsPrice.get(j)));
+//            log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
+//            String value = displatedProductsPrice.get(j).getText();
+//            assert (value.contains("$9.00") || value.contains("$29.00"));
+//        }
+//        log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
+//        return this;
+//    }
+
+    public ArtPage clearFilters() {
         clickOnElement(clearButton);
         return this;
     }

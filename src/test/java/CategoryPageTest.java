@@ -16,11 +16,14 @@ public class CategoryPageTest extends TestBase {
     }
 
     @Test
-    public void artCategories() throws InterruptedException {
+    public void artCategories(){
         artPage
                 .clickArtCategory()
                 .priceFirstFilter()
                 .matchedProductsList()
+                .clearFilters()
+                .priceSecondFilter()
+                .matchedProductsList1()
                 .clearFilters();
     }
 }
