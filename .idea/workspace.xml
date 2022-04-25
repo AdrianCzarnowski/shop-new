@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with filter">
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with clear filters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CategoryPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CategoryPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650889241747</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="with clear filters">
+      <created>1650890937819</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1650890937819</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -419,7 +424,8 @@
     <MESSAGE value="with categories" />
     <MESSAGE value="refactor categoryPage" />
     <MESSAGE value="with filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="with filter" />
+    <MESSAGE value="with clear filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="with clear filters" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
