@@ -19,8 +19,9 @@ public class CategoryPageTest extends TestBase {
     public void artCategories(){
         artPage
                 .clickArtCategory()
-                .priceStart9$Ends10$();
-//                .matchedProductsPrice();
+                .priceStart9$Ends10$()
+                .matchedProductsList()
+                .clearFilters();
     }
 }
 

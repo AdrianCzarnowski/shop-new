@@ -31,7 +31,7 @@ public class ArtPage extends BasePage {
     private List<WebElement> displatedProductsPrice;
     @FindBy(xpath = "//div[@id='_desktop_search_filters_clear_all']/button")
     private WebElement clearButton;
-    @FindBy(css="#search_filters > p")
+    @FindBy(css = "#search_filters > p")
     private WebElement fliters;
 
     public ArtPage(WebDriver driver) {
@@ -57,6 +57,20 @@ public class ArtPage extends BasePage {
             log.info(getTextFromElement(price));
         }
         clickOnElement(rightSlider);
+        return this;
+    }
+
+    public ArtPage matchedProductsList() {
+        List<String> products = new ArrayList<>();
+        for (int j = 0; j < displatedProductsPrice.size(); j++) {
+            products.add(displatedProductsPrice.get(j).getText());
+            log.info("<<<<<<<<<<<<<<Products: " + displatedProductsPrice.get(j).getText());
+
+        }
+        return this;
+    }
+    public ArtPage clearFilters(){
+        clickOnElement(clearButton);
         return this;
     }
 }
