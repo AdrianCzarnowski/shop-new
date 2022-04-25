@@ -50,7 +50,7 @@ public class ArtPage extends BasePage {
 
     public ArtPage priceFirstFilter() {
 
-        while (!price.getText().endsWith("$10.00")) {
+        while (!price.getText().endsWith(System.getProperty("max_value_first_filter"))) {
             waitToBeVisible(rightSlider);
             waitToBeClickable(rightSlider);
             clickAndHold(rightSlider);

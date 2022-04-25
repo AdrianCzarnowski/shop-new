@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pages.FooterPage;
 import pages.MenuPage;
 import pages.product.ArtPage;
 import pages.product.CategoryPage;
@@ -23,6 +24,7 @@ public class TestBase {
     public static SearchPage searchPage;
     public static CategoryPage categoryPage;
     public static ArtPage artPage;
+    public static FooterPage footerPage;
 
     private static DriverFactory driverFactory = new DriverFactory();
     private static YamlReader yamlReader = new YamlReader();
@@ -39,6 +41,7 @@ public class TestBase {
         searchPage = new SearchPage(driver);
         categoryPage = new CategoryPage(driver);
         artPage = new ArtPage(driver);
+        footerPage = new FooterPage(driver);
 
     }
 
