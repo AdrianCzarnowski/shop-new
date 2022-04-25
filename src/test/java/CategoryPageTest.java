@@ -20,10 +20,10 @@ public class CategoryPageTest extends TestBase {
         artPage
                 .clickArtCategory()
                 .priceFirstFilter()
-                .matchedProductsFirstFiltr()
+                .matchedProductsFirstFiltered()
                 .clearFilters()
                 .priceSecondFilter()
-                .matchedProductsSecondFiltr()
+                .matchedProductsSecondFiltered()
                 .clearFilters();
     }
 }
