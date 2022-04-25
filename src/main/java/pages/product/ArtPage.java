@@ -82,8 +82,7 @@ public class ArtPage extends BasePage {
             products.add(getTextFromElement(displatedProductsPrice.get(j)));
             log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
             String value = displatedProductsPrice.get(j).getText();
-            assert (value.contains(System.getProperty("min_value_first_filter"))
-                    || value.contains(System.getProperty("max_value_first_filter")));
+            assert (value.contains(System.getProperty("min_value_first_filter")));
         }
         log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
         return this;
@@ -94,8 +93,7 @@ public class ArtPage extends BasePage {
             products.add(getTextFromElement(displatedProductsPrice.get(j)));
             log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
             String value = displatedProductsPrice.get(j).getText();
-            assert (value.contains(System.getProperty("min_value_second_filter"))
-                    || value.contains(System.getProperty("max_value_second_filter")));
+            assert(value.contains(System.getProperty("max_value_second_filter")));
         }
         log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
         return this;

@@ -8,7 +8,7 @@ environment:
     max_value_first_filter: $10.00
     min_value_first_filter: $9.00
     min_value_second_filter: $9.00
-    max_value_second_filter: $25.00
+    max_value_second_filter: $29.00
   init:
     appUrl: http://146.59.32.4
     active: false
