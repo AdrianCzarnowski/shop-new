@@ -31,7 +31,6 @@ public class BasePage {
 
     public void clickOnElement(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
-        highLightenerMethod(element);
         element.click();
     }
     public void sendKeys(WebElement element, String text, boolean clear){

@@ -9,10 +9,11 @@ import org.slf4j.LoggerFactory;
 import pages.MenuPage;
 import pages.base.BasePage;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import static org.openqa.selenium.Keys.ARROW_LEFT;
-import static org.openqa.selenium.Keys.ARROW_RIGHT;
+import static org.openqa.selenium.Keys.ENTER;
+
 
 public class ArtPage extends BasePage {
 
@@ -30,6 +31,8 @@ public class ArtPage extends BasePage {
     private List<WebElement> displatedProductsPrice;
     @FindBy(xpath = "//div[@id='_desktop_search_filters_clear_all']/button")
     private WebElement clearButton;
+    @FindBy(css="#search_filters > p")
+    private WebElement fliters;
 
     public ArtPage(WebDriver driver) {
         super(driver);
@@ -45,13 +48,18 @@ public class ArtPage extends BasePage {
     }
 
     public ArtPage priceStart9$Ends10$() {
-        while (!price.getText().endsWith("$10.00")){
+
+        while (!price.getText().endsWith("$10.00")) {
             waitToBeVisible(rightSlider);
             waitToBeClickable(rightSlider);
             clickAndHold(rightSlider);
-            actions.moveByOffset(-10,0).perform();
+            actions.moveByOffset(-10, 0).perform();
             log.info(getTextFromElement(price));
         }
+        clickOnElement(rightSlider);
         return this;
     }
 }
+
+
+

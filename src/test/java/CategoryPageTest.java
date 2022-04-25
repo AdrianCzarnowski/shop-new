@@ -20,6 +20,7 @@ public class CategoryPageTest extends TestBase {
         artPage
                 .clickArtCategory()
                 .priceStart9$Ends10$();
+//                .matchedProductsPrice();
     }
 }
 

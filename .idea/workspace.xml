@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="refactor categoryPage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" afterDir="false" />
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with filter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/WebElementHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/CategoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/CategoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CategoryPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CategoryPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SearchPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -370,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650637748673</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="with filter">
+      <created>1650887196357</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1650887196357</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +412,8 @@
     <MESSAGE value="with Clothes category" />
     <MESSAGE value="with categories" />
     <MESSAGE value="refactor categoryPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor categoryPage" />
+    <MESSAGE value="with filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="with filter" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
