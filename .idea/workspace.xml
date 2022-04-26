@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with data from yaml to filters">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/FooterPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/product/PriceDropPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PriceDropPageTest.java" afterDir="false" />
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with footpage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/FooterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/FooterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/PriceDropPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/PriceDropPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PriceDropPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PriceDropPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,11 +37,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models" />
@@ -51,7 +51,7 @@
       <recent name="C:\Users\aczarnowski\IdeaProjects\shop-exc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PriceDropPageTest.click">
+  <component name="RunManager" selected="JUnit.PriceDropPageTest.onSaleProducts">
     <configuration name="CategoryPageTest.artCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
@@ -72,11 +72,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PriceDropPageTest.click" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PriceDropPageTest.onSaleProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PriceDropPageTest" />
-      <option name="METHOD_NAME" value="click" />
+      <option name="METHOD_NAME" value="onSaleProducts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -104,7 +104,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PriceDropPageTest.click" />
+        <item itemvalue="JUnit.PriceDropPageTest.onSaleProducts" />
         <item itemvalue="JUnit.CategoryPageTest.artCategories" />
         <item itemvalue="JUnit.SearchPageTest.dropDownResult_MatchTo_InputProductName" />
         <item itemvalue="JUnit.SearchPageTest.searchResult_MatchTo_InputProductName" />
@@ -450,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650897036151</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="with footpage">
+      <created>1650898171250</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1650898171250</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -495,7 +502,8 @@
     <MESSAGE value="with filter" />
     <MESSAGE value="with clear filters" />
     <MESSAGE value="with data from yaml to filters" />
-    <option name="LAST_COMMIT_MESSAGE" value="with data from yaml to filters" />
+    <MESSAGE value="with footpage" />
+    <option name="LAST_COMMIT_MESSAGE" value="with footpage" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

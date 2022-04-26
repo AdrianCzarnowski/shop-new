@@ -22,16 +22,12 @@ public class ArtPage extends BasePage {
     private WebElement leftSlider;
     @FindBy(css = "a.ui-slider-handle:nth-of-type(2)")
     private WebElement rightSlider;
-    @FindBy(css = ".ui-slider")
-    private WebElement slider;
     @FindBy(css = ".faceted-slider p")
     private WebElement price;
     @FindBy(css = "span.price")
     private List<WebElement> displatedProductsPrice;
     @FindBy(xpath = "//div[@id='_desktop_search_filters_clear_all']/button")
     private WebElement clearButton;
-    @FindBy(css = "#search_filters > p")
-    private WebElement fliters;
     @FindBy(css = "#category > div")
     private WebElement reload;
 

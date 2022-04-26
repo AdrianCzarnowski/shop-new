@@ -13,7 +13,7 @@ public class FooterPage extends BasePage {
     @FindBy(css="#link-product-page-prices-drop-1")
     private WebElement priceDropButton;
 
-    public FooterPage clickPriceDroppButton(){
+    public FooterPage clickPriceDropButton(){
         clickOnElement(priceDropButton);
         return this;
     }

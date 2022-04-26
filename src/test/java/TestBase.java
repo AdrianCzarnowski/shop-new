@@ -12,6 +12,7 @@ import pages.FooterPage;
 import pages.MenuPage;
 import pages.product.ArtPage;
 import pages.product.CategoryPage;
+import pages.product.PriceDropPage;
 import pages.product.SearchPage;
 import properties.App;
 import properties.reader.YamlReader;
@@ -25,6 +26,7 @@ public class TestBase {
     public static CategoryPage categoryPage;
     public static ArtPage artPage;
     public static FooterPage footerPage;
+    public static PriceDropPage priceDropPage;
 
     private static DriverFactory driverFactory = new DriverFactory();
     private static YamlReader yamlReader = new YamlReader();
@@ -42,6 +44,7 @@ public class TestBase {
         categoryPage = new CategoryPage(driver);
         artPage = new ArtPage(driver);
         footerPage = new FooterPage(driver);
+        priceDropPage = new PriceDropPage(driver);
 
     }
 

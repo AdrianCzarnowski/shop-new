@@ -5,7 +5,8 @@ import org.slf4j.LoggerFactory;
 public class PriceDropPageTest extends TestBase{
     private static Logger log = LoggerFactory.getLogger("SearchResultTest.class");
     @Test
-    public void click(){
-        footerPage.clickPriceDroppButton();
+    public void onSaleProducts(){
+        footerPage.clickPriceDropButton();
+        priceDropPage.checkOnSalePageAreLoaded();
     }
 }
