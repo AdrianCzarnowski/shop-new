@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with Check Visibility">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/PriceDropPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/PriceDropPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/properties/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PriceDropPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PriceDropPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +94,17 @@
       <option name="MAIN_CLASS_NAME" value="SearchPageTest" />
       <option name="METHOD_NAME" value="searchResult_MatchTo_InputProductName" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
