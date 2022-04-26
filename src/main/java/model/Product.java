@@ -4,6 +4,9 @@ import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 public class Product {
 
@@ -50,7 +53,16 @@ public class Product {
             product.quantity = this.quantity;
             product.orderCost = this.orderCost;
             return product;
-
         }
+
+
+
+
+
+
+
+
+        
+
     }
 }
