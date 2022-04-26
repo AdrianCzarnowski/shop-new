@@ -3,7 +3,6 @@ package properties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import model.Environment;
-import properties.reader.YamlReader;
 
 @Data
 @NoArgsConstructor

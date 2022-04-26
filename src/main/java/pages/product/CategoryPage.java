@@ -26,13 +26,11 @@ public class CategoryPage extends BasePage {
     @FindBy(xpath = "//ul[@class='category-sub-menu']//a")
     private List<WebElement> subCategories;
 
-
     public CategoryPage(WebDriver driver) {
         super(driver);
     }
 
     private List<String> categoryNameDisplayed = new ArrayList<>();
-
 
     private void getCategoryName() {
         String categoryName = getTextFromElement(title);

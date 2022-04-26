@@ -21,7 +21,6 @@ public class Product {
     private double allOrderCost;
     private int quantityOfProducts;
 
-
     public Product(String productName, double productPrice, int quantity, double orderCost) {
         this.productName = productName;
         this.productPrice = productPrice;
