@@ -35,7 +35,7 @@ public class SearchPage extends BasePage {
 
 
     public SearchPage fillSearchBox(String value) {
-        sendKeys(menuPage.searchBox, value,false);
+        sendKeys(menuPage.searchBox,value,false);
         return this;
     }
 

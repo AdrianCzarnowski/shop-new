@@ -38,7 +38,7 @@ public class ProductOnSalePage extends BasePage {
     public ProductOnSalePage checkCalculateDiscount() {
         double regularPriceValue = Double.parseDouble(regularPrice.getText().substring(1));
         double discountPriceValue = Double.parseDouble(discountPrice.getText().substring(1));
-        double priceAfterDiscount = regularPriceValue * (0.8);
+        double priceAfterDiscount = regularPriceValue*(0.8);
         assert (discountPriceValue == priceAfterDiscount);
         log.info("Discount price is well calculated" + "" +
                 " Regular price: " + regularPriceValue + "$" + " after 20% off: " + priceAfterDiscount + "$");

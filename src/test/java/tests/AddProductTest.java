@@ -18,7 +18,8 @@ public class AddProductTest extends Pages {
                 .setRandomQuantityValue()
                 .clickAddToCartButton();
         cartOrderDetailsPage
-                .productChart(product);
+                .clickCountinueShopping();
+//                .productChart(product);
 
 
     }

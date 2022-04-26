@@ -24,11 +24,25 @@ public class CartOrderDetailsPage extends BasePage {
     private WebElement productQuantity;
     @FindBy(css ="span.subtotal.value")
     private WebElement productsValue;
+    @FindBy(css="div.col-md-7 > div > div > button")
+    private WebElement continueShoppingBtn;
 
     public Product newProductBuilder() {
-        Product product = new Product(getTextFromElement(productName), Double.parseDouble(getTextFromElement(productPrice).substring(1)),
-                Integer.parseInt(getTextFromElement(productQuantity)),Double.parseDouble(getTextFromElement(productsValue).substring(1)));
+        waitToBeVisible(productName);
+        waitToBeVisible(productPrice);
+        waitToBeVisible(productQuantity);
+        waitToBeVisible(productsValue);
+        Product product = null;
+        if (productName != null && productPrice != null && productQuantity != null && productsValue != null) {
+            product = new Product(getTextFromElement(productName), Double.parseDouble(getTextFromElement(productPrice).substring(1)),
+                    Integer.parseInt(getTextFromElement(productQuantity)), Double.parseDouble(getTextFromElement(productsValue).substring(1)));
+        }
         return product;
+    }
+
+    public CartOrderDetailsPage clickCountinueShopping(){
+        clickOnElement(continueShoppingBtn);
+        return this;
     }
     public void productChart(Product product){
         Product newProduct = newProductBuilder();
@@ -38,7 +52,11 @@ public class CartOrderDetailsPage extends BasePage {
                     product.getProductList().get(i)
                             .setQuantityOfProducts((product.getProductList()
                                     .get(i).getQuantity()) + newProduct.getQuantity());
-                }else product.getProductList().add(newProduct);
+                    log.info("<<<<<<<<<<<<<<<<<Quantity updated: " + newProduct.getQuantity());
+                }else {
+                    product.getProductList().add(newProduct);
+                    log.info("<<<<<<<<<<New product added: " + newProduct.getProductName());
+                }
             }
         }
     }
