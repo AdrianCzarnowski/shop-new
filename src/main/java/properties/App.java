@@ -26,7 +26,6 @@ public class App {
                 Map<String, Object> properties = environmentModel.getEnvironmentProperties();
                 for (Map.Entry entry : properties.entrySet()) {
                     System.setProperty(entry.getKey().toString(), entry.getValue().toString());
-                    log.info("url loaded: " + properties);
                 }
                 log.info("Properties size: " + properties.size());
                 break;

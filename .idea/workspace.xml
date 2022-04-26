@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with PriceDrop">
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with Check Visibility">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/CategoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/CategoryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/PriceDropPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/PriceDropPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/properties/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PriceDropPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PriceDropPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,13 +118,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00001" summary="initial">
-      <created>1649837679004</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1649837679004</updated>
     </task>
     <task id="LOCAL-00002" summary="with POP">
       <created>1649840821577</created>
@@ -462,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650956798486</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="with Check Visibility">
+      <created>1650959448080</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1650959448081</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,7 +509,8 @@
     <MESSAGE value="with data from yaml to filters" />
     <MESSAGE value="with footpage" />
     <MESSAGE value="with PriceDrop" />
-    <option name="LAST_COMMIT_MESSAGE" value="with PriceDrop" />
+    <MESSAGE value="with Check Visibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="with Check Visibility" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
