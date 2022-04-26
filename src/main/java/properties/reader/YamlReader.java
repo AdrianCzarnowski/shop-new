@@ -37,7 +37,5 @@ public class YamlReader {
             e.printStackTrace();
         }
     }
-    public DriverEnum getBrowserName(){
-        return getConfig().getBrowserConfig().getDriverEnum();
-    }
+
 }

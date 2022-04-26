@@ -14,6 +14,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import properties.Config;
 import properties.reader.YamlReader;
 
 @NoArgsConstructor
@@ -51,12 +52,12 @@ public class DriverFactory {
                 driver = new EdgeDriver(optionsEdge);
                 driver.get(System.getProperty("appUrl"));
         }
-
-        this.driver=driver;
         return driver;
     }
 
-
+    public DriverEnum getBrowserName(){
+        return yamlReader.getConfig().getBrowserConfig().getDriverEnum();
+    }
 
 }
 

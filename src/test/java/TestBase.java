@@ -22,7 +22,6 @@ public class TestBase {
     protected WebDriver driver;
     private static App app;
     private static DriverFactory driverFactory = new DriverFactory();
-    private static YamlReader yamlReader = new YamlReader();
 
     public static SearchPage searchPage;
     public static CategoryPage categoryPage;
@@ -39,7 +38,7 @@ public class TestBase {
 
     @BeforeEach
     void beforeEach() {
-        driver = driverFactory.getDriver(yamlReader.getBrowserName());
+        driver = driverFactory.getDriver(driverFactory.getBrowserName());
         searchPage = new SearchPage(driver);
         categoryPage = new CategoryPage(driver);
         artPage = new ArtPage(driver);
