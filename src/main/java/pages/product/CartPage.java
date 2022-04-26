@@ -39,6 +39,7 @@ public class CartPage extends BasePage {
     public CartPage setRandomQuantityValue(){
         Random random = new Random();
         sendKeys(quantity, String.valueOf(random.nextInt(4)+1), true);
+
         return this;
     }
     public CartPage clickAddToCartButton(){
