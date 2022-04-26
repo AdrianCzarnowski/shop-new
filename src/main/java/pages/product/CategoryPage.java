@@ -17,7 +17,7 @@ public class CategoryPage extends BasePage {
     MenuPage menuPage = new MenuPage(driver);
 
     @FindBy(xpath = "//div[@itemprop='itemListElement']")
-    private List<WebElement> productList;
+    public List<WebElement> productList;
 
     @FindBy(css = "#js-product-list-header > div > h1")
     private WebElement title;
