@@ -26,11 +26,6 @@ public class CartOrderDetailsPage extends BasePage {
     private WebElement productsValue;
 
     public Product newProductBuilder() {
-        String product1 = getTextFromElement(productName);
-        log.info(product1);
-        double price = Double.parseDouble(getTextFromElement(productPrice).substring(1));
-        log.info(String.valueOf(price));
-
         Product product = new Product(getTextFromElement(productName), Double.parseDouble(getTextFromElement(productPrice).substring(1)),
                 Integer.parseInt(getTextFromElement(productQuantity)),Double.parseDouble(getTextFromElement(productsValue).substring(1)));
         return product;
@@ -38,7 +33,7 @@ public class CartOrderDetailsPage extends BasePage {
     public void productChart(Product product){
         Product newProduct = newProductBuilder();
         if (product.getProductList().size()>0){
-            for (int i = 0; i < product.getProductList().size(); i++) {
+            for (int i = 0; i <product.getProductList().size(); i++) {
                 if (product.getProductList().get(i).equals(newProduct)){
                     product.getProductList().get(i)
                             .setQuantityOfProducts((product.getProductList()

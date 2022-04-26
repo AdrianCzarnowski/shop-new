@@ -30,7 +30,6 @@ public class Product {
     }
 
     public double getAllOrderZCost(List<Product> productList){
-        allOrderCost = 0;
         if (productList.size()>0){
             for (Product product : productList){
                 allOrderCost+=product.getProductPrice()*product.getQuantity();
@@ -39,7 +38,6 @@ public class Product {
         return allOrderCost;
     }
     public int getQuantityOfProducts(){
-        quantityOfProducts =0;
         if (productList.size()>0){
             for (Product product : productList){
                 quantityOfProducts+=product.getQuantity();
