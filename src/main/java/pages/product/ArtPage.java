@@ -25,7 +25,7 @@ public class ArtPage extends BasePage {
     @FindBy(css = ".faceted-slider p")
     private WebElement price;
     @FindBy(css = "span.price")
-    private List<WebElement> displatedProductsPrice;
+    private List<WebElement> displayedProductsPrice;
     @FindBy(xpath = "//div[@id='_desktop_search_filters_clear_all']/button")
     private WebElement clearButton;
     @FindBy(css = "#category > div")
@@ -74,24 +74,24 @@ public class ArtPage extends BasePage {
 
     public ArtPage firstFilteredMatchedProducts() {
         List<String> products = new ArrayList<>();
-        for (int j = 0; j < displatedProductsPrice.size(); j++) {
-            products.add(getTextFromElement(displatedProductsPrice.get(j)));
-            log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
-            String value = displatedProductsPrice.get(j).getText();
+        for (int j = 0; j < displayedProductsPrice.size(); j++) {
+            products.add(getTextFromElement(displayedProductsPrice.get(j)));
+            log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displayedProductsPrice.get(j)));
+            String value = displayedProductsPrice.get(j).getText();
             assert (value.contains(System.getProperty("min_value_first_filter")));
         }
-        log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
+        log.info("<<<<<<<<<<<<<Number of matched products: " + displayedProductsPrice.size());
         return this;
     }
     public ArtPage secondFilteredMatchedProducts() {
         List<String> products = new ArrayList<>();
-        for (int j = 0; j < displatedProductsPrice.size(); j++) {
-            products.add(getTextFromElement(displatedProductsPrice.get(j)));
-            log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displatedProductsPrice.get(j)));
-            String value = displatedProductsPrice.get(j).getText();
+        for (int j = 0; j < displayedProductsPrice.size(); j++) {
+            products.add(getTextFromElement(displayedProductsPrice.get(j)));
+            log.info("<<<<<<<<<<<<<<Products: " + getTextFromElement(displayedProductsPrice.get(j)));
+            String value = displayedProductsPrice.get(j).getText();
             assert(value.contains(System.getProperty("max_value_second_filter")));
         }
-        log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
+        log.info("<<<<<<<<<<<<<Number of matched products: " + displayedProductsPrice.size());
         return this;
     }
 
