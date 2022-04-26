@@ -44,7 +44,7 @@ public class ArtPage extends BasePage {
         return this;
     }
 
-    public ArtPage priceFirstFilter() {
+    public ArtPage firstFilterOfPrices() {
 
         while (!price.getText().endsWith(System.getProperty("max_value_first_filter"))) {
             waitToBeVisible(rightSlider);
@@ -58,7 +58,7 @@ public class ArtPage extends BasePage {
         return this;
     }
 
-    public ArtPage priceSecondFilter() {
+    public ArtPage secondFilterOfPrices() {
 
         while (!price.getText().startsWith(System.getProperty("max_value_first_filter"))) {
             waitToBeVisible(leftSlider);
@@ -72,7 +72,7 @@ public class ArtPage extends BasePage {
         return this;
     }
 
-    public ArtPage matchedProductsFirstFiltered() {
+    public ArtPage firstFilteredMatchedProducts() {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displatedProductsPrice.size(); j++) {
             products.add(getTextFromElement(displatedProductsPrice.get(j)));
@@ -83,7 +83,7 @@ public class ArtPage extends BasePage {
         log.info("<<<<<<<<<<<<<Number of matched products: " + displatedProductsPrice.size());
         return this;
     }
-    public ArtPage matchedProductsSecondFiltered() {
+    public ArtPage secondFilteredMatchedProducts() {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displatedProductsPrice.size(); j++) {
             products.add(getTextFromElement(displatedProductsPrice.get(j)));

@@ -79,7 +79,7 @@ public class PriceDropPage extends BasePage {
         }
         return  this;
     }
-    public PriceDropPage openOneProduct() {
+    public PriceDropPage openOneProductPage() {
         clickOnElement(randomValueFromList(categoryPage.productList));
         log.info("<<<<<<<<<<<<<<<Go to random product page>>>>>>>>>>>>>>>>>>");
         return this;

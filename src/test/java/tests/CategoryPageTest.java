@@ -22,11 +22,11 @@ public class CategoryPageTest extends Pages {
     public void artCategories(){
         artPage
                 .clickArtCategory()
-                .priceFirstFilter()
-                .matchedProductsFirstFiltered()
+                .firstFilterOfPrices()
+                .firstFilteredMatchedProducts()
                 .clearFilters()
-                .priceSecondFilter()
-                .matchedProductsSecondFiltered()
+                .secondFilterOfPrices()
+                .secondFilteredMatchedProducts()
                 .clearFilters();
     }
 }

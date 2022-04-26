@@ -15,7 +15,7 @@ public class PriceDropPageTest extends Pages {
                 .checkOnSalePageAreLoaded()
                 .checkVisibilityOfPricesAndDiscount()
                 .calculateAndCheckDiscountPrice()
-                .openOneProduct();
+                .openOneProductPage();
         productPage
                 .checkVisibilityOfSaveLabel()
                 .checkCalculateDiscount();
