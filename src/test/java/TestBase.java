@@ -1,6 +1,7 @@
 
 import helpers.DriverFactory;
 
+import model.DriverEnum;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
@@ -10,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.FooterPage;
 import pages.MenuPage;
+import pages.base.BasePage;
 import pages.product.*;
 import properties.App;
 import properties.reader.YamlReader;
@@ -19,6 +21,9 @@ public class TestBase {
     private static final Logger log = LoggerFactory.getLogger("TestBase.class");
     protected WebDriver driver;
     private static App app;
+    private static DriverFactory driverFactory = new DriverFactory();
+    private static YamlReader yamlReader = new YamlReader();
+
     public static SearchPage searchPage;
     public static CategoryPage categoryPage;
     public static ArtPage artPage;
@@ -27,10 +32,6 @@ public class TestBase {
     public static ProductPage productPage;
     public static CartPage cartPage;
 
-    private static DriverFactory driverFactory = new DriverFactory();
-    private static YamlReader yamlReader = new YamlReader();
-
-
     @BeforeAll
     static void beforeAll() {
         app = new App();
@@ -38,7 +39,7 @@ public class TestBase {
 
     @BeforeEach
     void beforeEach() {
-        driver = driverFactory.getDriver(yamlReader.getConfig().getBrowserConfig().getDriverEnum());
+        driver = driverFactory.getDriver(yamlReader.getBrowserName());
         searchPage = new SearchPage(driver);
         categoryPage = new CategoryPage(driver);
         artPage = new ArtPage(driver);

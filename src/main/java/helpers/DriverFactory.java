@@ -1,6 +1,7 @@
 package helpers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import lombok.NoArgsConstructor;
 import model.DriverEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,12 +14,13 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import properties.reader.YamlReader;
 
+@NoArgsConstructor
 public class DriverFactory {
     private WebDriver driver;
     private  static Logger log = LoggerFactory.getLogger("DriverFactory");
-
-
+    YamlReader yamlReader = new YamlReader();
 
     public WebDriver getDriver(DriverEnum driverEnum) {
         switch (driverEnum) {
@@ -53,5 +55,8 @@ public class DriverFactory {
         this.driver=driver;
         return driver;
     }
+
+
+
 }
 

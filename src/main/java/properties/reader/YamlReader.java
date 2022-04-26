@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
+import lombok.Data;
+import model.DriverEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import properties.Config;
@@ -13,15 +15,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+@Data
 public class YamlReader {
-
-    private static Logger log = LoggerFactory.getLogger("YamlReader.class");
-
-    public Config getConfig() {
-        return config;
-    }
-
     Config config;
+    private static Logger log = LoggerFactory.getLogger("YamlReader.class");
 
     public YamlReader() {
 
@@ -39,5 +36,8 @@ public class YamlReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public DriverEnum getBrowserName(){
+        return getConfig().getBrowserConfig().getDriverEnum();
     }
 }

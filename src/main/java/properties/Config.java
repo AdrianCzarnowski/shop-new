@@ -10,4 +10,5 @@ public class Config {
     public Environment environment;
     public BrowserConfig browserConfig;
 
+
 }
