@@ -4,8 +4,6 @@ import model.User;
 
 public class UserBuilder {
 
-
-
     public User.UserBuilder getRandomUser() {
 
         User.UserBuilder user = new User.UserBuilder()

@@ -25,6 +25,7 @@ public class TestBase {
     public static FooterPage footerPage;
     public static PriceDropPage priceDropPage;
     public static ProductPage productPage;
+    public static CartPage cartPage;
 
     private static DriverFactory driverFactory = new DriverFactory();
     private static YamlReader yamlReader = new YamlReader();
@@ -43,7 +44,8 @@ public class TestBase {
         artPage = new ArtPage(driver);
         footerPage = new FooterPage(driver);
         priceDropPage = new PriceDropPage(driver);
-        productPage= new ProductPage(driver);
+        productPage = new ProductPage(driver);
+        cartPage = new CartPage(driver);
 
     }
 
