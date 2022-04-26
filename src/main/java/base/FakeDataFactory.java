@@ -1,4 +1,4 @@
-package helpers;
+package base;
 
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;

@@ -1,4 +1,4 @@
-package helpers;
+package base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.NoArgsConstructor;
@@ -14,7 +14,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import properties.Config;
 import properties.reader.YamlReader;
 
 @NoArgsConstructor

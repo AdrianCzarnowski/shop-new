@@ -1,10 +1,13 @@
+package tests;
+
+import base.Pages;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class CategoryPageTest extends TestBase {
+public class CategoryPageTest extends Pages {
 
     private static Logger log = LoggerFactory.getLogger("SearchResultTest.class");
 

@@ -54,15 +54,5 @@ public class Product {
             product.orderCost = this.orderCost;
             return product;
         }
-
-
-
-
-
-
-
-
-        
-
     }
 }

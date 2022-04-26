@@ -1,3 +1,6 @@
+package tests;
+
+import base.Pages;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,7 +9,7 @@ import static org.hamcrest.Matchers.containsString;
 
 
 
-public class SearchPageTest extends TestBase {
+public class SearchPageTest extends Pages {
 
     private static Logger log = LoggerFactory.getLogger("SearchResultTest.class");
     @Test

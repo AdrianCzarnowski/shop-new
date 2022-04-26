@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="fix browser">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/DriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/properties/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/properties/reader/YamlReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/reader/YamlReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AddProductsToBasketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddProductsToBasketTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CategoryPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CategoryPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PriceDropPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PriceDropPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,22 +52,28 @@
       <recent name="C:\Users\aczarnowski\IdeaProjects\shop-exc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PriceDropPageTest.onSaleProducts">
-    <configuration name="CategoryPageTest.artCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AddProductsToBasketTest.addRandomProduct">
+    <configuration name="AddProductsToBasketTest.addRandomProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CategoryPageTest" />
-      <option name="METHOD_NAME" value="artCategories" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddProductsToBasketTest" />
+      <option name="METHOD_NAME" value="addRandomProduct" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryPageTest.checkCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CategoryPageTest.artCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CategoryPageTest" />
-      <option name="METHOD_NAME" value="checkCategories" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CategoryPageTest" />
+      <option name="METHOD_NAME" value="artCategories" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -73,8 +81,8 @@
     </configuration>
     <configuration name="PriceDropPageTest.onSaleProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PriceDropPageTest" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PriceDropPageTest" />
       <option name="METHOD_NAME" value="onSaleProducts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -83,8 +91,8 @@
     </configuration>
     <configuration name="SearchPageTest.dropDownResult_MatchTo_InputProductName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SearchPageTest" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SearchPageTest" />
       <option name="METHOD_NAME" value="dropDownResult_MatchTo_InputProductName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -93,8 +101,8 @@
     </configuration>
     <configuration name="SearchPageTest.searchResult_MatchTo_InputProductName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SearchPageTest" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SearchPageTest" />
       <option name="METHOD_NAME" value="searchResult_MatchTo_InputProductName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -114,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddProductsToBasketTest.addRandomProduct" />
         <item itemvalue="JUnit.PriceDropPageTest.onSaleProducts" />
         <item itemvalue="JUnit.CategoryPageTest.artCategories" />
         <item itemvalue="JUnit.SearchPageTest.dropDownResult_MatchTo_InputProductName" />
         <item itemvalue="JUnit.SearchPageTest.searchResult_MatchTo_InputProductName" />
-        <item itemvalue="JUnit.CategoryPageTest.checkCategories" />
       </list>
     </recent_temporary>
   </component>
@@ -130,13 +138,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00005" summary="with faker lib.">
-      <created>1649843847246</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1649843847246</updated>
     </task>
     <task id="LOCAL-00006" summary="with faker lib.">
       <created>1649843868354</created>
@@ -474,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650978342778</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="fix browser">
+      <created>1650979072085</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1650979072085</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
