@@ -4,9 +4,13 @@ import model.Product;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
 public class CartOrderDetailsPage extends BasePage {
+
+    private static Logger log = LoggerFactory.getLogger("CartOrderDetailsPage.class");
 
     public CartOrderDetailsPage(WebDriver driver) {
         super(driver);
@@ -18,12 +22,29 @@ public class CartOrderDetailsPage extends BasePage {
     private WebElement productPrice;
     @FindBy(css="span.product-quantity > strong")
     private WebElement productQuantity;
-    @FindBy(css ="span.subtotal.valu")
+    @FindBy(css ="span.subtotal.value")
     private WebElement productsValue;
 
-    public Product build() {
-        Product product = new Product(getTextFromElement(productName), Double.parseDouble(getTextFromElement(productPrice)),
-                Integer.parseInt(getTextFromElement(productQuantity)),Double.parseDouble(getTextFromElement(productsValue)));
+    public Product newProductBuilder() {
+        String product1 = getTextFromElement(productName);
+        log.info(product1);
+        double price = Double.parseDouble(getTextFromElement(productPrice).substring(1));
+        log.info(String.valueOf(price));
+
+        Product product = new Product(getTextFromElement(productName), Double.parseDouble(getTextFromElement(productPrice).substring(1)),
+                Integer.parseInt(getTextFromElement(productQuantity)),Double.parseDouble(getTextFromElement(productsValue).substring(1)));
         return product;
+    }
+    public void productChart(Product product){
+        Product newProduct = newProductBuilder();
+        if (product.getProductList().size()>0){
+            for (int i = 0; i < product.getProductList().size(); i++) {
+                if (product.getProductList().get(i).equals(newProduct)){
+                    product.getProductList().get(i)
+                            .setQuantityOfProducts((product.getProductList()
+                                    .get(i).getQuantity()) + newProduct.getQuantity());
+                }else product.getProductList().add(newProduct);
+            }
+        }
     }
 }

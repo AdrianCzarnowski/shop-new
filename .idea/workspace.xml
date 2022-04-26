@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with pages">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/product/CartOrderDetailsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/ProductOnSalePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/CartOrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/CartOrderDetailsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductsToBasketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +53,8 @@
       <recent name="helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddProductsToBasketTest.addRandomProduct">
-    <configuration name="AddProductsToBasketTest.addRandomProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AddProductTest.addRandomProduct">
+    <configuration name="AddProductTest.addRandomProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <extension name="coverage">
         <pattern>
@@ -64,7 +63,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AddProductsToBasketTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddProductTest" />
       <option name="METHOD_NAME" value="addRandomProduct" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -124,7 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddProductsToBasketTest.addRandomProduct" />
+        <item itemvalue="JUnit.AddProductTest.addRandomProduct" />
         <item itemvalue="JUnit.PriceDropPageTest.onSaleProducts" />
         <item itemvalue="JUnit.CategoryPageTest.artCategories" />
         <item itemvalue="JUnit.SearchPageTest.dropDownResult_MatchTo_InputProductName" />
@@ -140,13 +139,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00007" summary="with faker lib.">
-      <created>1649846443758</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1649846443758</updated>
     </task>
     <task id="LOCAL-00008" summary="with loginPage">
       <created>1649878681685</created>
@@ -484,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650980815546</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="with pages">
+      <created>1650983650069</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1650983650070</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
