@@ -7,11 +7,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
-public class ProductPage extends BasePage {
+public class ProductOnSalePage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("CategoriesPage.class");
 
-    public ProductPage(WebDriver driver) {
+    public ProductOnSalePage(WebDriver driver) {
         super(driver);
     }
 
@@ -24,7 +24,7 @@ public class ProductPage extends BasePage {
     @FindBy(css="div:nth-child(2) > h1")
     private WebElement productName;
 
-    public ProductPage checkVisibilityOfSaveLabel() {
+    public ProductOnSalePage checkVisibilityOfSaveLabel() {
         waitToBeVisible(savePercent);
         waitToBeVisible(regularPrice);
         waitToBeVisible(discountPrice);
@@ -35,7 +35,7 @@ public class ProductPage extends BasePage {
         return this;
     }
 
-    public ProductPage checkCalculateDiscount() {
+    public ProductOnSalePage checkCalculateDiscount() {
         double regularPriceValue = Double.parseDouble(regularPrice.getText().substring(1));
         double discountPriceValue = Double.parseDouble(discountPrice.getText().substring(1));
         double priceAfterDiscount = regularPriceValue * (0.8);

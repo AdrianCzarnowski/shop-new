@@ -12,47 +12,39 @@ public class Product {
 
     private static Logger log = LoggerFactory.getLogger("DriverFactory");
 
+    private List<Product> productList = new ArrayList<>();
+
     private String productName;
     private double productPrice;
     private int quantity;
     private double orderCost;
+    private double allOrderCost;
+    private int quantityOfProducts;
 
 
-    public static final class ProductBuilder {
-        private String productName;
-        private double productPrice;
-        private int quantity;
-        private double orderCost;
-
-
-        public ProductBuilder productName(String productName) {
-            this.productName = productName;
-            return this;
-        }
-
-        public ProductBuilder productPrice(double productPrice) {
-            this.productPrice = productPrice;
-            return this;
-
-        }
-
-        public ProductBuilder quantity(int quantity) {
-            this.quantity = quantity;
-            return this;
-        }
-
-        public ProductBuilder orderCost(double orderCost) {
-            this.orderCost = orderCost;
-            return this;
-        }
-
-        public Product build() {
-            Product product = new Product();
-            product.productName = this.productName;
-            product.productPrice = this.productPrice;
-            product.quantity = this.quantity;
-            product.orderCost = this.orderCost;
-            return product;
-        }
+    public Product(String productName, double productPrice, int quantity, double orderCost) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.quantity = quantity;
+        this.orderCost = orderCost;
     }
+
+    public double getAllOrderZCost(List<Product> productList){
+        if (productList.size()>0){
+            for (Product product : productList){
+                allOrderCost+=product.getProductPrice()*product.getQuantity();
+            }
+        }
+        return allOrderCost;
+    }
+    public int getQuantityOfProducts(){
+        if (productList.size()>0){
+            for (Product product : productList){
+                quantityOfProducts+=product.getQuantity();
+            }
+        }
+        return quantityOfProducts;
+    }
+
 }
+

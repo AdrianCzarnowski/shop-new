@@ -10,7 +10,7 @@ public class Pages extends TestBase {
     public static ArtPage artPage;
     public static FooterPage footerPage;
     public static PriceDropPage priceDropPage;
-    public static ProductPage productPage;
+    public static ProductOnSalePage productPage;
     public static CartPage cartPage;
 
     @BeforeEach
@@ -20,7 +20,7 @@ public class Pages extends TestBase {
         artPage = new ArtPage(driver);
         footerPage = new FooterPage(driver);
         priceDropPage = new PriceDropPage(driver);
-        productPage = new ProductPage(driver);
+        productPage = new ProductOnSalePage(driver);
         cartPage = new CartPage(driver);
     }
 
