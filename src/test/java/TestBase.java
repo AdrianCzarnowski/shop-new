@@ -10,10 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.FooterPage;
 import pages.MenuPage;
-import pages.product.ArtPage;
-import pages.product.CategoryPage;
-import pages.product.PriceDropPage;
-import pages.product.SearchPage;
+import pages.product.*;
 import properties.App;
 import properties.reader.YamlReader;
 
@@ -27,6 +24,7 @@ public class TestBase {
     public static ArtPage artPage;
     public static FooterPage footerPage;
     public static PriceDropPage priceDropPage;
+    public static ProductPage productPage;
 
     private static DriverFactory driverFactory = new DriverFactory();
     private static YamlReader yamlReader = new YamlReader();
@@ -45,6 +43,7 @@ public class TestBase {
         artPage = new ArtPage(driver);
         footerPage = new FooterPage(driver);
         priceDropPage = new PriceDropPage(driver);
+        productPage= new ProductPage(driver);
 
     }
 

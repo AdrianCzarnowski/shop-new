@@ -19,7 +19,7 @@ public class PriceDropPage extends BasePage {
     @FindBy(css = "li:nth-child(2) > span")
     private WebElement subCategoriesTitle;
 
-    By discount = By.cssSelector("article > div > ul > li");
+    By discountLabel = By.cssSelector("article > div > ul > li");
     By regularPrice = By.cssSelector("span.regular-price");
     By discountPrice = By.cssSelector("span.price");
     By productName = By.cssSelector("div.product-description > h2");
@@ -31,10 +31,10 @@ public class PriceDropPage extends BasePage {
 
     public PriceDropPage checkOnSalePageAreLoaded() {
         log.info("Page header: " +getTextFromElement(onSaleTitle));
-        log.info("Subcaegory name: " +getTextFromElement(subCategoriesTitle));
+        log.info("Subcategory name: " +getTextFromElement(subCategoriesTitle));
         String subCategoriesToUpperCase = getTextFromElement(subCategoriesTitle).toUpperCase();
         assert (getTextFromElement(onSaleTitle).equals(subCategoriesToUpperCase));
-        log.info("<<<<<<<<<<<<<ON SALE page loaded");
+        log.info("<<<<<<<<<<<<<" + subCategoriesToUpperCase+ " page loaded");
         return this;
     }
 
@@ -42,7 +42,7 @@ public class PriceDropPage extends BasePage {
         log.info("Number of discounted products on the website: " + categoryPage.productList.size());
         for (int i = 0; i < categoryPage.productList.size(); i++) {
 
-            WebElement discountValue = categoryPage.productList.get(i).findElement(discount);
+            WebElement discountValue = categoryPage.productList.get(i).findElement(discountLabel);
             WebElement regularPriceValue = categoryPage.productList.get(i).findElement(regularPrice);
             WebElement discountPriceValue = categoryPage.productList.get(i).findElement(discountPrice);
             WebElement productNameValue = categoryPage.productList.get(i).findElement(productName);
@@ -60,7 +60,6 @@ public class PriceDropPage extends BasePage {
         return this;
     }
     public PriceDropPage calculateAndCheckDiscountPrice() {
-        log.info("Number of discounted products on the website: " + categoryPage.productList.size());
         for (int i = 0; i < categoryPage.productList.size(); i++) {
             WebElement productNameValue = categoryPage.productList.get(i).findElement(productName);
             log.info("<<<<<<<<<<<<<Product: " + productNameValue.getText());
@@ -79,6 +78,11 @@ public class PriceDropPage extends BasePage {
 
         }
         return  this;
+    }
+    public PriceDropPage openOneProduct() {
+        clickOnElement(randomValueFromList(categoryPage.productList));
+        log.info("<<<<<<<<<<<<<<<Go to random product page>>>>>>>>>>>>>>>>>>");
+        return this;
     }
 }
 

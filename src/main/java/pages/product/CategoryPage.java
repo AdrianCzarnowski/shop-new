@@ -20,7 +20,7 @@ public class CategoryPage extends BasePage {
     public List<WebElement> productList;
 
     @FindBy(css = "#js-product-list-header > div > h1")
-    private WebElement title;
+    public WebElement title;
     @FindBy(css = "div.col-md-6.hidden-sm-down.total-products")
     private WebElement productQuantity;
     @FindBy(xpath = "//ul[@class='category-sub-menu']//a")

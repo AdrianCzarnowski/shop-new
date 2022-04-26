@@ -30,7 +30,8 @@ public class SearchPage extends BasePage {
 
     HomePage homePage = new HomePage(driver);
     MenuPage menuPage = new MenuPage(driver);
-    String product = homePage.randomProductNameFromHomePage();
+
+    String product = homePage.randomProductFromHomePage();
 
 
     public SearchPage fillSearchBox(String value) {

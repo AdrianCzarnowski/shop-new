@@ -11,7 +11,10 @@ public class PriceDropPageTest extends TestBase {
         priceDropPage
                 .checkOnSalePageAreLoaded()
                 .checkVisibilityOfPricesAndDiscount()
-                .calculateAndCheckDiscountPrice();
-
+                .calculateAndCheckDiscountPrice()
+                .openOneProduct();
+        productPage
+                .checkVisibilityOfSaveLabel()
+                .checkCalculateDiscount();
     }
 }

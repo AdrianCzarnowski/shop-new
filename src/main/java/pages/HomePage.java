@@ -1,6 +1,5 @@
 package pages;
 
-import lombok.Data;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,7 +20,7 @@ public class HomePage extends BasePage {
     @FindBy(css = "div.product-description > h3")
     private List<WebElement> productsList;
 
-    public String randomProductNameFromHomePage(){
+    public String randomProductFromHomePage(){
         return randomValueFromList(productsList).getText();
     }
 }
