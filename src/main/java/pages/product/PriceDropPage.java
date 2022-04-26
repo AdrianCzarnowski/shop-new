@@ -59,6 +59,27 @@ public class PriceDropPage extends BasePage {
         }
         return this;
     }
+    public PriceDropPage calculateAndCheckDiscountPrice() {
+        log.info("Number of discounted products on the website: " + categoryPage.productList.size());
+        for (int i = 0; i < categoryPage.productList.size(); i++) {
+            WebElement productNameValue = categoryPage.productList.get(i).findElement(productName);
+            log.info("<<<<<<<<<<<<<Product: " + productNameValue.getText());
+
+            double regularPriceValue = Double.parseDouble(categoryPage.productList.get(i)
+                    .findElement(regularPrice).getText().substring(1));
+            double discountPriceValue = Double.parseDouble(categoryPage.productList.get(i)
+                    .findElement(discountPrice).getText().substring(1));
+            double priceAfterDiscount = regularPriceValue*(0.8);
+
+            assert (discountPriceValue == priceAfterDiscount);
+            log.info("Discount price is well calculated" + "" +
+                    " Regular price: "+ regularPriceValue + "$"+" after 20% off: " + priceAfterDiscount+"$");
+            assert (discountPriceValue<regularPriceValue);
+            log.info("Regular price is higher than the discounted price");
+
+        }
+        return  this;
+    }
 }
 
 

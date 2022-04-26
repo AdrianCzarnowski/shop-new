@@ -10,7 +10,8 @@ public class PriceDropPageTest extends TestBase {
         footerPage.clickPriceDropButton();
         priceDropPage
                 .checkOnSalePageAreLoaded()
-                .checkVisibilityOfPricesAndDiscount();
+                .checkVisibilityOfPricesAndDiscount()
+                .calculateAndCheckDiscountPrice();
 
     }
 }
