@@ -16,7 +16,7 @@ import java.util.Random;
 
 
 public class BasePage {
-    private static Logger logger = LoggerFactory.getLogger("BasePage.class");
+    private static Logger log = LoggerFactory.getLogger("BasePage.class");
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
@@ -44,17 +44,15 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
         highLightenerMethod(element);
         element.sendKeys(text);
-        logger.info("<<<<<<<<<<<<<Text in element: " + text);
+        log.info("Sent text: " + text);
     }
 
     public WebElement randomValueFromList(List<WebElement> elementList) {
         int size = new Random().nextInt(elementList.size() - 1);
-        logger.info("Rolled number: " + size);
         return elementList.get(size);
     }
 
     public String getTextFromElement(WebElement element) {
-//        wait.until(ExpectedConditions.visibilityOf(element));
         return element.getText();
     }
 
@@ -62,12 +60,6 @@ public class BasePage {
         actions.clickAndHold(element);
     }
 
-
-    public void scrollToElement(WebElement element) {
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
-        waitToBeVisible(element);
-        logger.info("<<<<<<<<<<<<<<<<<Scroll to element: " + element);
-    }
 
     public void waitToBeVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));

@@ -30,7 +30,7 @@ public class CartOrderDetailsPage extends BasePage {
     public Product newProductBuilder() {
         String productNameText = getTextFromElement(productName);
         String productPriceText = getTextFromElement(productPrice).replace("$", "");
-        String productQuantityText = getTextFromElement(productQuantity);
+        String productQuantityText = getTextFromElement(productQuantity).replace("$", "");
 
 
         Product product = new Product(productNameText, Double.parseDouble(productPriceText),
@@ -52,26 +52,12 @@ public class CartOrderDetailsPage extends BasePage {
             log.info("List contains item");
             Product productFromList = productList.get(productList.indexOf(newProduct));
             productFromList.setQuantityOfProducts(productFromList.getQuantity() + newProduct.getQuantity());
-            log.info("<<<<<<<<<<<<<<<<<Quantity updated: " + newProduct.getQuantity());
-        } else {
-            log.warn("List doesnt contian item");
-            productList.add(newProduct);
-            log.info("<<<<<<<<<<New product added: " + newProduct.getProductName());
-        }
+            log.info("Quantity updated " + newProduct.getProductName() + " quantity after updated: " + newProduct.getQuantity());
 
-//        if (productList.size() > 0) {
-//            for (int i = 0; i < productList.size(); i++) {
-//                if (productList.contains(newProduct)) {
-//                    productList.get(i)
-//                            .setQuantityOfProducts((productList
-//                                    .get(i).getQuantity()) + newProduct.getQuantity());
-//                    log.info("<<<<<<<<<<<<<<<<<Quantity updated: " + newProduct.getQuantity());
-//                    continue;
-//                } else {
-//                    productList.add(newProduct);
-//                    log.info("<<<<<<<<<<New product added: " + newProduct.getProductName());
-//                }
-//            }
-//        }
+        } else {
+            log.warn("List doesn't contains item");
+            productList.add(newProduct);
+            log.info("New product added: " + newProduct.getProductName());
+        }
     }
 }

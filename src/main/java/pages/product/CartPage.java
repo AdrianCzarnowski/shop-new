@@ -20,6 +20,7 @@ public class CartPage extends BasePage {
     private WebElement quantity;
     @FindBy(css = "div.add")
     private WebElement addToCartButton;
+
     public CartPage(WebDriver driver) {
         super(driver);
     }
@@ -27,14 +28,14 @@ public class CartPage extends BasePage {
     public CartPage clickRandomCategory() {
         log.info("Available categories: " + menuPage.categories.stream().map(WebElement::getText).collect(Collectors.toList()));
         WebElement category = randomValueFromList(menuPage.categories);
-        log.info("<<<<<<<<<<<category: " + category.getText());
+        log.info("Selected category: " + category.getText());
         clickOnElement(category);
         return this;
     }
 
     public CartPage clickRandomProduct() {
         WebElement product = randomValueFromList(categoryPage.productList);
-        log.info("<<<<<<<<<<<Product: " + product.getText());
+        log.info("Selected product: " + product.getText());
         clickOnElement(product);
         return this;
     }
