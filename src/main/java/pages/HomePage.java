@@ -9,18 +9,19 @@ import pages.base.BasePage;
 
 import java.util.List;
 
-
 public class HomePage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("HomePage.class");
+    @FindBy(css = "div.product-description > h3")
+    private List<WebElement> productsNameList;
 
     public HomePage(WebDriver driver) {
         super(driver);
     }
-    @FindBy(css = "div.product-description > h3")
-    private List<WebElement> productsList;
 
-    public String randomProductFromHomePage(){
-        return randomValueFromList(productsList).getText();
+    public String randomProductNameFromHomePage() {
+        return randomValueFromList(productsNameList).getText();
     }
+
+
 }

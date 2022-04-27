@@ -16,7 +16,7 @@ public class SearchPage extends BasePage {
     private static Logger log = LoggerFactory.getLogger("SearchPage.class");
     HomePage homePage = new HomePage(driver);
     MenuPage menuPage = new MenuPage(driver);
-    String product = homePage.randomProductFromHomePage();
+    String product = homePage.randomProductNameFromHomePage();
     @FindBy(css = "div.product-description")
     private WebElement searchResultProductName;
     @FindBy(css = "#ui-id-1")

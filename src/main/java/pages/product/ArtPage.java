@@ -29,6 +29,7 @@ public class ArtPage extends BasePage {
     private WebElement clearButton;
     @FindBy(css = "#category > div")
     private WebElement reload;
+
     public ArtPage(WebDriver driver) {
         super(driver);
     }

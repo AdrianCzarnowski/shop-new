@@ -19,9 +19,25 @@ public class AddProductTestModel extends Pages {
                     .setRandomQuantityValue()
                     .clickAddToCartButton();
             cartOrderDetailsPage
-                    .clickContinueShopping();
-            cartOrderDetailsPage
+                    .clickContinueShopping()
                     .checkCartOfProducts();
         }
+    }
+
+    @Test
+    public void basketTest() {
+        for (int i = 0; i < 5; i++) {
+            randomProductPage
+                    .clickRandomCategory()
+                    .clickRandomProduct()
+                    .clickAddToCartButton();
+            cartOrderDetailsPage
+                    .clickContinueShopping()
+                    .checkCartOfProducts();
+        }
+        randomProductPage
+                .clickBasketBtn()
+                .setFirstProductQuantity();
+
     }
 }

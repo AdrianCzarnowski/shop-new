@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with product basket">
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with config.yaml and new browser factory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/UserBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/UserBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/EnvironmentList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ProductModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/CartOrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/CartProductOrderDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/properties/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/SearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
       <recent name="helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddProductTestModel">
+  <component name="RunManager" selected="JUnit.AddProductTestModel.basketTest">
     <configuration name="AddProductTestModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <extension name="coverage">
@@ -82,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddProductTestModel.basketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <extension name="coverage">
         <pattern>
@@ -91,8 +89,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CategoryPageTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddProductTestModel" />
+      <option name="METHOD_NAME" value="basketTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasketTest.basketAdding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson12Shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.BasketTest" />
+      <option name="METHOD_NAME" value="basketAdding" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,7 +122,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PriceDropPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PriceDropPageTest.onSaleProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <extension name="coverage">
         <pattern>
@@ -117,22 +132,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.PriceDropPageTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lesson12Shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchPageTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="onSaleProducts" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddProductTestModel" />
-        <item itemvalue="JUnit.SearchPageTest" />
-        <item itemvalue="JUnit.PriceDropPageTest" />
-        <item itemvalue="JUnit.CategoryPageTest" />
+        <item itemvalue="JUnit.AddProductTestModel.basketTest" />
+        <item itemvalue="JUnit.BasketTest.basketAdding" />
+        <item itemvalue="JUnit.PriceDropPageTest.onSaleProducts" />
         <item itemvalue="JUnit.CategoryPageTest.artCategories" />
+        <item itemvalue="JUnit.AddProductTestModel" />
       </list>
     </recent_temporary>
   </component>
@@ -166,20 +167,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00018" summary="with flags">
-      <created>1650472144163</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1650472144163</updated>
-    </task>
-    <task id="LOCAL-00019" summary="with flags">
-      <created>1650472920473</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1650472920473</updated>
     </task>
     <task id="LOCAL-00020" summary="with flags">
       <created>1650475396356</created>
@@ -510,7 +497,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651057188410</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="with config.yaml and new browser factory">
+      <created>1651058291155</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1651058291155</updated>
+    </task>
+    <task id="LOCAL-00068" summary="with config.yaml and new browser factory">
+      <created>1651058473926</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1651058473927</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,7 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial" />
     <MESSAGE value="with POP" />
     <MESSAGE value="with logger" />
     <MESSAGE value="with faker lib." />
@@ -562,7 +562,8 @@
     <MESSAGE value="fix browser" />
     <MESSAGE value="with pages" />
     <MESSAGE value="with product basket" />
-    <option name="LAST_COMMIT_MESSAGE" value="with product basket" />
+    <MESSAGE value="with config.yaml and new browser factory" />
+    <option name="LAST_COMMIT_MESSAGE" value="with config.yaml and new browser factory" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
