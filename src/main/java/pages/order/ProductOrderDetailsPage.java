@@ -48,7 +48,6 @@ public class ProductOrderDetailsPage extends BasePage {
     public void checkCartOfProducts() {
         Product newProduct = newProductBuilder();
 
-
         if (productList.contains(newProduct)) {
             Product productFromList = productList.get(productList.indexOf(newProduct));
             log.info("List contains item");
@@ -62,12 +61,11 @@ public class ProductOrderDetailsPage extends BasePage {
             newProduct.setAllOrderCost(newProduct.getProductPrice() * newProduct.getQuantity());
         }
 
-        log.info("Products in list:");
+        log.info("Products in list: ");
         productList.forEach(product -> log.info("\t- " + product.toString() + "\n"));
-        double value = newProduct.getProductPrice() * newProduct.getQuantity();
-        log.info("Cost of items: ");
-        log.info(String.valueOf(value));
-
+//        double value = newProduct.getProductPrice() * newProduct.getQuantity();
+//        log.info("Cost of items: ");
+//        log.info(String.valueOf(value));
     }
 }
 

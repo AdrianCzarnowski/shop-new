@@ -1,6 +1,7 @@
 package tests;
 
 import base.Pages;
+import model.Product;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,8 +38,11 @@ public class AddProductTestModel extends Pages {
                     .clickContinueShopping()
                     .checkCartOfProducts();
         }
+        log.info("Total cost of items: ");
+        log.info(String.valueOf(Product.getAllOrderCost()));
         randomProductPage
                 .clickBasketBtn();
+
 //                .setFirstProductQuantity();
 
     }

@@ -13,11 +13,10 @@ public class Product {
 
     public static List<Product> productList = new ArrayList<>();
     private static Logger log = LoggerFactory.getLogger("DriverFactory");
+    private static double allOrderCost = 0.0;
     private String productName;
     private double productPrice;
-    private int quantity;
-    private double orderCost = 0.0;
-    private double allOrderCost = 0.0;
+    private int quantity = 0;
     private int quantityOfProducts = 0;
 
     public Product(String productName, double productPrice, int quantity) {
@@ -26,6 +25,18 @@ public class Product {
         this.quantity = quantity;
     }
 
+    public static double getAllOrderCost() {
+        if (productList.size() > 0) {
+            for (Product product : productList) {
+                allOrderCost += product.getQuantity() * product.productPrice;
+            }
+        }
+        return allOrderCost;
+    }
+
+    public void setAllOrderCost(double allOrderCost) {
+        this.allOrderCost = allOrderCost;
+    }
 
     public int getQuantityOfProducts() {
         if (productList.size() > 0) {
@@ -35,7 +46,6 @@ public class Product {
         }
         return quantityOfProducts;
     }
-
 
     @Override
     public String toString() {
