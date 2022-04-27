@@ -54,24 +54,20 @@ public class ProductOrderDetailsPage extends BasePage {
             log.info("List contains item");
             productFromList.setQuantityOfProducts(productFromList.getQuantity() + newProduct.getQuantity());
             log.info("Quantity updated " + newProduct.getProductName() + " quantity after updated: " + newProduct.getQuantity());
-            log.info("Cost of items after update quantity: ");
-            double value = newProduct.getProductPrice() * newProduct.getQuantity();
-            log.info(String.valueOf(value));
-
 
         } else {
             log.warn("List doesn't contains item");
             productList.add(newProduct);
             log.info("New product added: " + newProduct.getProductName());
             newProduct.setAllOrderCost(newProduct.getProductPrice() * newProduct.getQuantity());
-            log.info("Cost of items after added new product: ");
-            double value = newProduct.getProductPrice() * newProduct.getQuantity();
-            log.info(String.valueOf(value));
-
         }
 
         log.info("Products in list:");
-        productList.forEach(p -> log.info("\t- " + p.toString() + "\n"));
-    }
+        productList.forEach(product -> log.info("\t- " + product.toString() + "\n"));
+        double value = newProduct.getProductPrice() * newProduct.getQuantity();
+        log.info("Cost of items: ");
+        log.info(String.valueOf(value));
 
+    }
 }
+

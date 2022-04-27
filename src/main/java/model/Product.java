@@ -36,14 +36,6 @@ public class Product {
         return quantityOfProducts;
     }
 
-    public double getAllOrderCost() {
-        if (productList.size() > 0) {
-            for (Product product : productList) {
-                allOrderCost += product.getQuantity() * product.productPrice;
-            }
-        }
-        return allOrderCost;
-    }
 
     @Override
     public String toString() {

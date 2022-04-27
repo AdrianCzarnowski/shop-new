@@ -27,6 +27,7 @@ public class AddProductTestModel extends Pages {
 
     @Test
     public void basketTest() {
+
         for (int i = 0; i < 5; i++) {
             randomProductPage
                     .clickRandomCategory()
