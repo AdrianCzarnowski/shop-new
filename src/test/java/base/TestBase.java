@@ -19,8 +19,7 @@ public class TestBase {
 
     @BeforeEach
     void beforeEach() {
-        driver = driverFactory.getDriver(driverFactory.getBrowserName());
-
+        driver = driverFactory.getDriver(app.setBrowserFromYaml());
     }
 
     @AfterEach

@@ -18,9 +18,9 @@ import properties.reader.YamlReader;
 
 @NoArgsConstructor
 public class DriverFactory {
-    private WebDriver driver;
-    private  static Logger log = LoggerFactory.getLogger("DriverFactory");
+    private static Logger log = LoggerFactory.getLogger("DriverFactory");
     YamlReader yamlReader = new YamlReader();
+    private WebDriver driver;
 
     public WebDriver getDriver(DriverEnum driverEnum) {
         switch (driverEnum) {
@@ -53,10 +53,7 @@ public class DriverFactory {
         }
         return driver;
     }
-
-    public DriverEnum getBrowserName(){
-        return yamlReader.getConfig().getBrowserConfig().getDriverEnum();
-    }
-
 }
+
+
 

@@ -21,9 +21,7 @@ public class AddProductTest extends Pages {
             cartOrderDetailsPage
                     .clickCountinueShopping();
             cartOrderDetailsPage
-                    .productChart();
+                    .checkCartOfProducts();
         }
-
-
     }
 }

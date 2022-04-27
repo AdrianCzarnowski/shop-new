@@ -14,13 +14,9 @@ import pages.base.BasePage;
 public class SearchPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("SearchPage.class");
-
-
-
-    public SearchPage(WebDriver driver) {
-        super(driver);
-    }
-
+    HomePage homePage = new HomePage(driver);
+    MenuPage menuPage = new MenuPage(driver);
+    String product = homePage.randomProductFromHomePage();
     @FindBy(css = "div.product-description")
     private WebElement searchResultProductName;
     @FindBy(css = "#ui-id-1")
@@ -28,14 +24,12 @@ public class SearchPage extends BasePage {
     @FindBy(css = "#products")
     private WebElement listOfSearchProduct;
 
-    HomePage homePage = new HomePage(driver);
-    MenuPage menuPage = new MenuPage(driver);
-
-    String product = homePage.randomProductFromHomePage();
-
+    public SearchPage(WebDriver driver) {
+        super(driver);
+    }
 
     public SearchPage fillSearchBox(String value) {
-        sendKeys(menuPage.searchBox,value,false);
+        sendKeys(menuPage.searchBox, value, false);
         return this;
     }
 
@@ -58,7 +52,7 @@ public class SearchPage extends BasePage {
     }
 
     public SearchPage fillSearchBox() {
-        log.info("<<<<<<Random product name: " + product);
+        log.info("Random product name: " + product);
         fillSearchBox(product);
         return this;
     }

@@ -44,10 +44,9 @@ public class CartOrderDetailsPage extends BasePage {
         return this;
     }
 
-    public void productChart() {
+    public void checkCartOfProducts() {
         Product newProduct = newProductBuilder();
-        log.info("Products in list:");
-        productList.forEach(p -> log.info("\t- " + p.toString() + "\n"));
+
         if (productList.contains(newProduct)) {
             log.info("List contains item");
             Product productFromList = productList.get(productList.indexOf(newProduct));
@@ -59,5 +58,7 @@ public class CartOrderDetailsPage extends BasePage {
             productList.add(newProduct);
             log.info("New product added: " + newProduct.getProductName());
         }
+        log.info("Products in list:");
+        productList.forEach(p -> log.info("\t- " + p.toString() + "\n"));
     }
 }

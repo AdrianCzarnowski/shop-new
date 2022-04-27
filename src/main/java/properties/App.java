@@ -1,5 +1,6 @@
 package properties;
 
+import model.DriverEnum;
 import model.EnvironmentModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,16 +11,20 @@ import java.util.Map;
 
 public class App {
     private static Logger log = LoggerFactory.getLogger("AppProperties.class");
+    YamlReader yamlReader = new YamlReader();
 
     public App() {
         setEnvironmentFromYaml();
     }
 
+    public DriverEnum setBrowserFromYaml() {
+        return yamlReader.getConfig().getBrowserConfig().getDriverEnum();
+    }
+
     private void setEnvironmentFromYaml() {
-        YamlReader yamlReader = new YamlReader();
+
         List<EnvironmentModel> environments = yamlReader.getConfig().getEnvironment().getEnvironments();
         boolean foundActiveBrowser = false;
-
         for (EnvironmentModel environmentModel : environments) {
             if (environmentModel.isActive()) {
                 foundActiveBrowser = true;

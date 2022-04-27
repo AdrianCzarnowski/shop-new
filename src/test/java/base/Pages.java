@@ -17,7 +17,7 @@ public class Pages extends TestBase {
     public static Product product;
 
     @BeforeEach
-    public void testSetup(){
+    public void testSetup() {
         searchPage = new SearchPage(driver);
         categoryPage = new CategoryPage(driver);
         artPage = new ArtPage(driver);
@@ -26,7 +26,5 @@ public class Pages extends TestBase {
         productPage = new ProductOnSalePage(driver);
         cartPage = new CartPage(driver);
         cartOrderDetailsPage = new CartOrderDetailsPage(driver);
-
     }
-
 }

@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with pages">
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with product basket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/DriverFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/ArtPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/CartOrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/CartOrderDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/CategoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/CategoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/PriceDropPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/PriceDropPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/properties/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Pages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,13 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00015" summary="with wrappers">
-      <created>1650457705464</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1650457705464</updated>
     </task>
     <task id="LOCAL-00016" summary="with wrappers">
       <created>1650466463285</created>
@@ -497,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651053095274</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="with product basket">
+      <created>1651055426544</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1651055426544</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -548,7 +555,8 @@
     <MESSAGE value="with ProductModel" />
     <MESSAGE value="fix browser" />
     <MESSAGE value="with pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="with pages" />
+    <MESSAGE value="with product basket" />
+    <option name="LAST_COMMIT_MESSAGE" value="with product basket" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -25,15 +25,7 @@ public class Product {
         this.productPrice = productPrice;
         this.quantity = quantity;
     }
-
-    public double getAllOrderZCost(List<Product> productList) {
-        if (productList.size() > 0) {
-            for (Product product : productList) {
-                allOrderCost += product.getProductPrice() * product.getQuantity();
-            }
-        }
-        return allOrderCost;
-    }
+    
 
     public int getQuantityOfProducts() {
         if (productList.size() > 0) {
