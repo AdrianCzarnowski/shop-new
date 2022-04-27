@@ -6,14 +6,13 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Data
 public class Product {
 
+    public static List<Product> productList = new ArrayList<>();
     private static Logger log = LoggerFactory.getLogger("DriverFactory");
-
-    private List<Product> productList = new ArrayList<>();
-
     private String productName;
     private double productPrice;
     private int quantity;
@@ -21,29 +20,53 @@ public class Product {
     private double allOrderCost;
     private int quantityOfProducts;
 
-    public Product(String productName, double productPrice, int quantity, double orderCost) {
+    public Product(String productName, double productPrice, int quantity) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.quantity = quantity;
-        this.orderCost = orderCost;
     }
 
-    public double getAllOrderZCost(List<Product> productList){
-        if (productList.size()>0){
-            for (Product product : productList){
-                allOrderCost+=product.getProductPrice()*product.getQuantity();
+    public double getAllOrderZCost(List<Product> productList) {
+        if (productList.size() > 0) {
+            for (Product product : productList) {
+                allOrderCost += product.getProductPrice() * product.getQuantity();
             }
         }
         return allOrderCost;
     }
-    public int getQuantityOfProducts(){
-        if (productList.size()>0){
-            for (Product product : productList){
-                quantityOfProducts+=product.getQuantity();
+
+    public int getQuantityOfProducts() {
+        if (productList.size() > 0) {
+            for (Product product : productList) {
+                quantityOfProducts += product.getQuantity();
             }
         }
         return quantityOfProducts;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                ", quantity=" + quantity +
+                ", orderCost=" + orderCost +
+                ", allOrderCost=" + allOrderCost +
+                ", quantityOfProducts=" + quantityOfProducts +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Double.compare(product.productPrice, productPrice) == 0 && Objects.equals(productName, product.productName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productName, productPrice);
+    }
 }
 

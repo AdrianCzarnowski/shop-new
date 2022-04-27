@@ -9,39 +9,45 @@ import pages.MenuPage;
 import pages.base.BasePage;
 
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class CartPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("CategoriesPage.class");
-
+    MenuPage menuPage = new MenuPage(driver);
+    CategoryPage categoryPage = new CategoryPage(driver);
+    @FindBy(css = "#quantity_wanted")
+    private WebElement quantity;
+    @FindBy(css = "div.add")
+    private WebElement addToCartButton;
     public CartPage(WebDriver driver) {
         super(driver);
     }
 
-    MenuPage menuPage = new MenuPage(driver);
-    CategoryPage categoryPage = new CategoryPage(driver);
-
-    @FindBy(css="#quantity_wanted")
-    private WebElement quantity;
-    @FindBy(css ="div.add")
-    private WebElement addToCartButton;
-
-
-    public CartPage clickRandomCategory(){
-        clickOnElement(randomValueFromList(menuPage.categories));
+    public CartPage clickRandomCategory() {
+        log.info("Available categories: " + menuPage.categories.stream().map(WebElement::getText).collect(Collectors.toList()));
+        WebElement category = randomValueFromList(menuPage.categories);
+        log.info("<<<<<<<<<<<category: " + category.getText());
+        clickOnElement(category);
         return this;
     }
 
-    public CartPage clickRandomProduct(){
-        clickOnElement(randomValueFromList(categoryPage.productList));
+    public CartPage clickRandomProduct() {
+        WebElement product = randomValueFromList(categoryPage.productList);
+        log.info("<<<<<<<<<<<Product: " + product.getText());
+        clickOnElement(product);
         return this;
     }
-    public CartPage setRandomQuantityValue(){
+
+    public CartPage setRandomQuantityValue() {
         Random random = new Random();
-        sendKeys(quantity, String.valueOf(random.nextInt(4)+1), true);
+        int value = random.nextInt(4) + 1;
+        log.info("quantity: " + value);
+        sendKeys(quantity, String.valueOf(value), true);
         return this;
     }
-    public CartPage clickAddToCartButton(){
+
+    public CartPage clickAddToCartButton() {
         clickOnElement(addToCartButton);
         return this;
     }

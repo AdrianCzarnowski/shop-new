@@ -12,14 +12,17 @@ public class AddProductTest extends Pages {
 
     @Test
     public void addRandomProduct() {
-        cartPage
-                .clickRandomCategory()
-                .clickRandomProduct()
-                .setRandomQuantityValue()
-                .clickAddToCartButton();
-        cartOrderDetailsPage
-                .clickCountinueShopping();
-//                .productChart(product);
+        for (int i = 0; i < 5; i++) {
+            cartPage
+                    .clickRandomCategory()
+                    .clickRandomProduct()
+                    .setRandomQuantityValue()
+                    .clickAddToCartButton();
+            cartOrderDetailsPage
+                    .clickCountinueShopping();
+            cartOrderDetailsPage
+                    .productChart();
+        }
 
 
     }
