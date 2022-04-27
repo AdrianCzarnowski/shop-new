@@ -15,7 +15,7 @@ public class RandomProductPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("CategoriesPage.class");
 
-    public int numberOfAdditionToCart = Integer.parseInt(System.getProperty("number_of_addition_to_cart"));
+    public final int numberOfAdditionToCart = Integer.parseInt(System.getProperty("number_of_addition_to_cart"));
     MenuPage menuPage = new MenuPage(driver);
     CategoryPage categoryPage = new CategoryPage(driver);
     @FindBy(css = "#quantity_wanted")
