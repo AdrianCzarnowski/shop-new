@@ -9,6 +9,7 @@ environment:
     max_value_first_filter: $10.00
     min_value_second_filter: $9.00
     max_value_second_filter: $29.00
+    number_of_addition_to_cart: 3
   init:
     appUrl: http://146.59.32.4
     active: false
@@ -16,6 +17,7 @@ environment:
     max_value_first_filter: $10.00
     min_value_second_filter: $9.00
     max_value_second_filter: $29.00
+    number_of_addition_to_cart: 3
 
 
 

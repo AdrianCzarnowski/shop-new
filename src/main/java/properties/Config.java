@@ -2,11 +2,11 @@ package properties;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import model.Environment;
+import model.EnvironmentList;
 
 @Data
 @NoArgsConstructor
 public class Config {
-    public Environment environment;
+    public EnvironmentList environment;
     public BrowserConfig browserConfig;
 }

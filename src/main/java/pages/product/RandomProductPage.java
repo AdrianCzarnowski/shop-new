@@ -11,9 +11,11 @@ import pages.base.BasePage;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-public class CartPage extends BasePage {
+public class RandomProductPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("CategoriesPage.class");
+
+    public int numberOfAdditionToCart = Integer.parseInt(System.getProperty("number_of_addition_to_cart"));
     MenuPage menuPage = new MenuPage(driver);
     CategoryPage categoryPage = new CategoryPage(driver);
     @FindBy(css = "#quantity_wanted")
@@ -21,11 +23,11 @@ public class CartPage extends BasePage {
     @FindBy(css = "div.add")
     private WebElement addToCartButton;
 
-    public CartPage(WebDriver driver) {
+    public RandomProductPage(WebDriver driver) {
         super(driver);
     }
 
-    public CartPage clickRandomCategory() {
+    public RandomProductPage clickRandomCategory() {
         log.info("Available categories: " + menuPage.categories.stream().map(WebElement::getText).collect(Collectors.toList()));
         WebElement category = randomValueFromList(menuPage.categories);
         log.info("Selected category: " + category.getText());
@@ -33,14 +35,14 @@ public class CartPage extends BasePage {
         return this;
     }
 
-    public CartPage clickRandomProduct() {
+    public RandomProductPage clickRandomProduct() {
         WebElement product = randomValueFromList(categoryPage.productList);
         log.info("Selected product: " + product.getText());
         clickOnElement(product);
         return this;
     }
 
-    public CartPage setRandomQuantityValue() {
+    public RandomProductPage setRandomQuantityValue() {
         Random random = new Random();
         int value = random.nextInt(4) + 1;
         log.info("quantity: " + value);
@@ -48,7 +50,7 @@ public class CartPage extends BasePage {
         return this;
     }
 
-    public CartPage clickAddToCartButton() {
+    public RandomProductPage clickAddToCartButton() {
         clickOnElement(addToCartButton);
         return this;
     }

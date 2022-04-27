@@ -1,12 +1,12 @@
 package base;
 
-import model.User;
+import model.UserModel;
 
 public class UserBuilder {
 
-    public User.UserBuilder getRandomUser() {
+    public UserModel.UserBuilder getRandomUser() {
 
-        User.UserBuilder user = new User.UserBuilder()
+        UserModel.UserBuilder user = new UserModel.UserBuilder()
                 .firstName(FakeDataFactory.getFakeFirstName())
                 .lastName(FakeDataFactory.getFakeLastName())
                 .email(FakeDataFactory.getFakeEmail())
@@ -15,8 +15,8 @@ public class UserBuilder {
         return user;
     }
 
-    public User.UserBuilder getAlreadyRegisterUser() {
-        User.UserBuilder user = new User.UserBuilder()
+    public UserModel.UserBuilder getAlreadyRegisterUser() {
+        UserModel.UserBuilder user = new UserModel.UserBuilder()
                 .firstName("Jan")
                 .lastName("Kowalski")
                 .email("jankowalski@gmail.com")

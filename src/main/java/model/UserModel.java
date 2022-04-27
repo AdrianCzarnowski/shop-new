@@ -3,7 +3,7 @@ package model;
 import lombok.Data;
 
 @Data
-public class User {
+public class UserModel {
     private String firstName;
     private String lastName;
     private String email;
@@ -42,7 +42,7 @@ public class User {
             return this;
         }
 
-        public User build() {
+        public UserModel build() {
             if (firstName.isEmpty()) {
                 throw new IllegalStateException("Firstname cannot be empty");
             }
@@ -58,7 +58,7 @@ public class User {
             if (birthDate.isEmpty()) {
                 throw new IllegalStateException("birthdate cannot be empty");
             }
-            User user = new User();
+            UserModel user = new UserModel();
             user.firstName = this.firstName;
             user.lastName = this.lastName;
             user.email = this.email;

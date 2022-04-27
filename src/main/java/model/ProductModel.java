@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Objects;
 
 @Data
-public class Product {
+public class ProductModel {
 
-    public static List<Product> productList = new ArrayList<>();
+    public static List<ProductModel> productList = new ArrayList<>();
     private static Logger log = LoggerFactory.getLogger("DriverFactory");
     private String productName;
     private double productPrice;
@@ -20,16 +20,16 @@ public class Product {
     private double allOrderCost;
     private int quantityOfProducts;
 
-    public Product(String productName, double productPrice, int quantity) {
+    public ProductModel(String productName, double productPrice, int quantity) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.quantity = quantity;
     }
-    
+
 
     public int getQuantityOfProducts() {
         if (productList.size() > 0) {
-            for (Product product : productList) {
+            for (ProductModel product : productList) {
                 quantityOfProducts += product.getQuantity();
             }
         }
@@ -48,7 +48,7 @@ public class Product {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
+        ProductModel product = (ProductModel) o;
         return Double.compare(product.productPrice, productPrice) == 0 && Objects.equals(productName, product.productName);
     }
 

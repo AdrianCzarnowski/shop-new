@@ -9,9 +9,10 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-public class Environment {
+public class EnvironmentList {
     public EnvironmentModel prod;
     public EnvironmentModel init;
+
     public List<EnvironmentModel> getEnvironments() {
         List<EnvironmentModel> environments = new ArrayList<>();
         environments.add(getProd());
