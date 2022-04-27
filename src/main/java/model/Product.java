@@ -9,18 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 @Data
-public class ProductModel {
+public class Product {
 
-    public static List<ProductModel> productList = new ArrayList<>();
+    public static List<Product> productList = new ArrayList<>();
     private static Logger log = LoggerFactory.getLogger("DriverFactory");
     private String productName;
     private double productPrice;
     private int quantity;
-    private double orderCost;
-    private double allOrderCost;
-    private int quantityOfProducts;
+    private double orderCost = 0.0;
+    private double allOrderCost = 0.0;
+    private int quantityOfProducts = 0;
 
-    public ProductModel(String productName, double productPrice, int quantity) {
+    public Product(String productName, double productPrice, int quantity) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.quantity = quantity;
@@ -29,11 +29,20 @@ public class ProductModel {
 
     public int getQuantityOfProducts() {
         if (productList.size() > 0) {
-            for (ProductModel product : productList) {
+            for (Product product : productList) {
                 quantityOfProducts += product.getQuantity();
             }
         }
         return quantityOfProducts;
+    }
+
+    public double getAllOrderCost() {
+        if (productList.size() > 0) {
+            for (Product product : productList) {
+                allOrderCost += product.getQuantity() * product.productPrice;
+            }
+        }
+        return allOrderCost;
     }
 
     @Override
@@ -48,7 +57,7 @@ public class ProductModel {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ProductModel product = (ProductModel) o;
+        Product product = (Product) o;
         return Double.compare(product.productPrice, productPrice) == 0 && Objects.equals(productName, product.productName);
     }
 

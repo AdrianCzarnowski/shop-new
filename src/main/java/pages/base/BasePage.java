@@ -31,6 +31,10 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    public static String getTextFromElement(WebElement element) {
+        return element.getText();
+    }
+
     public void clickOnElement(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
@@ -50,10 +54,6 @@ public class BasePage {
     public WebElement randomValueFromList(List<WebElement> elementList) {
         int size = new Random().nextInt(elementList.size() - 1);
         return elementList.get(size);
-    }
-
-    public String getTextFromElement(WebElement element) {
-        return element.getText();
     }
 
     public void clickAndHold(WebElement element) {

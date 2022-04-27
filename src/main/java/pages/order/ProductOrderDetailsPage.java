@@ -1,6 +1,6 @@
-package pages.product;
+package pages.order;
 
-import model.ProductModel;
+import model.Product;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,57 +8,70 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
-import static model.ProductModel.productList;
+import static model.Product.productList;
 
-public class CartProductOrderDetailsPage extends BasePage {
+public class ProductOrderDetailsPage extends BasePage {
 
-    private static Logger log = LoggerFactory.getLogger("CartOrderDetailsPage.class");
+    private static Logger log = LoggerFactory.getLogger("ProductOrderDetailsPage.class");
     @FindBy(css = ".product-container [itemprop=name]")
-    private WebElement productName;
+    private static WebElement productName;
     @FindBy(css = "div.col-md-5.divide-right > div > div:nth-child(2) > p")
-    private WebElement productPrice;
+    private static WebElement productPrice;
     @FindBy(css = "span.product-quantity > strong")
-    private WebElement productQuantity;
+    private static WebElement productQuantity;
 
     @FindBy(css = "div.col-md-7 > div > div > button")
     private WebElement continueShoppingBtn;
 
-    public CartProductOrderDetailsPage(WebDriver driver) {
+    public ProductOrderDetailsPage(WebDriver driver) {
         super(driver);
     }
 
-    public ProductModel newProductBuilder() {
+
+    public static Product newProductBuilder() {
         String productNameText = getTextFromElement(productName);
         String productPriceText = getTextFromElement(productPrice).replace("$", "");
         String productQuantityText = getTextFromElement(productQuantity).replace("$", "");
 
 
-        ProductModel product = new ProductModel(productNameText, Double.parseDouble(productPriceText),
+        Product product = new Product(productNameText, Double.parseDouble(productPriceText),
                 Integer.parseInt(productQuantityText));
         log.info("Created item:" + product);
         return product;
     }
 
-    public CartProductOrderDetailsPage clickContinueShopping() {
+    public ProductOrderDetailsPage clickContinueShopping() {
         clickOnElement(continueShoppingBtn);
         return this;
     }
 
     public void checkCartOfProducts() {
-        ProductModel newProduct = newProductBuilder();
+        Product newProduct = newProductBuilder();
+
 
         if (productList.contains(newProduct)) {
+            Product productFromList = productList.get(productList.indexOf(newProduct));
             log.info("List contains item");
-            ProductModel productFromList = productList.get(productList.indexOf(newProduct));
             productFromList.setQuantityOfProducts(productFromList.getQuantity() + newProduct.getQuantity());
             log.info("Quantity updated " + newProduct.getProductName() + " quantity after updated: " + newProduct.getQuantity());
+            log.info("Cost of items after update quantity: ");
+            double value = newProduct.getProductPrice() * newProduct.getQuantity();
+            log.info(String.valueOf(value));
+
 
         } else {
             log.warn("List doesn't contains item");
             productList.add(newProduct);
             log.info("New product added: " + newProduct.getProductName());
+            newProduct.setAllOrderCost(newProduct.getProductPrice() * newProduct.getQuantity());
+            log.info("Cost of items after added new product: ");
+            double value = newProduct.getProductPrice() * newProduct.getQuantity();
+            log.info(String.valueOf(value));
+
         }
+
         log.info("Products in list:");
         productList.forEach(p -> log.info("\t- " + p.toString() + "\n"));
     }
+
 }

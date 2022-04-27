@@ -21,6 +21,7 @@ public class AddProductTestModel extends Pages {
             cartOrderDetailsPage
                     .clickContinueShopping()
                     .checkCartOfProducts();
+
         }
     }
 
@@ -36,8 +37,8 @@ public class AddProductTestModel extends Pages {
                     .checkCartOfProducts();
         }
         randomProductPage
-                .clickBasketBtn()
-                .setFirstProductQuantity();
+                .clickBasketBtn();
+//                .setFirstProductQuantity();
 
     }
 }

@@ -26,6 +26,8 @@ public class RandomProductPage extends BasePage {
     private WebElement addToCartButton;
     @FindBy(css = "#_desktop_cart")
     private WebElement basket;
+    @FindBy(css = " div:nth-child(2) > h1")
+    private WebElement selectedProductName;
 
     @FindBy(xpath = "//li[1]/div/div[3]/div/div[2]/div/div[1]/div/input")
     private WebElement firstProduct;
@@ -44,8 +46,8 @@ public class RandomProductPage extends BasePage {
 
     public RandomProductPage clickRandomProduct() {
         WebElement product = randomValueFromList(categoryPage.productList);
-        log.info("Selected product: " + product.getText());
         clickOnElement(product);
+        log.info("Selected product: " + getTextFromElement(selectedProductName));
         return this;
     }
 
