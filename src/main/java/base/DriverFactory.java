@@ -14,12 +14,10 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import properties.reader.YamlReader;
 
 @NoArgsConstructor
 public class DriverFactory {
     private static Logger log = LoggerFactory.getLogger("DriverFactory");
-    YamlReader yamlReader = new YamlReader();
     private WebDriver driver;
 
     public WebDriver getDriver(DriverEnum driverEnum) {
