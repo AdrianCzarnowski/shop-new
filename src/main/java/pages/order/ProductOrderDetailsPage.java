@@ -10,6 +10,7 @@ import pages.base.BasePage;
 
 import static model.Product.productList;
 
+
 public class ProductOrderDetailsPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("ProductOrderDetailsPage.class");
@@ -19,7 +20,7 @@ public class ProductOrderDetailsPage extends BasePage {
     private static WebElement productPrice;
     @FindBy(css = "span.product-quantity > strong")
     private static WebElement productQuantity;
-
+    public Product newProduct;
     @FindBy(css = "div.col-md-7 > div > div > button")
     private WebElement continueShoppingBtn;
 
@@ -27,8 +28,7 @@ public class ProductOrderDetailsPage extends BasePage {
         super(driver);
     }
 
-
-    public static Product newProductBuilder() {
+    public Product newProductBuilder() {
         String productNameText = getTextFromElement(productName);
         highLightenerMethod(productPrice);
         String productPriceText = getTextFromElement(productPrice).replace("$", "");
@@ -47,7 +47,7 @@ public class ProductOrderDetailsPage extends BasePage {
     }
 
     public void checkCartOfProducts() {
-        Product newProduct = newProductBuilder();
+        newProduct = newProductBuilder();
 
 
         if (productList.contains(newProduct)) {

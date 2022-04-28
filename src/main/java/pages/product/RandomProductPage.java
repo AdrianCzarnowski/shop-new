@@ -18,6 +18,7 @@ public class RandomProductPage extends BasePage {
 
     public final int numberOfAdditionToCart = Integer.parseInt(System.getProperty("number_of_addition_to_cart"));
     public final int firstProductQuantity = Integer.parseInt(System.getProperty("first_product_quantity"));
+    public final int numberOfRandomProduct = Integer.parseInt(System.getProperty("number_of_random_add_random_product"));
     MenuPage menuPage = new MenuPage(driver);
     CategoryPage categoryPage = new CategoryPage(driver);
     @FindBy(css = "#quantity_wanted")

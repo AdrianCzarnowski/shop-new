@@ -17,7 +17,7 @@ public class BasketPage extends BasePage {
         super(driver);
     }
 
-    public static String checkTotalCost() {
+    public String checkTotalCost() {
         return getTextFromElement(itemsValue).replace("$", "");
     }
 }

@@ -21,17 +21,24 @@ public class BasePage {
     protected WebDriverWait wait;
     protected Actions actions;
     protected JavascriptExecutor js;
+//    protected Product product = new Product();
 
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(System.getProperty("waitTime"))));
         actions = new Actions(driver);
         js = ((JavascriptExecutor) driver);
         PageFactory.initElements(driver, this);
     }
 
-    public static String getTextFromElement(WebElement element) {
+    public static String getValueFromElement(WebElement element) {
+        log.info("Value from element:" + element.getAttribute("value"));
+        return element.getAttribute("value");
+    }
+
+    public String getTextFromElement(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element));
         try {
             return element.getText();
         } catch (StaleElementReferenceException e) {

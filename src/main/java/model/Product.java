@@ -22,13 +22,15 @@ public class Product {
         this.productPrice = productPrice;
         this.quantity = quantity;
     }
+//    public Product(){
+//    }
 
     public static double getAllOrderCost() {
         double total = 0;
         for (Product product : productList) {
             int quantity = product.getQuantity();
-            double prize = product.getProductPrice();
-            total += quantity * prize;
+            double price = product.getProductPrice();
+            total += quantity * price;
         }
 
         return total;

@@ -1,6 +1,7 @@
 browserConfig:
   driverEnum: CHROME
 
+
 environment:
   prod:
     appUrl: http://146.59.32.4
@@ -10,7 +11,9 @@ environment:
     min_value_second_filter: $9.00
     max_value_second_filter: $29.00
     number_of_addition_to_cart: 3
+    number_of_random_add_random_product: 5
     first_product_quantity: 5
+    waitTime: 15
   init:
     appUrl: http://146.59.32.4
     active: false
@@ -19,6 +22,7 @@ environment:
     min_value_second_filter: $9.00
     max_value_second_filter: $29.00
     number_of_addition_to_cart: 3
+    number_of_random_add_random_product: 5
     first_product_quantity: 5
 
 

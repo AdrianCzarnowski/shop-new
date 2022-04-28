@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with Basket Test">
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with first order value check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" afterDir="false" />
     </list>
     <list id="df7cfab3-9670-494a-af33-5c152f939e86" name="Changes by dbryla" comment="">
@@ -39,12 +40,20 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java">
       <ranges>
-        <range start1="19" end1="20" start2="19" end2="20" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
-        <range start1="30" end1="31" start2="30" end2="31" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
+        <range start1="11" end1="11" start2="11" end2="12" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="19" end1="20" start2="20" end2="21" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
+        <range start1="21" end1="22" start2="22" end2="23" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="29" end1="31" start2="30" end2="31" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
         <range start1="34" end1="35" start2="34" end2="36" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
-        <range start1="49" end1="50" start2="50" end2="50" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
-        <range start1="64" end1="65" start2="64" end2="64" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
-        <range start1="67" end1="70" start2="66" end2="66" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="49" end1="50" start2="50" end2="51" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
+        <range start1="23" end1="23" start2="24" end2="25" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="27" end1="28" start2="29" end2="30" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="33" end1="34" start2="35" end2="42" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
       </ranges>
     </file>
   </component>
@@ -64,7 +73,7 @@
   "keyToString": {
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -163,8 +172,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AddProductTestModel.basketTest" />
-        <item itemvalue="JUnit.AddProductTestModel" />
         <item itemvalue="JUnit.AddProductTestModel.addRandomProduct" />
+        <item itemvalue="JUnit.AddProductTestModel" />
         <item itemvalue="JUnit.BasketTest.basketAdding" />
         <item itemvalue="JUnit.PriceDropPageTest.onSaleProducts" />
       </list>
@@ -178,13 +187,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00024" summary="with Data Faker">
-      <created>1650535260641</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1650535260641</updated>
     </task>
     <task id="LOCAL-00025" summary="with Data Faker">
       <created>1650538288302</created>
@@ -522,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651137336389</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="with first order value check">
+      <created>1651140319350</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1651140319350</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -549,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="with logger" />
     <MESSAGE value="with faker lib." />
     <MESSAGE value="with loginPage" />
     <MESSAGE value="with SingInPage" />
@@ -574,7 +582,8 @@
     <MESSAGE value="with product basket" />
     <MESSAGE value="with config.yaml and new browser factory" />
     <MESSAGE value="with Basket Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="with Basket Test" />
+    <MESSAGE value="with first order value check" />
+    <option name="LAST_COMMIT_MESSAGE" value="with first order value check" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
