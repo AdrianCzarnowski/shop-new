@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with first order value check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" afterDir="false" />
     </list>
-    <list id="df7cfab3-9670-494a-af33-5c152f939e86" name="Changes by dbryla" comment="">
+    <list id="df7cfab3-9670-494a-af33-5c152f939e86" name="Changes by dbryla" comment="Changes by dbryla">
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" afterDir="false" />
     </list>
@@ -37,25 +30,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java">
-      <ranges>
-        <range start1="11" end1="11" start2="11" end2="12" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
-        <range start1="19" end1="20" start2="20" end2="21" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
-        <range start1="21" end1="22" start2="22" end2="23" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
-        <range start1="29" end1="31" start2="30" end2="31" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
-        <range start1="34" end1="35" start2="34" end2="36" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
-        <range start1="49" end1="50" start2="50" end2="51" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
-        <range start1="23" end1="23" start2="24" end2="25" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
-        <range start1="27" end1="28" start2="29" end2="30" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
-        <range start1="33" end1="34" start2="35" end2="42" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
-      </ranges>
-    </file>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/4.1.2/selenium-support-4.1.2.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -187,13 +163,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00025" summary="with Data Faker">
-      <created>1650538288302</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1650538288302</updated>
     </task>
     <task id="LOCAL-00026" summary="with fix search test">
       <created>1650551855772</created>
@@ -531,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651140319350</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="with first order value check">
+      <created>1651145548844</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1651145548844</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
