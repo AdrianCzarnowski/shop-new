@@ -41,7 +41,7 @@ public class AddProductTestModel extends Pages {
         randomProductPage
                 .clickBasketBtn();
 
-        log.info("Total cost of items: " + String.valueOf(Product.getAllOrderCost()));
+        log.info("Total cost of items: ", String.valueOf(Product.getAllOrderCost()));
         basketPage
                 .checkTotalCost();
         log.info("Total cos of items in basket: " + String.valueOf(basketPage.checkTotalCost()));

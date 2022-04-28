@@ -10,7 +10,6 @@ import pages.base.BasePage;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.String.valueOf;
 
 public class BasketPage extends BasePage {
 
@@ -22,7 +21,7 @@ public class BasketPage extends BasePage {
     private List<WebElement> price;
     @FindBy(xpath = "//button[contains(@class, 'touchspin-up')]")
     private List<WebElement> productUpBtn;
-    private List<String> priceList = new ArrayList<>();
+
 
     public BasketPage(WebDriver driver) {
         super(driver);
@@ -33,6 +32,8 @@ public class BasketPage extends BasePage {
     }
 
     public void checkCostAfterChange() {
+        List<String> priceList = new ArrayList<>();
+
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
@@ -45,14 +46,16 @@ public class BasketPage extends BasePage {
             priceList.add(value);
         }
         for (int i = 0; i < priceList.size(); i++) {
-            orderCostAfterChange += Double.parseDouble(priceList.get(i));
+            orderCostAfterChange += Double.parseDouble((priceList.get(i)));
         }
-        log.info("Order cost after change : " + round(orderCostAfterChange));
-        assert (valueOf(orderCostAfterChange).contains(checkTotalCost()));
+        log.info("Order cost after change : " + String.format("%.2f", orderCostAfterChange).replace(",", "."));
+        assert (String.format("%.2f", orderCostAfterChange).replace(",", ".").contains(checkTotalCost()));
+        log.info("Order cost is the same");
     }
 
     public BasketPage clickUpQuantityRandomProduct() {
         clickOnElement(productUpBtn.get(0));
+        log.info("Product up button clicked");
         return this;
     }
 }
