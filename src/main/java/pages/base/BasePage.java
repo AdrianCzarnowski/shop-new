@@ -24,6 +24,7 @@ public class BasePage {
     protected WebDriverWait wait;
     protected Actions actions;
     protected JavascriptExecutor js;
+    protected Random random = new Random();
 //    protected Product product = new Product();
 
 

@@ -14,14 +14,8 @@ public class AddProductTestModel extends Pages {
     @Test
     public void addRandomProduct() {
         for (int i = 0; i < randomProductPage.numberOfAdditionToCart; i++) {
-            randomProductPage
-                    .clickRandomCategory()
-                    .clickRandomProduct()
-                    .setRandomQuantityValue()
-                    .clickAddToCartButton();
-            cartOrderDetailsPage
-                    .clickContinueShopping()
-                    .checkCartOfProducts();
+            randomProductPage.clickRandomCategory().clickRandomProduct().setRandomQuantityValue().clickAddToCartButton();
+            cartOrderDetailsPage.clickContinueShopping().checkCartOfProducts();
 
         }
     }
@@ -40,23 +34,19 @@ public class AddProductTestModel extends Pages {
         }
         randomProductPage
                 .clickBasketBtn();
-
-        log.info("Total cost of items: ", String.valueOf(Product.getAllOrderCost()));
         basketPage
                 .checkTotalCost();
-        log.info("Total cos of items in basket: " + String.valueOf(basketPage.checkTotalCost()));
-
         assert ((String.valueOf(Product.getAllOrderCost())).contains(basketPage.checkTotalCost()));
         log.info("Order value are the same");
+
         randomProductPage
                 .setFirstProductQuantity();
         basketPage
+                .checkCostAfterChange()
+                .clickUpQuantityRandomProduct()
+                .checkCostAfterChange()
+                .clickDownQuantityRandomProduct()
                 .checkCostAfterChange();
-        basketPage
-                .clickUpQuantityRandomProduct();
-
-        basketPage.checkCostAfterChange();
-
 
     }
 }

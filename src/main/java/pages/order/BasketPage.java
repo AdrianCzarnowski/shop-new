@@ -21,6 +21,8 @@ public class BasketPage extends BasePage {
     private List<WebElement> price;
     @FindBy(xpath = "//button[contains(@class, 'touchspin-up')]")
     private List<WebElement> productUpBtn;
+    @FindBy(xpath = "//button[contains(@class, 'touchspin-down')]")
+    private List<WebElement> productDownBtn;
 
 
     public BasketPage(WebDriver driver) {
@@ -31,7 +33,7 @@ public class BasketPage extends BasePage {
         return getTextFromElement(itemsValue).replace("$", "");
     }
 
-    public void checkCostAfterChange() {
+    public BasketPage checkCostAfterChange() {
         List<String> priceList = new ArrayList<>();
 
         try {
@@ -51,11 +53,18 @@ public class BasketPage extends BasePage {
         log.info("Order cost after change : " + String.format("%.2f", orderCostAfterChange).replace(",", "."));
         assert (String.format("%.2f", orderCostAfterChange).replace(",", ".").contains(checkTotalCost()));
         log.info("Order cost is the same");
+        return this;
     }
 
     public BasketPage clickUpQuantityRandomProduct() {
-        clickOnElement(productUpBtn.get(0));
+        clickOnElement(productUpBtn.get(productUpBtn.size() - 1));
         log.info("Product up button clicked");
+        return this;
+    }
+
+    public BasketPage clickDownQuantityRandomProduct() {
+        clickOnElement(productDownBtn.get(random.nextInt(productDownBtn.size() - 1)));
+        log.info("Product down button clicked");
         return this;
     }
 }
