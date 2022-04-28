@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import static pages.base.BasePage.round;
+
 @Data
 public class Product {
 
@@ -31,7 +33,7 @@ public class Product {
             total += quantity * price;
         }
 
-        return total;
+        return round(total);
     }
 
     public void addQuantity(int quantity) {

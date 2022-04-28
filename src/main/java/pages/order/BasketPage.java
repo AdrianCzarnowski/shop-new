@@ -49,7 +49,7 @@ public class BasketPage extends BasePage {
 
         }
         log.info("Order cost after change : " + orderCostAfterChange);
-        return orderCostAfterChange;
+        return round(orderCostAfterChange);
 
     }
 }

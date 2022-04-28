@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.Duration;
 import java.util.List;
 import java.util.Random;
@@ -36,6 +38,13 @@ public class BasePage {
     public static String getValueFromElement(WebElement element) {
         log.info("Value from element:" + element.getAttribute("value"));
         return element.getAttribute("value");
+    }
+
+    public static double round(double value) {
+        int precision = 2;
+        BigDecimal bigDecimal = new BigDecimal(value);
+        bigDecimal = bigDecimal.setScale(precision, RoundingMode.HALF_UP);
+        return bigDecimal.doubleValue();
     }
 
     public String getTextFromElement(WebElement element) {
