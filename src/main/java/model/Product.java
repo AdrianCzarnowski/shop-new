@@ -12,7 +12,7 @@ import java.util.Objects;
 public class Product {
 
     public static List<Product> productList = new ArrayList<>();
-    private static Logger log = LoggerFactory.getLogger("DriverFactory");
+    private static Logger log = LoggerFactory.getLogger("Product.class");
     private String productName;
     private double productPrice;
     private int quantity;
@@ -22,8 +22,6 @@ public class Product {
         this.productPrice = productPrice;
         this.quantity = quantity;
     }
-//    public Product(){
-//    }
 
     public static double getAllOrderCost() {
         double total = 0;

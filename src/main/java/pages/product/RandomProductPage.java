@@ -32,6 +32,8 @@ public class RandomProductPage extends BasePage {
 
     @FindBy(xpath = "//li[1]/div/div[3]/div/div[2]/div/div[1]/div/input")
     private WebElement firstProduct;
+    @FindBy(css = "h1")
+    private WebElement bar;
 
     public RandomProductPage(WebDriver driver) {
         super(driver);
@@ -64,6 +66,7 @@ public class RandomProductPage extends BasePage {
         clickOnElement(firstProduct);
         firstProduct.sendKeys(Keys.BACK_SPACE);
         sendKeys(firstProduct, String.valueOf(firstProductQuantity), true);
+        clickOnElement(bar);
         return this;
     }
 

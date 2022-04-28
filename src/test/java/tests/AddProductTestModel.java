@@ -48,8 +48,10 @@ public class AddProductTestModel extends Pages {
 
         assert ((String.valueOf(Product.getAllOrderCost())).contains(basketPage.checkTotalCost()));
         log.info("Order value are the same");
+        randomProductPage
+                .setFirstProductQuantity();
+        basketPage.checkCostAfterChange();
 
-//                .setFirstProductQuantity();
 
     }
 }
