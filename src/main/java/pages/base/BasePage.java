@@ -36,7 +36,6 @@ public class BasePage {
     public static String getValueFromElement(WebElement element) {
         log.info("Value from element:" + element.getAttribute("value"));
         return element.getAttribute("value");
-
     }
 
     public String getTextFromElement(WebElement element) {
