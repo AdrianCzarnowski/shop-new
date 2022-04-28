@@ -28,7 +28,6 @@ public class Product {
         for (Product product : productList) {
             int quantity = product.getQuantity();
             double prize = product.getProductPrice();
-            log.info("Item: " + product + " current total: " + total + " next total: " + (quantity * prize));
             total += quantity * prize;
         }
 

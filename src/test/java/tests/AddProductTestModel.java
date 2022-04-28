@@ -5,6 +5,7 @@ import model.Product;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pages.order.BasketPage;
 
 public class AddProductTestModel extends Pages {
 
@@ -38,10 +39,16 @@ public class AddProductTestModel extends Pages {
                     .clickContinueShopping()
                     .checkCartOfProducts();
         }
-        log.info("Total cost of items: ");
-        log.info(String.valueOf(Product.getAllOrderCost()));
         randomProductPage
                 .clickBasketBtn();
+
+        log.info("Total cost of items: " + String.valueOf(Product.getAllOrderCost()));
+        basketPage
+                .checkTotalCost();
+        log.info("Total cos of items in basket: " + String.valueOf(BasketPage.checkTotalCost()));
+
+        assert ((String.valueOf(Product.getAllOrderCost())).contains(BasketPage.checkTotalCost()));
+        log.info("Order value are the same");
 
 //                .setFirstProductQuantity();
 

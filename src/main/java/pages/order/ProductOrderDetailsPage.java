@@ -47,7 +47,6 @@ public class ProductOrderDetailsPage extends BasePage {
     }
 
     public void checkCartOfProducts() {
-//        waitToBeInvisible();
         Product newProduct = newProductBuilder();
 
 
@@ -62,12 +61,8 @@ public class ProductOrderDetailsPage extends BasePage {
             productList.add(newProduct);
             log.info("New product added: " + newProduct.getProductName());
         }
-
         log.info("Products in list: ");
         productList.forEach(product -> log.info("\t- " + product.toString() + "\n"));
-//        double value = newProduct.getProductPrice() * newProduct.getQuantity();
-//        log.info("Cost of items: ");
-//        log.info(String.valueOf(value));
     }
 }
 

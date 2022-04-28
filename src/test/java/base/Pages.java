@@ -3,6 +3,7 @@ package base;
 import org.junit.jupiter.api.BeforeEach;
 import pages.FooterPage;
 import pages.HomePage;
+import pages.order.BasketPage;
 import pages.order.ProductOrderDetailsPage;
 import pages.product.*;
 
@@ -16,6 +17,7 @@ public class Pages extends TestBase {
     public static RandomProductPage randomProductPage;
     public static ProductOrderDetailsPage cartOrderDetailsPage;
     public static HomePage homePage;
+    public static BasketPage basketPage;
 
     @BeforeEach
     public void testSetup() {
@@ -28,5 +30,6 @@ public class Pages extends TestBase {
         randomProductPage = new RandomProductPage(driver);
         cartOrderDetailsPage = new ProductOrderDetailsPage(driver);
         homePage = new HomePage(driver);
+        basketPage = new BasketPage(driver);
     }
 }
