@@ -50,7 +50,8 @@ public class AddProductTestModel extends Pages {
         log.info("Order value are the same");
         randomProductPage
                 .setFirstProductQuantity();
-        basketPage.checkCostAfterChange();
+        basketPage
+                .checkCostAfterChange();
 
 
     }

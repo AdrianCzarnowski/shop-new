@@ -10,6 +10,8 @@ import pages.base.BasePage;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.String.valueOf;
+
 public class BasketPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("BasketPage.class");
@@ -28,7 +30,7 @@ public class BasketPage extends BasePage {
         return getTextFromElement(itemsValue).replace("$", "");
     }
 
-    public double checkCostAfterChange() {
+    public void checkCostAfterChange() {
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
@@ -39,17 +41,14 @@ public class BasketPage extends BasePage {
 
         for (int i = 0; i < price.size(); i++) {
             String value = getTextFromElement(price.get(i)).replace("$", "");
-            cost = Double.parseDouble(value);
-            log.info(String.valueOf(cost));
             priceList.add(value);
         }
-        log.info(String.valueOf(priceList));
+        log.info(valueOf(priceList));
         for (int i = 0; i < priceList.size(); i++) {
             orderCostAfterChange += Double.parseDouble(priceList.get(i));
-
         }
         log.info("Order cost after change : " + orderCostAfterChange);
-        return round(orderCostAfterChange);
-
+        log.info("cost form website: " + checkTotalCost());
+        assert (valueOf(orderCostAfterChange).contains(checkTotalCost()));
     }
 }

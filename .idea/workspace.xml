@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with first order value check">
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with round wrapper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,20 +161,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00030" summary="with fix search test">
-      <created>1650554084916</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1650554084916</updated>
-    </task>
-    <task id="LOCAL-00031" summary="with Clothes category">
-      <created>1650619473845</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1650619473845</updated>
     </task>
     <task id="LOCAL-00032" summary="with categories">
       <created>1650631042011</created>
@@ -508,7 +491,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651146207245</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="with first order value check">
+      <created>1651153345686</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1651153345686</updated>
+    </task>
+    <task id="LOCAL-00080" summary="with round wrapper">
+      <created>1651153597986</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1651153597986</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -535,7 +532,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="with loginPage" />
     <MESSAGE value="with SingInPage" />
     <MESSAGE value="with logback" />
     <MESSAGE value="with wrappers" />
@@ -560,7 +556,8 @@
     <MESSAGE value="with Basket Test" />
     <MESSAGE value="Changes by dbryla" />
     <MESSAGE value="with first order value check" />
-    <option name="LAST_COMMIT_MESSAGE" value="with first order value check" />
+    <MESSAGE value="with round wrapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="with round wrapper" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
