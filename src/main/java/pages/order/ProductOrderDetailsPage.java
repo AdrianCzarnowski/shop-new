@@ -18,7 +18,7 @@ public class ProductOrderDetailsPage extends BasePage {
     private static WebElement productName;
     @FindBy(css = "[itemprop=price]")
     private static WebElement productPrice;
-    @FindBy(css = "span.product-quantity > strong")
+    @FindBy(css = "#quantity_wanted")
     private static WebElement productQuantity;
     public Product newProduct;
     @FindBy(css = "div.col-md-7 > div > div > button")
@@ -32,7 +32,8 @@ public class ProductOrderDetailsPage extends BasePage {
         String productNameText = getTextFromElement(productName);
         highLightenerMethod(productPrice);
         String productPriceText = getTextFromElement(productPrice).replace("$", "");
-        String productQuantityText = getTextFromElement(productQuantity).replace("$", "");
+        highLightenerMethod(productQuantity);
+        String productQuantityText = getValueFromElement(productQuantity);
 
 
         Product product = new Product(productNameText, Double.parseDouble(productPriceText),
