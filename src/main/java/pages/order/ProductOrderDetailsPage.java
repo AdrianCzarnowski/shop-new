@@ -45,7 +45,6 @@ public class ProductOrderDetailsPage extends BasePage {
     public ProductOrderDetailsPage clickContinueShopping() {
         clickOnElement(continueShoppingBtn);
         return this;
-        
     }
 
     public void checkCartOfProducts() {
