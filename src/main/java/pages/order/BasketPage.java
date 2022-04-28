@@ -43,12 +43,10 @@ public class BasketPage extends BasePage {
             String value = getTextFromElement(price.get(i)).replace("$", "");
             priceList.add(value);
         }
-        log.info(valueOf(priceList));
         for (int i = 0; i < priceList.size(); i++) {
             orderCostAfterChange += Double.parseDouble(priceList.get(i));
         }
-        log.info("Order cost after change : " + orderCostAfterChange);
-        log.info("cost form website: " + checkTotalCost());
+        log.info("Order cost after change : " + round(orderCostAfterChange));
         assert (valueOf(orderCostAfterChange).contains(checkTotalCost()));
     }
 }
