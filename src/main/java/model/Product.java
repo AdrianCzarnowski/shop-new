@@ -13,11 +13,9 @@ public class Product {
 
     public static List<Product> productList = new ArrayList<>();
     private static Logger log = LoggerFactory.getLogger("DriverFactory");
-    private static double allOrderCost = 0.0;
     private String productName;
     private double productPrice;
-    private int quantity = 0;
-    private int quantityOfProducts = 0;
+    private int quantity;
 
     public Product(String productName, double productPrice, int quantity) {
         this.productName = productName;
@@ -26,26 +24,21 @@ public class Product {
     }
 
     public static double getAllOrderCost() {
-        if (productList.size() > 0) {
-            for (Product product : productList) {
-                allOrderCost += product.getQuantity() * product.productPrice;
-            }
+        double total = 0;
+        for (Product product : productList) {
+            int quantity = product.getQuantity();
+            double prize = product.getProductPrice();
+            log.info("Item: " + product + " current total: " + total + " next total: " + (quantity * prize));
+            total += quantity * prize;
         }
-        return allOrderCost;
+
+        return total;
     }
 
-    public void setAllOrderCost(double allOrderCost) {
-        this.allOrderCost = allOrderCost;
+    public void addQuantity(int quantity) {
+        this.quantity += quantity;
     }
 
-    public int getQuantityOfProducts() {
-        if (productList.size() > 0) {
-            for (Product product : productList) {
-                quantityOfProducts += product.getQuantity();
-            }
-        }
-        return quantityOfProducts;
-    }
 
     @Override
     public String toString() {

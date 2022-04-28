@@ -32,7 +32,21 @@ public class BasePage {
     }
 
     public static String getTextFromElement(WebElement element) {
-        return element.getText();
+        try {
+            return element.getText();
+        } catch (StaleElementReferenceException e) {
+            return "";
+        }
+    }
+
+    public void highLightenerMethod(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].setAttribute('style', 'background: lightred; border: 5px solid red;')", element);
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void clickOnElement(WebElement element) {
@@ -60,7 +74,6 @@ public class BasePage {
         actions.clickAndHold(element);
     }
 
-
     public void waitToBeVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
@@ -71,16 +84,6 @@ public class BasePage {
 
     public void waitToBeClickable(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
-
-    public void highLightenerMethod(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].setAttribute('style', 'background: lightred; border: 5px solid red;')", element);
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
 

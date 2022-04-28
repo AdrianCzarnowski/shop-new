@@ -15,7 +15,7 @@ public class ProductOrderDetailsPage extends BasePage {
     private static Logger log = LoggerFactory.getLogger("ProductOrderDetailsPage.class");
     @FindBy(css = ".product-container [itemprop=name]")
     private static WebElement productName;
-    @FindBy(css = "div.col-md-5.divide-right > div > div:nth-child(2) > p")
+    @FindBy(css = "[itemprop=price]")
     private static WebElement productPrice;
     @FindBy(css = "span.product-quantity > strong")
     private static WebElement productQuantity;
@@ -30,6 +30,7 @@ public class ProductOrderDetailsPage extends BasePage {
 
     public static Product newProductBuilder() {
         String productNameText = getTextFromElement(productName);
+        highLightenerMethod(productPrice);
         String productPriceText = getTextFromElement(productPrice).replace("$", "");
         String productQuantityText = getTextFromElement(productQuantity).replace("$", "");
 
@@ -46,19 +47,20 @@ public class ProductOrderDetailsPage extends BasePage {
     }
 
     public void checkCartOfProducts() {
+//        waitToBeInvisible();
         Product newProduct = newProductBuilder();
+
 
         if (productList.contains(newProduct)) {
             Product productFromList = productList.get(productList.indexOf(newProduct));
             log.info("List contains item");
-            productFromList.setQuantityOfProducts(productFromList.getQuantity() + newProduct.getQuantity());
+            productFromList.addQuantity(newProduct.getQuantity());
             log.info("Quantity updated " + newProduct.getProductName() + " quantity after updated: " + newProduct.getQuantity());
 
         } else {
             log.warn("List doesn't contains item");
             productList.add(newProduct);
             log.info("New product added: " + newProduct.getProductName());
-            newProduct.setAllOrderCost(newProduct.getProductPrice() * newProduct.getQuantity());
         }
 
         log.info("Products in list: ");

@@ -7,8 +7,13 @@
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with Basket Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Pages.java" afterDir="false" />
+    </list>
+    <list id="df7cfab3-9670-494a-af33-5c152f939e86" name="Changes by dbryla" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +34,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java">
+      <ranges>
+        <range start1="17" end1="18" start2="17" end2="18" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="19" end1="20" start2="19" end2="20" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
+        <range start1="30" end1="31" start2="30" end2="31" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
+        <range start1="32" end1="32" start2="32" end2="33" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="33" end1="34" start2="34" end2="36" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
+        <range start1="48" end1="48" start2="50" end2="51" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="49" end1="49" start2="52" end2="53" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="53" end1="54" start2="57" end2="58" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="60" end1="61" start2="64" end2="64" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
+        <range start1="34" end1="35" start2="35" end2="40" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="36" end1="36" start2="41" end2="46" changelist="df7cfab3-9670-494a-af33-5c152f939e86" />
+        <range start1="37" end1="37" start2="47" end2="57" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="62" end1="63" start2="82" end2="82" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+        <range start1="75" end1="85" start2="94" end2="94" changelist="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,6 +73,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "actions.on.save"
   }
@@ -59,7 +90,23 @@
       <recent name="helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddProductTestModel.basketTest">
+  <component name="RunManager" selected="JUnit.AddProductTestModel">
+    <configuration name="AddProductTestModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson12Shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddProductTestModel" />
+      <option name="METHOD_NAME" value="basketTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AddProductTestModel.addRandomProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <extension name="coverage">
@@ -108,16 +155,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryPageTest.artCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lesson12Shop" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CategoryPageTest" />
-      <option name="METHOD_NAME" value="artCategories" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PriceDropPageTest.onSaleProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <extension name="coverage">
@@ -134,24 +171,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddProductTestModel" />
         <item itemvalue="JUnit.AddProductTestModel.basketTest" />
         <item itemvalue="JUnit.AddProductTestModel.addRandomProduct" />
         <item itemvalue="JUnit.BasketTest.basketAdding" />
         <item itemvalue="JUnit.PriceDropPageTest.onSaleProducts" />
-        <item itemvalue="JUnit.CategoryPageTest.artCategories" />
       </list>
     </recent_temporary>
   </component>
@@ -565,9 +591,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/Product.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/src/main/java/pages/base/BasePage.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
