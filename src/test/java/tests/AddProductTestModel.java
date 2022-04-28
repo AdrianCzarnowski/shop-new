@@ -52,6 +52,10 @@ public class AddProductTestModel extends Pages {
                 .setFirstProductQuantity();
         basketPage
                 .checkCostAfterChange();
+        basketPage
+                .clickUpQuantityRandomProduct();
+
+        basketPage.checkCostAfterChange();
 
 
     }

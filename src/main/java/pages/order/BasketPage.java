@@ -20,6 +20,8 @@ public class BasketPage extends BasePage {
 
     @FindBy(css = "span > strong")
     private List<WebElement> price;
+    @FindBy(xpath = "//button[contains(@class, 'touchspin-up')]")
+    private List<WebElement> productUpBtn;
     private List<String> priceList = new ArrayList<>();
 
     public BasketPage(WebDriver driver) {
@@ -36,7 +38,6 @@ public class BasketPage extends BasePage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        double cost = 0;
         double orderCostAfterChange = 0;
 
         for (int i = 0; i < price.size(); i++) {
@@ -48,5 +49,10 @@ public class BasketPage extends BasePage {
         }
         log.info("Order cost after change : " + round(orderCostAfterChange));
         assert (valueOf(orderCostAfterChange).contains(checkTotalCost()));
+    }
+
+    public BasketPage clickUpQuantityRandomProduct() {
+        clickOnElement(productUpBtn.get(0));
+        return this;
     }
 }

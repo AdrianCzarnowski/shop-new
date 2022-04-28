@@ -41,7 +41,7 @@ public class BasePage {
     }
 
     public static double round(double value) {
-        int precision = 2;
+        int precision = 3;
         BigDecimal bigDecimal = new BigDecimal(value);
         bigDecimal = bigDecimal.setScale(precision, RoundingMode.HALF_UP);
         return bigDecimal.doubleValue();
