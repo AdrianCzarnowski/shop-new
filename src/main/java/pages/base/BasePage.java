@@ -63,6 +63,12 @@ public class BasePage {
         element.click();
     }
 
+    public void selectCheckBox(WebElement element) {
+        if (!element.isSelected()) {
+            element.click();
+        }
+    }
+
     public void sendKeys(WebElement element, String text, boolean clear) {
         if (clear) {
             highLightenerMethod(element);

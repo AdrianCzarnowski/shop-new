@@ -1,6 +1,8 @@
 package tests;
 
 import base.Pages;
+import base.UserFactory;
+import model.User;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,9 +12,10 @@ public class CheckoutTest extends Pages {
 
     @Test
     public void registrationTest() {
+        User user = new UserFactory().getRandomUser();
         menuPage.clickSingInButton();
         loginPage.clickNewAccount();
-        registrationPage.fillForm();
+        registrationPage.fillForm(user);
         for (int i = 0; i < randomProductPage.numberOfRandomProduct - 1; i++) {
             randomProductPage
                     .clickRandomCategory()

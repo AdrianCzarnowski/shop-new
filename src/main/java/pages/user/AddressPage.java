@@ -19,9 +19,15 @@ public class AddressPage extends BasePage {
     private WebElement city;
     @FindBy(xpath = "//input[@name='postcode']")
     private WebElement postcode;
+    @FindBy(xpath = "//select[@name='id_state']")
+    private WebElement state;
 
     public AddressPage(WebDriver driver) {
         super(driver);
+    }
+
+    private void chooseState() {
+        clickOnElement(state);
     }
 
     public AddressPage fillAddressesForm() {
@@ -29,6 +35,7 @@ public class AddressPage extends BasePage {
         sendKeys(address, FakeDataFactory.getStreet(), true);
         sendKeys(city, FakeDataFactory.getCity(), true);
         sendKeys(postcode, FakeDataFactory.getZipCode(), true);
+        chooseState();
         log.info("Address form is complete");
         return this;
     }

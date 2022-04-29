@@ -4,24 +4,24 @@ import model.User;
 
 public class UserFactory {
 
-    public User.UserBuilder getRandomUser() {
+    public User getRandomUser() {
 
-        User.UserBuilder user = new User.UserBuilder()
+        User user = new User.UserBuilder()
                 .firstName(FakeDataFactory.getFakeFirstName())
                 .lastName(FakeDataFactory.getFakeLastName())
                 .email(FakeDataFactory.getFakeEmail())
                 .password(FakeDataFactory.getPassword())
-                .birthDate(FakeDataFactory.getFakeBirthDate());
+                .birthDate(FakeDataFactory.getFakeBirthDate()).userBuilder();
         return user;
     }
 
-    public User.UserBuilder getAlreadyRegisterUser() {
-        User.UserBuilder user = new User.UserBuilder()
+    public User getAlreadyRegisterUser() {
+        User user = new User.UserBuilder()
                 .firstName("Jan")
                 .lastName("Kowalski")
                 .email("jankowalski@gmail.com")
                 .password("1qaz@WSX")
-                .birthDate("01.01.1999");
+                .birthDate("01.01.1999").userBuilder();
         return user;
 
     }

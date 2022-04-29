@@ -1,6 +1,6 @@
 package pages.user;
 
-import base.FakeDataFactory;
+import model.User;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +11,7 @@ import pages.base.BasePage;
 public class RegistrationPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("RegistrationPage.class");
-  
+
     @FindBy(xpath = "//*/section/div[1]/div[1]/label[1]/span")
     private WebElement gender;
     @FindBy(xpath = "//input[@name='firstname']")
@@ -42,17 +42,17 @@ public class RegistrationPage extends BasePage {
         super(driver);
     }
 
-    public RegistrationPage fillForm() {
+    public RegistrationPage fillForm(User user) {
         clickOnElement(gender);
-        sendKeys(firstName, FakeDataFactory.getFakeFirstName(), true);
-        sendKeys(lastName, FakeDataFactory.getFakeLastName(), true);
-        sendKeys(email, FakeDataFactory.getFakeEmail(), true);
-        sendKeys(password, FakeDataFactory.getPassword(), false);
-        sendKeys(birthday, FakeDataFactory.getFakeBirthDate(), true);
-        offers.click();
-        customerPrivacy.click();
-        newsletter.click();
-        acceptRegulamin.click();
+        sendKeys(firstName, user.getFirstName(), true);
+        sendKeys(lastName, user.getLastName(), true);
+        sendKeys(email, user.getEmail(), true);
+        sendKeys(password, user.getPassword(), false);
+        sendKeys(birthday, user.getBirthDate(), true);
+        selectCheckBox(offers);
+        selectCheckBox(customerPrivacy);
+        selectCheckBox(newsletter);
+        selectCheckBox(acceptRegulamin);
         clickOnElement(saveBtn);
         log.info("New user created");
         return this;
