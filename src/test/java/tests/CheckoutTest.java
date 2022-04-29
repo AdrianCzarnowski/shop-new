@@ -28,5 +28,7 @@ public class CheckoutTest extends Pages {
                 .clickAddToCartButton();
         productOrderDetailsPage
                 .clickProceedToCheckout();
+        basketPage
+                .clickProceedBtn();
     }
 }

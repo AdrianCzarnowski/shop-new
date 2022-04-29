@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with registration">
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with added product">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/user/AddressPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/ProductOrderDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/product/RandomProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,13 +173,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00040" summary="with clear filters">
-      <created>1650893635982</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1650893635982</updated>
     </task>
     <task id="LOCAL-00041" summary="with clear filters">
       <created>1650894078587</created>
@@ -520,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651223835918</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="with added product">
+      <created>1651225573086</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1651225573086</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -547,7 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="with Data Faker" />
     <MESSAGE value="with fix search test" />
     <MESSAGE value="with Clothes category" />
     <MESSAGE value="with categories" />
@@ -572,7 +568,8 @@
     <MESSAGE value="with trash" />
     <MESSAGE value="with login page" />
     <MESSAGE value="with registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="with registration" />
+    <MESSAGE value="with added product" />
+    <option name="LAST_COMMIT_MESSAGE" value="with added product" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

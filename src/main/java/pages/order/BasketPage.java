@@ -23,6 +23,8 @@ public class BasketPage extends BasePage {
     private List<WebElement> productUpBtn;
     @FindBy(xpath = "//button[contains(@class, 'touchspin-down')]")
     private List<WebElement> productDownBtn;
+    @FindBy(css = "div.checkout.cart-detailed-actions.card-block > div > a")
+    private WebElement proceedBtn;
 
     @FindBy(css = ".product-line-grid .cart-line-product-actions i")
     private List<WebElement> trashBtn;
@@ -78,6 +80,11 @@ public class BasketPage extends BasePage {
             log.info("Trash btn has been pressed");
             checkCostAfterChange();
         }
+        return this;
+    }
+
+    public BasePage clickProceedBtn() {
+        clickOnElement(proceedBtn);
         return this;
     }
 }
