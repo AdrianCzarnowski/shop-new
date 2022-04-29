@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with added product">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/user/AddressPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with AddressPage">
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/FakeDataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/FakeDataFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,13 +170,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00041" summary="with clear filters">
-      <created>1650894078587</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1650894078587</updated>
     </task>
     <task id="LOCAL-00042" summary="with clear filters">
       <created>1650895107906</created>
@@ -517,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651225573086</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="with AddressPage">
+      <created>1651226099448</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1651226099448</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -544,7 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="with fix search test" />
     <MESSAGE value="with Clothes category" />
     <MESSAGE value="with categories" />
     <MESSAGE value="refactor categoryPage" />
@@ -569,7 +565,8 @@
     <MESSAGE value="with login page" />
     <MESSAGE value="with registration" />
     <MESSAGE value="with added product" />
-    <option name="LAST_COMMIT_MESSAGE" value="with added product" />
+    <MESSAGE value="with AddressPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="with AddressPage" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

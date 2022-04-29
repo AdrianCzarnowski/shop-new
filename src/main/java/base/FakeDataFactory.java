@@ -31,6 +31,27 @@ public class FakeDataFactory {
     public static String getPassword() {
         return faker.internet().password(8, 24, true, true);
     }
+
+    public static String getCompany() {
+        return faker.company().name();
+    }
+
+    public static String getStreet() {
+        return faker.address().streetAddress();
+    }
+
+    public static String getCity() {
+        return faker.address().cityName();
+    }
+
+    public static String getZipCode() {
+        return faker.address().zipCode();
+    }
+
+    public static String getNumber() {
+        return String.valueOf(faker.phoneNumber());
+    }
+
 }
 
 
