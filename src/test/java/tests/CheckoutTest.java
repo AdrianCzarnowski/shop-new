@@ -30,5 +30,7 @@ public class CheckoutTest extends Pages {
                 .clickProceedToCheckout();
         basketPage
                 .clickProceedBtn();
+        addressPage
+                .fillAddressesForm();
     }
 }

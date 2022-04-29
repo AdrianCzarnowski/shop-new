@@ -7,6 +7,7 @@ import pages.navigation.MenuPage;
 import pages.order.BasketPage;
 import pages.order.ProductOrderDetailsPage;
 import pages.product.*;
+import pages.user.AddressPage;
 import pages.user.LoginPage;
 import pages.user.RegistrationPage;
 
@@ -24,6 +25,7 @@ public class Pages extends TestBase {
     public static MenuPage menuPage;
     public static LoginPage loginPage;
     public static RegistrationPage registrationPage;
+    public static AddressPage addressPage;
 
     @BeforeEach
     public void testSetup() {
@@ -40,5 +42,6 @@ public class Pages extends TestBase {
         menuPage = new MenuPage(driver);
         loginPage = new LoginPage(driver);
         registrationPage = new RegistrationPage(driver);
+        addressPage = new AddressPage(driver);
     }
 }
