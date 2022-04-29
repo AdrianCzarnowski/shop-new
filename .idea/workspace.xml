@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with Address Method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/order/ShippingMethodPage.java" afterDir="false" />
+    <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with Shipping Method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/order/PaymentPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/base/FakeDataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/FakeDataFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/user/AddressPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/AddressPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/AddressPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/AddressPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/BasketPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/ShippingMethodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/ShippingMethodPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Pages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
@@ -176,13 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00046" summary="with data from yaml to filters">
-      <created>1650896975365</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1650896975365</updated>
     </task>
     <task id="LOCAL-00047" summary="with data from yaml to filters">
       <created>1650897036151</created>
@@ -520,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651234788731</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="with Shipping Method">
+      <created>1651235599809</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1651235599809</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -547,7 +550,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="with categories" />
     <MESSAGE value="refactor categoryPage" />
     <MESSAGE value="with filter" />
     <MESSAGE value="with clear filters" />
@@ -572,7 +574,8 @@
     <MESSAGE value="with added product" />
     <MESSAGE value="with AddressPage" />
     <MESSAGE value="with Address Method" />
-    <option name="LAST_COMMIT_MESSAGE" value="with Address Method" />
+    <MESSAGE value="with Shipping Method" />
+    <option name="LAST_COMMIT_MESSAGE" value="with Shipping Method" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

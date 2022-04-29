@@ -10,6 +10,7 @@ import pages.base.BasePage;
 public class ShippingMethodPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("ShippingMethodPage.class");
+
     @FindBy(xpath = "//button[@name='confirmDeliveryOption']")
     private WebElement confirmDeliveryOptionBtn;
 

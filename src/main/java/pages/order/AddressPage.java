@@ -22,6 +22,8 @@ public class AddressPage extends BasePage {
     private WebElement postcode;
     @FindBy(xpath = "//select[@name='id_state']")
     private WebElement states;
+    @FindBy(xpath = "//select[@name='id_country']")
+    private WebElement country;
     @FindBy(xpath = "//input[@name='phone']")
     private WebElement phone;
     @FindBy(xpath = "//button[@name='confirm-addresses']")
@@ -32,9 +34,14 @@ public class AddressPage extends BasePage {
         super(driver);
     }
 
-    private void selectState() {
-        Select select = new Select(states);
-        select.selectByVisibleText(System.getProperty("state"));
+//    private void selectState() {
+//        Select select = new Select(states);
+//        select.selectByVisibleText(System.getProperty("state"));
+//    }
+
+    private void selectCountry() {
+        Select select = new Select(country);
+        select.selectByVisibleText(System.getProperty("country"));
     }
 
 
@@ -42,7 +49,7 @@ public class AddressPage extends BasePage {
         sendKeys(company, FakeDataFactory.getCompany(), true);
         sendKeys(address, FakeDataFactory.getStreet(), true);
         sendKeys(city, FakeDataFactory.getCity(), true);
-        selectState();
+        selectCountry();
         sendKeys(postcode, FakeDataFactory.getZipCode(), true);
         sendKeys(phone, FakeDataFactory.getNumber(), true);
         clickOnElement(contiuneBtn);

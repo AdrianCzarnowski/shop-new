@@ -4,10 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import pages.navigation.FooterPage;
 import pages.navigation.HomePage;
 import pages.navigation.MenuPage;
-import pages.order.AddressPage;
-import pages.order.BasketPage;
-import pages.order.ProductOrderDetailsPage;
-import pages.order.ShippingMethodPage;
+import pages.order.*;
 import pages.product.*;
 import pages.user.LoginPage;
 import pages.user.RegistrationPage;
@@ -28,6 +25,7 @@ public class Pages extends TestBase {
     public static RegistrationPage registrationPage;
     public static AddressPage addressPage;
     public static ShippingMethodPage shippingMethodPage;
+    public static PaymentPage paymentPage;
 
     @BeforeEach
     public void testSetup() {
@@ -46,5 +44,6 @@ public class Pages extends TestBase {
         registrationPage = new RegistrationPage(driver);
         addressPage = new AddressPage(driver);
         shippingMethodPage = new ShippingMethodPage(driver);
+        paymentPage = new PaymentPage(driver);
     }
 }

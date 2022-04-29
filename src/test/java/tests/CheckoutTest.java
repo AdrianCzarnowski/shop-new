@@ -16,6 +16,7 @@ public class CheckoutTest extends Pages {
         menuPage.clickSingInButton();
         loginPage.clickNewAccount();
         registrationPage.fillForm(user);
+
         for (int i = 0; i < randomProductPage.numberOfRandomProduct - 1; i++) {
             randomProductPage
                     .clickRandomCategory()
@@ -24,6 +25,7 @@ public class CheckoutTest extends Pages {
                     .clickAddToCartButton();
             productOrderDetailsPage.clickContinueShopping();
         }
+
         randomProductPage
                 .clickRandomCategory()
                 .clickRandomProduct()
@@ -37,5 +39,10 @@ public class CheckoutTest extends Pages {
                 .fillAddressesForm();
         shippingMethodPage
                 .clickContinueBtn();
+        paymentPage
+                .selectPayment()
+                .checkTermsOfService()
+                .selectTermsOfService()
+                .clickPlaceOrderBtn();
     }
 }

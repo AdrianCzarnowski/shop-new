@@ -28,8 +28,6 @@ public class BasketPage extends BasePage {
 
     @FindBy(css = ".product-line-grid .cart-line-product-actions i")
     private List<WebElement> trashBtn;
-//    @FindBy(css = ".faceted-overlay")
-//    private WebElement overload;
 
     public BasketPage(WebDriver driver) {
         super(driver);
