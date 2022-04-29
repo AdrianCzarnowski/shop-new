@@ -18,7 +18,7 @@ public class Pages extends TestBase {
     public static PriceDropPage priceDropPage;
     public static ProductOnSalePage productPage;
     public static RandomProductPage randomProductPage;
-    public static ProductOrderDetailsPage cartOrderDetailsPage;
+    public static ProductOrderDetailsPage productOrderDetailsPage;
     public static HomePage homePage;
     public static BasketPage basketPage;
     public static MenuPage menuPage;
@@ -34,7 +34,7 @@ public class Pages extends TestBase {
         priceDropPage = new PriceDropPage(driver);
         productPage = new ProductOnSalePage(driver);
         randomProductPage = new RandomProductPage(driver);
-        cartOrderDetailsPage = new ProductOrderDetailsPage(driver);
+        productOrderDetailsPage = new ProductOrderDetailsPage(driver);
         homePage = new HomePage(driver);
         basketPage = new BasketPage(driver);
         menuPage = new MenuPage(driver);

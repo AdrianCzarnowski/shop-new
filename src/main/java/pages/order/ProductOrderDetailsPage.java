@@ -23,6 +23,8 @@ public class ProductOrderDetailsPage extends BasePage {
     public Product newProduct;
     @FindBy(css = "div.col-md-7 > div > div > button")
     private WebElement continueShoppingBtn;
+    @FindBy(xpath = "//div[@class='cart-content-btn']/a")
+    private WebElement proceedBtn;
 
     public ProductOrderDetailsPage(WebDriver driver) {
         super(driver);
@@ -44,6 +46,11 @@ public class ProductOrderDetailsPage extends BasePage {
 
     public ProductOrderDetailsPage clickContinueShopping() {
         clickOnElement(continueShoppingBtn);
+        return this;
+    }
+
+    public ProductOrderDetailsPage clickProceedToCheckout() {
+        clickOnElement(proceedBtn);
         return this;
     }
 

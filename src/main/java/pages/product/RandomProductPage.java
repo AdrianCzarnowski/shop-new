@@ -56,7 +56,7 @@ public class RandomProductPage extends BasePage {
 
     public RandomProductPage setRandomQuantityValue() {
         Random random = new Random();
-        int value = random.nextInt(4) + 1;
+        int value = random.nextInt(3) + 1;
         log.info("quantity: " + value);
         sendKeys(quantity, String.valueOf(value), true);
         return this;

@@ -15,7 +15,7 @@ public class AddProductTestModel extends Pages {
     public void addRandomProduct() {
         for (int i = 0; i < randomProductPage.numberOfAdditionToCart; i++) {
             randomProductPage.clickRandomCategory().clickRandomProduct().setRandomQuantityValue().clickAddToCartButton();
-            cartOrderDetailsPage.clickContinueShopping().checkCartOfProducts();
+            productOrderDetailsPage.clickContinueShopping().checkCartOfProducts();
 
         }
     }
@@ -28,7 +28,7 @@ public class AddProductTestModel extends Pages {
                     .clickRandomCategory()
                     .clickRandomProduct()
                     .clickAddToCartButton();
-            cartOrderDetailsPage
+            productOrderDetailsPage
                     .clickContinueShopping()
                     .checkCartOfProducts();
         }
