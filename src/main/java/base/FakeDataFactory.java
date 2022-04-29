@@ -45,7 +45,7 @@ public class FakeDataFactory {
     }
 
     public static String getZipCode() {
-        return faker.address().zipCode();
+        return faker.numerify("#####");
     }
 
     public static String getNumber() {

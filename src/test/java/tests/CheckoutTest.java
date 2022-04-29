@@ -35,5 +35,7 @@ public class CheckoutTest extends Pages {
                 .clickProceedBtn();
         addressPage
                 .fillAddressesForm();
+        shippingMethodPage
+                .clickContinueBtn();
     }
 }

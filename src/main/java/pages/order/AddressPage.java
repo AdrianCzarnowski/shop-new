@@ -1,4 +1,4 @@
-package pages.user;
+package pages.order;
 
 import base.FakeDataFactory;
 import org.openqa.selenium.WebDriver;
