@@ -13,6 +13,7 @@ environment:
     number_of_addition_to_cart: 3
     number_of_random_add_random_product: 5
     first_product_quantity: 5
+    state: Florida
     waitTime: 15
   init:
     appUrl: http://146.59.32.4

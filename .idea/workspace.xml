@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with AddressPage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/UserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/FakeDataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/FakeDataFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/user/AddressPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/user/AddressPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/user/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/user/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <recent name="helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddProductTestModel.basketTest">
+  <component name="RunManager" selected="JUnit.CheckoutTest.registrationTest">
     <configuration name="AddProductTestModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <extension name="coverage">
@@ -159,8 +159,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddProductTestModel.basketTest" />
         <item itemvalue="JUnit.CheckoutTest.registrationTest" />
+        <item itemvalue="JUnit.AddProductTestModel.basketTest" />
         <item itemvalue="JUnit.AddProductTestModel.addRandomProduct" />
         <item itemvalue="JUnit.AddProductTestModel" />
         <item itemvalue="JUnit.BasketTest.basketAdding" />
@@ -175,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00044" summary="with clear filters">
-      <created>1650895395070</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1650895395070</updated>
     </task>
     <task id="LOCAL-00045" summary="with clear filters">
       <created>1650895407286</created>
@@ -519,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651227227019</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="with AddressPage">
+      <created>1651229736972</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1651229736972</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

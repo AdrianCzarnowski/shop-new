@@ -49,7 +49,7 @@ public class FakeDataFactory {
     }
 
     public static String getNumber() {
-        return String.valueOf(faker.phoneNumber());
+        return faker.numerify("#########");
     }
 
 }

@@ -17,12 +17,12 @@ import java.util.Random;
 
 
 public class BasePage {
+    protected static Random random = new Random();
     private static Logger log = LoggerFactory.getLogger("BasePage.class");
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
     protected JavascriptExecutor js;
-    protected Random random = new Random();
 
 
     public BasePage(WebDriver driver) {
@@ -35,6 +35,10 @@ public class BasePage {
 
     public static String getValueFromElement(WebElement element) {
         return element.getAttribute("value");
+    }
+
+    public static WebElement getRandomElement(List<WebElement> elements) {
+        return elements.get(new Random().nextInt(elements.size()));
     }
 
     public String getTextFromElement(WebElement element) {
