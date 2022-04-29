@@ -24,6 +24,10 @@ public class BasketPage extends BasePage {
     @FindBy(xpath = "//button[contains(@class, 'touchspin-down')]")
     private List<WebElement> productDownBtn;
 
+    @FindBy(css = ".product-line-grid .cart-line-product-actions i")
+    private List<WebElement> trashBtn;
+//    @FindBy(css = ".faceted-overlay")
+//    private WebElement overload;
 
     public BasketPage(WebDriver driver) {
         super(driver);
@@ -58,13 +62,22 @@ public class BasketPage extends BasePage {
 
     public BasketPage clickUpQuantityRandomProduct() {
         clickOnElement(productUpBtn.get(productUpBtn.size() - 1));
-        log.info("Product up button clicked");
+        log.info("Product up button has been clicked");
         return this;
     }
 
     public BasketPage clickDownQuantityRandomProduct() {
         clickOnElement(productDownBtn.get(random.nextInt(productDownBtn.size() - 1)));
-        log.info("Product down button clicked");
+        log.info("Product down button has been clicked");
+        return this;
+    }
+
+    public BasketPage clickTrashBtn() {
+        for (int i = 0; i < trashBtn.size(); i++) {
+            clickOnElement(trashBtn.get(i));
+            log.info("Trash btn has been pressed");
+            checkCostAfterChange();
+        }
         return this;
     }
 }

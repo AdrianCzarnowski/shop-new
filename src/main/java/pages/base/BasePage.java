@@ -50,6 +50,7 @@ public class BasePage {
 
     public String getTextFromElement(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
+        wait.until(ExpectedConditions.visibilityOf(element));
         try {
             return element.getText();
         } catch (StaleElementReferenceException e) {

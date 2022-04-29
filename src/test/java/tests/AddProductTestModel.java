@@ -46,6 +46,8 @@ public class AddProductTestModel extends Pages {
                 .clickUpQuantityRandomProduct()
                 .checkCostAfterChange()
                 .clickDownQuantityRandomProduct()
+                .checkCostAfterChange()
+                .clickTrashBtn()
                 .checkCostAfterChange();
 
     }
