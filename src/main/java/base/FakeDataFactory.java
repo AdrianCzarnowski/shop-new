@@ -25,11 +25,11 @@ public class FakeDataFactory {
     }
 
     public static String getFakeBirthDate() {
-        return fakeValuesService.numerify("##"+"/"+"##"+"/"+"####");
+        return fakeValuesService.numerify("0#" + "/" + "2#" + "/" + "199#");
     }
 
     public static String getPassword() {
-       return faker.internet().password(8,24,true,true);
+        return faker.internet().password(8, 24, true, true);
     }
 }
 

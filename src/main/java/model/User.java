@@ -1,5 +1,6 @@
 package model;
 
+
 import lombok.Data;
 
 @Data
@@ -42,7 +43,7 @@ public class User {
             return this;
         }
 
-        public User build() {
+        public User userBuilder() {
             if (firstName.isEmpty()) {
                 throw new IllegalStateException("Firstname cannot be empty");
             }
@@ -67,4 +68,5 @@ public class User {
             return user;
         }
     }
+
 }

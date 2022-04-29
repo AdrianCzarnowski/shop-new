@@ -12,5 +12,6 @@ public class UserRegistrationTest extends Pages {
     public void registrationTest() {
         menuPage.clickSingInButton();
         loginPage.clickNewAccount();
+        registrationPage.fillForm();
     }
 }

@@ -2,7 +2,7 @@ package base;
 
 import model.User;
 
-public class UserBuilder {
+public class UserFactory {
 
     public User.UserBuilder getRandomUser() {
 

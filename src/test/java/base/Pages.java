@@ -1,13 +1,14 @@
 package base;
 
 import org.junit.jupiter.api.BeforeEach;
-import pages.FooterPage;
-import pages.HomePage;
-import pages.MenuPage;
+import pages.navigation.FooterPage;
+import pages.navigation.HomePage;
+import pages.navigation.MenuPage;
 import pages.order.BasketPage;
 import pages.order.ProductOrderDetailsPage;
 import pages.product.*;
 import pages.user.LoginPage;
+import pages.user.RegistrationPage;
 
 public class Pages extends TestBase {
     public static SearchPage searchPage;
@@ -22,6 +23,7 @@ public class Pages extends TestBase {
     public static BasketPage basketPage;
     public static MenuPage menuPage;
     public static LoginPage loginPage;
+    public static RegistrationPage registrationPage;
 
     @BeforeEach
     public void testSetup() {
@@ -37,5 +39,6 @@ public class Pages extends TestBase {
         basketPage = new BasketPage(driver);
         menuPage = new MenuPage(driver);
         loginPage = new LoginPage(driver);
+        registrationPage = new RegistrationPage(driver);
     }
 }
