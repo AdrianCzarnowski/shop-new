@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with trash">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/user/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UserRegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddProductTestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Pages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
       <recent name="helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddProductTestModel.basketTest">
+  <component name="RunManager" selected="JUnit.UserRegistrationTest.registrationTest">
     <configuration name="AddProductTestModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <extension name="coverage">
@@ -127,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PriceDropPageTest.onSaleProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserRegistrationTest.registrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson12Shop" />
       <extension name="coverage">
         <pattern>
@@ -136,8 +139,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PriceDropPageTest" />
-      <option name="METHOD_NAME" value="onSaleProducts" />
+      <option name="MAIN_CLASS_NAME" value="tests.UserRegistrationTest" />
+      <option name="METHOD_NAME" value="registrationTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserRegistrationTest.registrationTest" />
         <item itemvalue="JUnit.AddProductTestModel.basketTest" />
         <item itemvalue="JUnit.AddProductTestModel.addRandomProduct" />
         <item itemvalue="JUnit.AddProductTestModel" />
         <item itemvalue="JUnit.BasketTest.basketAdding" />
-        <item itemvalue="JUnit.PriceDropPageTest.onSaleProducts" />
       </list>
     </recent_temporary>
   </component>
@@ -172,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00037" summary="with filter">
-      <created>1650889241747</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1650889241747</updated>
     </task>
     <task id="LOCAL-00038" summary="with clear filters">
       <created>1650890937819</created>
@@ -516,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651215876303</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="with trash">
+      <created>1651216451427</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1651216451427</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
