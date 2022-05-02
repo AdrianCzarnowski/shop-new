@@ -45,6 +45,7 @@ public class CheckoutTest extends Pages {
                 .selectTermsOfService()
                 .clickPlaceOrderBtn();
         summaryPage
-                .checkOrderDetails();
+                .checkOrderDetails()
+                .getOrderReference();
     }
 }

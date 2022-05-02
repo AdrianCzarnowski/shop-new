@@ -104,4 +104,7 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    public void waitToBeVisibleAllElements(List<WebElement> elements) {
+        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+    }
 }
