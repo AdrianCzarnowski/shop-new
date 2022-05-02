@@ -14,6 +14,8 @@ public class PaymentPage extends BasePage {
     private WebElement termsCheckbox;
     @FindBy(xpath = "//*[@id='payment-option-2']")
     private WebElement payByBankWire;
+    @FindBy(css = "#payment-option-2-container > label > span")
+    private WebElement payByBankWireText;
     @FindBy(xpath = "//a[@id='cta-terms-and-conditions-0']")
     private WebElement termsOfServiceLink;
     @FindBy(xpath = "//*[@class='js-modal-content']")
@@ -37,9 +39,10 @@ public class PaymentPage extends BasePage {
         return this;
     }
 
+
     public PaymentPage checkTermsOfService() {
         clickOnElement(termsOfServiceLink);
-        String msg = modalMsg.getText();
+        String msg = getTextFromElement(modalMsg);
         if (!(msg == null)) {
             clickOnElement(closeModal);
             log.info("Terms are not empty");
