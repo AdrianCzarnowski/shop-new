@@ -13,6 +13,7 @@ public class DataCollect {
     private static Logger log = LoggerFactory.getLogger("DataCollect.class");
     private String shippingMethodName;
     private String paymentMethod;
+    private String orderReference;
 
     public DataCollect(String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;

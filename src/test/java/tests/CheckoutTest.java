@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 public class CheckoutTest extends Pages {
     private static Logger log = LoggerFactory.getLogger("UserRegistrationTest.class");
 
@@ -56,15 +57,18 @@ public class CheckoutTest extends Pages {
                 .selectTermsOfService()
                 .clickPlaceOrderBtn();
         summaryPage
-                .checkOrderDetails()
-                .getOrderReference()
-                .getShippingMethod();
-        summaryPage
-                .getPaymentMethod();
+                .checkOrderDetails();
+        dataCollect
+                .setOrderReference(summaryPage.orderReference());
+        log.info("reference: " + dataCollect.getOrderReference());
 
-        assertEquals(dataCollect.getShippingMethodName(), summaryPage.getShippingMethod());
-        log.info("Shipping method is the same");
+        assertEquals(dataCollect.getShippingMethodName(), summaryPage.getShippingMethod(), "");
+        log.info("Shipping methods are the same");
         assertEquals(dataCollect.getPaymentMethod(), System.getProperty("payment_method"));
-        log.info("Payment method is the same");
+        log.info("Payment methods are the same");
+
+        summaryPage
+                .goToOrderHistory();
+
     }
 }

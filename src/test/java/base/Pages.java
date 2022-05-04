@@ -1,5 +1,6 @@
 package base;
 
+import model.DataCollect;
 import org.junit.jupiter.api.BeforeEach;
 import pages.navigation.FooterPage;
 import pages.navigation.HomePage;
@@ -27,6 +28,7 @@ public class Pages extends TestBase {
     public static ShippingMethodPage shippingMethodPage;
     public static PaymentPage paymentPage;
     public static SummaryPage summaryPage;
+    public static DataCollect dataCollect;
 
 
     @BeforeEach
@@ -48,6 +50,7 @@ public class Pages extends TestBase {
         shippingMethodPage = new ShippingMethodPage(driver);
         paymentPage = new PaymentPage(driver);
         summaryPage = new SummaryPage(driver);
+
 
     }
 }

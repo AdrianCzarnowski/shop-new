@@ -17,12 +17,15 @@ public class SummaryPage extends BasePage {
     @FindBy(xpath = "//div[@class='order-line row']")
     private List<WebElement> products;
     @FindBy(css = "#order-details > ul > li:nth-child(1)")
-    private WebElement orderReference;
+    private WebElement orderNumber;
     @FindBy(css = "#order-details > ul > li:nth-child(3)")
     private WebElement shippingMethod;
 
     @FindBy(css = "#order-details > ul > li:nth-child(2)")
     private WebElement paymentMethod;
+
+    @FindBy(css = "[title='Orders']")
+    private WebElement orderHistory;
 
 
     public SummaryPage(WebDriver driver) {
@@ -35,13 +38,13 @@ public class SummaryPage extends BasePage {
             waitToBeVisibleAllElements(products);
             productList.add(getTextFromElement(products.get(i)));
         }
-        log.info(String.valueOf(productList));
+        log.info("all products are visible and have all components");
         return this;
     }
 
-    public SummaryPage getOrderReference() {
-        log.info(getTextFromElement(orderReference).replace("Order reference: ", ""));
-        return this;
+    public String orderReference() {
+        String orderReference = getTextFromElement(orderNumber).replace("Order reference: ", "");
+        return orderReference;
     }
 
     public String getShippingMethod() {
@@ -51,8 +54,14 @@ public class SummaryPage extends BasePage {
     }
 
     public String getPaymentMethod() {
-        String payment = getTextFromElement(paymentMethod);
+        String payment = getTextFromElement(paymentMethod).trim();
         log.info(payment);
         return payment;
+    }
+
+    public SummaryPage goToOrderHistory() {
+        scrollToElement(orderHistory);
+        clickOnElement(orderHistory);
+        return this;
     }
 }
