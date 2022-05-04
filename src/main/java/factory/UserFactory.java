@@ -1,4 +1,4 @@
-package base;
+package factory;
 
 import model.User;
 

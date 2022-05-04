@@ -1,4 +1,4 @@
-package base;
+package factory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.NoArgsConstructor;

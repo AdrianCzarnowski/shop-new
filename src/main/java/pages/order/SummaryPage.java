@@ -13,18 +13,20 @@ import java.util.List;
 public class SummaryPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("BasePage.class");
+    List<String> productList = new ArrayList<>();
     @FindBy(xpath = "//div[@class='order-line row']")
     private List<WebElement> products;
-
     @FindBy(css = "#order-details > ul > li:nth-child(1)")
     private WebElement orderReference;
+    @FindBy(css = "#order-details > ul > li:nth-child(3)")
+    private WebElement shippingMethod;
 
     public SummaryPage(WebDriver driver) {
         super(driver);
     }
 
     public SummaryPage checkOrderDetails() {
-        List<String> productList = new ArrayList<>();
+
         for (int i = 0; i < products.size(); i++) {
             waitToBeVisibleAllElements(products);
             productList.add(getTextFromElement(products.get(i)));
@@ -37,4 +39,12 @@ public class SummaryPage extends BasePage {
         log.info(getTextFromElement(orderReference).replace("Order reference: ", ""));
         return this;
     }
+
+    public SummaryPage getSippingMethod() {
+        getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", "");
+        log.info(getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", ""));
+        return this;
+    }
+
+
 }

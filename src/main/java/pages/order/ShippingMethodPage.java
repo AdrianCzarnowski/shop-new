@@ -14,6 +14,9 @@ public class ShippingMethodPage extends BasePage {
     @FindBy(xpath = "//button[@name='confirmDeliveryOption']")
     private WebElement confirmDeliveryOptionBtn;
 
+    @FindBy(css = "[for='delivery_option_1'] .carrier-name")
+    private WebElement nameOfShippingMethod;
+
     public ShippingMethodPage(WebDriver driver) {
         super(driver);
     }
@@ -21,6 +24,12 @@ public class ShippingMethodPage extends BasePage {
     public ShippingMethodPage clickContinueBtn() {
         clickOnElement(confirmDeliveryOptionBtn);
         log.info("Shipping method selected");
+        return this;
+    }
+
+    public ShippingMethodPage shippingMethodName() {
+        getTextFromElement(nameOfShippingMethod);
+        log.info(getTextFromElement(nameOfShippingMethod));
         return this;
     }
 }

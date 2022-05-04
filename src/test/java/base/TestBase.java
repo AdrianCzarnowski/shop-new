@@ -1,5 +1,6 @@
 package base;
 
+import factory.DriverFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,7 +25,7 @@ public class TestBase {
 
     @AfterEach
     void tearDown() {
-        driver.quit();
+//        driver.quit();
     }
 }
 

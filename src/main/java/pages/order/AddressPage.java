@@ -1,6 +1,6 @@
 package pages.order;
 
-import base.FakeDataFactory;
+import factory.FakeDataFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
