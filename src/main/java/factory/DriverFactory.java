@@ -1,8 +1,8 @@
 package factory;
 
+import helpers.DriverEnum;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.NoArgsConstructor;
-import model.DriverEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

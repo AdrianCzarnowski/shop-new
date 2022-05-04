@@ -1,8 +1,8 @@
 package properties;
 
+import helpers.DriverEnum;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import model.DriverEnum;
 
 @Data
 @NoArgsConstructor

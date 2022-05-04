@@ -1,4 +1,4 @@
-package model;
+package helpers;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 @NoArgsConstructor
 @Data
-public class DataCollect {
+public class OrderDataCollect {
 
 
     private static Logger log = LoggerFactory.getLogger("DataCollect.class");
@@ -16,7 +16,7 @@ public class DataCollect {
     private String orderReference;
     private double totalAmount;
 
-    public DataCollect(String shippingMethodName) {
+    public OrderDataCollect(String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
     }
 

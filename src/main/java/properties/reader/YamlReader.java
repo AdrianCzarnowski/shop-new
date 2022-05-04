@@ -4,9 +4,7 @@ import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-
 import lombok.Data;
-import model.DriverEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import properties.Config;
@@ -17,8 +15,8 @@ import java.io.IOException;
 
 @Data
 public class YamlReader {
-    Config config;
     private static Logger log = LoggerFactory.getLogger("YamlReader.class");
+    Config config;
 
     public YamlReader() {
 

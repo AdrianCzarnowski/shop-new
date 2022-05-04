@@ -24,6 +24,9 @@ public class OrderHistoryPage extends BasePage {
     @FindBy(css = "tbody > tr > td:nth-child(5)")
     private WebElement status;
 
+    @FindBy(xpath = ".//a[contains(text(), 'Details')]")
+    private WebElement detailsBtn;
+
     public OrderHistoryPage(WebDriver driver) {
         super(driver);
     }
@@ -51,6 +54,11 @@ public class OrderHistoryPage extends BasePage {
     public String orderStatus() {
         String orderStatus = getTextFromElement(status);
         return orderStatus;
+    }
+
+    public OrderHistoryPage goToDetailsPage() {
+        clickOnElement(detailsBtn);
+        return this;
     }
 }
 

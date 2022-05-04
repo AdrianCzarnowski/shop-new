@@ -1,6 +1,6 @@
 package properties;
 
-import model.DriverEnum;
+import helpers.DriverEnum;
 import model.EnvironmentModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

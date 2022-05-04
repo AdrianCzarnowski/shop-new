@@ -47,6 +47,10 @@ public class Product {
                 ", quantity: " + quantity;
     }
 
+    public List<Product> getProductList() {
+        return productList;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

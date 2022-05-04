@@ -2,7 +2,7 @@ package tests;
 
 import base.Pages;
 import factory.UserFactory;
-import model.DataCollect;
+import helpers.OrderDataCollect;
 import model.User;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -19,7 +19,7 @@ public class CheckoutTest extends Pages {
     @Test
     public void registrationTest() {
 
-        DataCollect dataCollect = new DataCollect();
+        OrderDataCollect orderDataCollect = new OrderDataCollect();
 
         User user = new UserFactory().getRandomUser();
         menuPage.clickSingInButton();
@@ -27,7 +27,11 @@ public class CheckoutTest extends Pages {
         registrationPage.fillForm(user);
 
         for (int i = 0; i < randomProductPage.numberOfRandomProduct - 1; i++) {
-            randomProductPage.clickRandomCategory().clickRandomProduct().setRandomQuantityValue().clickAddToCartButton();
+            randomProductPage
+                    .clickRandomCategory()
+                    .clickRandomProduct()
+                    .setRandomQuantityValue()
+                    .clickAddToCartButton();
             productOrderDetailsPage.clickContinueShopping();
         }
 
@@ -42,12 +46,12 @@ public class CheckoutTest extends Pages {
                 .clickProceedBtn();
         addressPage
                 .fillAddressesForm();
-        dataCollect
+        orderDataCollect
                 .setShippingMethodName(shippingMethodPage.shippingMethodName().getShippingMethodName().trim());
 
         shippingMethodPage
                 .clickContinueBtn();
-        dataCollect
+        orderDataCollect
                 .setPaymentMethod(paymentPage.paymentMethodName());
         paymentPage
                 .selectPayment()
@@ -57,30 +61,35 @@ public class CheckoutTest extends Pages {
         summaryPage
                 .checkOrderDetails()
                 .totalAmount();
-        dataCollect
+        orderDataCollect
                 .setOrderReference(summaryPage.orderReference());
-        dataCollect
+        orderDataCollect
                 .setTotalAmount(summaryPage.totalAmount());
 
 
-        assertEquals(dataCollect.getShippingMethodName(), summaryPage.getShippingMethod());
+        assertEquals(orderDataCollect.getShippingMethodName(), summaryPage.getShippingMethod());
         log.info("Shipping methods are the same");
-        assertEquals(dataCollect.getPaymentMethod(), System.getProperty("payment_method_payment_page"));
+        assertEquals(orderDataCollect.getPaymentMethod(), System.getProperty("payment_method_payment_page"));
         log.info("Payment methods are the same");
 
         summaryPage
                 .goToOrderHistory();
 
-        assertEquals(dataCollect.getOrderReference(), orderHistoryPage.orderReference());
+        assertEquals(orderDataCollect.getOrderReference(), orderHistoryPage.orderReference());
         log.info("Order reference is the same");
         assertEquals(BasePage.getTodayDate(), orderHistoryPage.orderDate());
         log.info("Date is correct");
-        assertEquals(dataCollect.getTotalAmount(), orderHistoryPage.orderTotalPrice());
-        log.info("Price are equals");
+        assertEquals(orderDataCollect.getTotalAmount(), orderHistoryPage.orderTotalPrice());
+        log.info("Prices are equals");
         assertEquals(System.getProperty("payment_order_history"), orderHistoryPage.orderPayment());
         log.info("Form of payment is the same");
-        assertTrue(orderHistoryPage.orderStatus().contains(dataCollect.getPaymentMethod()));
-        log.info("Order status: " + orderHistoryPage.orderStatus());
+        assertTrue(orderHistoryPage.orderStatus().contains(orderDataCollect.getPaymentMethod()));
+        log.info("Order status is correct: " + orderHistoryPage.orderStatus());
+
+        orderHistoryPage
+                .goToDetailsPage();
+        orderDetailsPage
+                .details();
 
 
     }

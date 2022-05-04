@@ -28,6 +28,7 @@ public class Pages extends TestBase {
     public static PaymentPage paymentPage;
     public static SummaryPage summaryPage;
     public static OrderHistoryPage orderHistoryPage;
+    public static OrderDetailsPage orderDetailsPage;
 
 
     @BeforeEach
@@ -50,6 +51,7 @@ public class Pages extends TestBase {
         paymentPage = new PaymentPage(driver);
         summaryPage = new SummaryPage(driver);
         orderHistoryPage = new OrderHistoryPage(driver);
+        orderDetailsPage = new OrderDetailsPage(driver);
 
 
     }
