@@ -10,7 +10,8 @@ public class PriceDropPageTest extends Pages {
 
     @Test
     public void onSaleProducts() {
-        footerPage.clickPriceDropButton();
+        footerPage
+                .clickPriceDropButton();
         priceDropPage
                 .checkOnSalePageAreLoaded()
                 .checkVisibilityOfPricesAndDiscount()

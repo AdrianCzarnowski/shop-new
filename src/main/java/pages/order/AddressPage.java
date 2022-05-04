@@ -34,11 +34,6 @@ public class AddressPage extends BasePage {
         super(driver);
     }
 
-//    private void selectState() {
-//        Select select = new Select(states);
-//        select.selectByVisibleText(System.getProperty("state"));
-//    }
-
     private void selectCountry() {
         Select select = new Select(country);
         select.selectByVisibleText(System.getProperty("country"));

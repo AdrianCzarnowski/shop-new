@@ -1,5 +1,6 @@
 package pages.order;
 
+import model.DataCollect;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,13 +8,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
+import static model.DataCollect.dataList;
+
 public class ShippingMethodPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("ShippingMethodPage.class");
-
+    public DataCollect dataCollect;
     @FindBy(xpath = "//button[@name='confirmDeliveryOption']")
     private WebElement confirmDeliveryOptionBtn;
-
     @FindBy(css = "[for='delivery_option_1'] .carrier-name")
     private WebElement nameOfShippingMethod;
 
@@ -27,9 +29,16 @@ public class ShippingMethodPage extends BasePage {
         return this;
     }
 
-    public ShippingMethodPage shippingMethodName() {
-        getTextFromElement(nameOfShippingMethod);
+    public DataCollect shippingMethodName() {
+        String shippingNameText = nameOfShippingMethod.getText();
         log.info(getTextFromElement(nameOfShippingMethod));
-        return this;
+        DataCollect dataCollect1 = new DataCollect(shippingNameText);
+        return dataCollect1;
     }
+
+    public void checkShippingName() {
+        dataCollect = shippingMethodName();
+        DataCollect data = dataList.get(dataList.indexOf(dataCollect));
+    }
+
 }

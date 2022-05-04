@@ -2,6 +2,7 @@ package tests;
 
 import base.Pages;
 import factory.UserFactory;
+import model.DataCollect;
 import model.User;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -38,8 +39,8 @@ public class CheckoutTest extends Pages {
         addressPage
                 .fillAddressesForm();
         shippingMethodPage
-                .shippingMethodName()
-                .clickContinueBtn();
+                .shippingMethodName();
+        shippingMethodPage.clickContinueBtn();
         paymentPage
                 .selectPayment()
                 .checkTermsOfService()
@@ -49,7 +50,8 @@ public class CheckoutTest extends Pages {
                 .checkOrderDetails()
                 .getOrderReference()
                 .getSippingMethod();
-        assert (String.valueOf(shippingMethodPage.shippingMethodName()).equals(String.valueOf(summaryPage.getSippingMethod())));
+        log.info(String.valueOf(DataCollect.getshipName()));
+        assert (String.valueOf(DataCollect.getshipName()).equals(String.valueOf(summaryPage.getSippingMethod())));
         log.info("Shipping method is the same");
     }
 }

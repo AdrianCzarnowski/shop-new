@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with Shipping Method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/DataCollect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/DriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/FakeDataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/FakeDataFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/AddressPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/AddressPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/ShippingMethodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/ShippingMethodPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/SummaryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/SummaryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PriceDropPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PriceDropPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,13 +164,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00050" summary="with Check Visibility">
-      <created>1650959448080</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1650959448081</updated>
     </task>
     <task id="LOCAL-00051" summary="with ProductModel">
       <created>1650974522866</created>
@@ -511,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651502882382</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="with Shipping Method">
+      <created>1651652249337</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1651652249338</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -566,6 +563,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="with Shipping Method" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/order/ShippingMethodPage.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="pages.order.BasketPage" memberName="productUpBtn" />
