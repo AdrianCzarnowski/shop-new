@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class CheckoutTest extends Pages {
@@ -64,7 +65,7 @@ public class CheckoutTest extends Pages {
 
         assertEquals(dataCollect.getShippingMethodName(), summaryPage.getShippingMethod());
         log.info("Shipping methods are the same");
-        assertEquals(dataCollect.getPaymentMethod(), System.getProperty("payment_method"));
+        assertEquals(dataCollect.getPaymentMethod(), System.getProperty("payment_method_payment_page"));
         log.info("Payment methods are the same");
 
         summaryPage
@@ -76,6 +77,10 @@ public class CheckoutTest extends Pages {
         log.info("Date is correct");
         assertEquals(dataCollect.getTotalAmount(), orderHistoryPage.orderTotalPrice());
         log.info("Price are equals");
+        assertEquals(System.getProperty("payment_order_history"), orderHistoryPage.orderPayment());
+        log.info("Form of payment is the same");
+        assertTrue(orderHistoryPage.orderStatus().contains(dataCollect.getPaymentMethod()));
+        log.info("Order status: " + orderHistoryPage.orderStatus());
 
 
     }

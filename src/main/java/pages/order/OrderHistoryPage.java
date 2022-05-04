@@ -18,6 +18,12 @@ public class OrderHistoryPage extends BasePage {
     @FindBy(css = "tbody > tr > td:nth-child(3)")
     private WebElement totalPrice;
 
+    @FindBy(css = "tbody > tr > td:nth-child(4)")
+    private WebElement payment;
+
+    @FindBy(css = "tbody > tr > td:nth-child(5)")
+    private WebElement status;
+
     public OrderHistoryPage(WebDriver driver) {
         super(driver);
     }
@@ -35,6 +41,16 @@ public class OrderHistoryPage extends BasePage {
     public double orderTotalPrice() {
         double total = Double.parseDouble(getTextFromElement(totalPrice).replace("$", ""));
         return total;
+    }
+
+    public String orderPayment() {
+        String paymentType = getTextFromElement(payment);
+        return paymentType;
+    }
+
+    public String orderStatus() {
+        String orderStatus = getTextFromElement(status);
+        return orderStatus;
     }
 }
 
