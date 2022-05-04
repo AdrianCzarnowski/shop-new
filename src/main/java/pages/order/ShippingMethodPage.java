@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
-import static model.DataCollect.dataList;
+//import static model.DataCollect.dataList;
 
 public class ShippingMethodPage extends BasePage {
 
@@ -30,16 +30,16 @@ public class ShippingMethodPage extends BasePage {
     }
 
     public DataCollect shippingMethodName() {
-        String shippingNameText = getTextFromElement(nameOfShippingMethod);
+        String shippingNameText = getTextFromElement(nameOfShippingMethod).trim();
         log.info(getTextFromElement(nameOfShippingMethod));
         DataCollect dataCollect1 = new DataCollect(shippingNameText);
         return dataCollect1;
     }
 
-    public void checkShippingName() {
-        dataCollect = shippingMethodName();
-        dataList.add(dataCollect);
-        log.info(String.valueOf(dataCollect));
-    }
+//    public void checkShippingName() {
+//        dataCollect = shippingMethodName();
+//        dataList.add(dataCollect);
+//        log.info(String.valueOf(dataCollect));
+//    }
 
 }

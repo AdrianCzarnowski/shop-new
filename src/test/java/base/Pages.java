@@ -28,6 +28,7 @@ public class Pages extends TestBase {
     public static PaymentPage paymentPage;
     public static SummaryPage summaryPage;
 
+
     @BeforeEach
     public void testSetup() {
         searchPage = new SearchPage(driver);
@@ -47,5 +48,6 @@ public class Pages extends TestBase {
         shippingMethodPage = new ShippingMethodPage(driver);
         paymentPage = new PaymentPage(driver);
         summaryPage = new SummaryPage(driver);
+
     }
 }

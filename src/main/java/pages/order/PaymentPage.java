@@ -54,4 +54,10 @@ public class PaymentPage extends BasePage {
         clickOnElement(placeOrderBtn);
         return this;
     }
+
+    public String paymentMethodName() {
+        String paymentMethod = payByBankWireText.getText().trim();
+        log.info(paymentMethod);
+        return paymentMethod;
+    }
 }

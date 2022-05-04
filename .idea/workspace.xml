@@ -7,8 +7,10 @@
     <list default="true" id="40f01fef-4c6e-4e9d-98cd-f2e137bd3b91" name="Changes" comment="with Shipping Method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/DataCollect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DataCollect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/PaymentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/PaymentPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/ShippingMethodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/ShippingMethodPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/order/SummaryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/order/SummaryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Pages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,20 +165,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649835064895</updated>
-    </task>
-    <task id="LOCAL-00052" summary="with ProductModel">
-      <created>1650975066580</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1650975066580</updated>
-    </task>
-    <task id="LOCAL-00053" summary="fix browser">
-      <created>1650978342777</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1650978342778</updated>
     </task>
     <task id="LOCAL-00054" summary="fix browser">
       <created>1650979072085</created>
@@ -507,7 +495,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651657861373</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="with Shipping Method">
+      <created>1651661231421</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1651661231421</updated>
+    </task>
+    <task id="LOCAL-00102" summary="with Shipping Method">
+      <created>1651661244644</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1651661244644</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

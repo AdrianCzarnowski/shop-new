@@ -21,6 +21,10 @@ public class SummaryPage extends BasePage {
     @FindBy(css = "#order-details > ul > li:nth-child(3)")
     private WebElement shippingMethod;
 
+    @FindBy(css = "#order-details > ul > li:nth-child(2)")
+    private WebElement paymentMethod;
+
+
     public SummaryPage(WebDriver driver) {
         super(driver);
     }
@@ -44,5 +48,11 @@ public class SummaryPage extends BasePage {
         String shippingMethodName = getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", "");
         log.info("Shipping method name: " + getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", ""));
         return shippingMethodName;
+    }
+
+    public String getPaymentMethod() {
+        String payment = getTextFromElement(paymentMethod);
+        log.info(payment);
+        return payment;
     }
 }

@@ -15,6 +15,9 @@ public class CheckoutTest extends Pages {
 
     @Test
     public void registrationTest() {
+
+        DataCollect dataCollect = new DataCollect();
+
         User user = new UserFactory().getRandomUser();
         menuPage.clickSingInButton();
         loginPage.clickNewAccount();
@@ -40,12 +43,13 @@ public class CheckoutTest extends Pages {
                 .clickProceedBtn();
         addressPage
                 .fillAddressesForm();
-        shippingMethodPage
-                .shippingMethodName();
-        shippingMethodPage
-                .checkShippingName();
+        dataCollect
+                .setShippingMethodName(shippingMethodPage.shippingMethodName().getShippingMethodName().trim());
+
         shippingMethodPage
                 .clickContinueBtn();
+        dataCollect
+                .setPaymentMethod(paymentPage.paymentMethodName());
         paymentPage
                 .selectPayment()
                 .checkTermsOfService()
@@ -55,9 +59,13 @@ public class CheckoutTest extends Pages {
                 .checkOrderDetails()
                 .getOrderReference()
                 .getShippingMethod();
+        summaryPage
+                .getPaymentMethod();
+//        log.info("<<<<<<<<<" + dataCollect.getshipName());
 
-        log.info("<<<<<<<<<" + DataCollect.getshipName());
-        assertEquals(DataCollect.getshipName(), (summaryPage.getShippingMethod().trim()));
+        assertEquals(dataCollect.getShippingMethodName(), summaryPage.getShippingMethod().trim());
         log.info("Shipping method is the same");
+        assertEquals(dataCollect.getPaymentMethod(), "Pay by bank wire");
+        log.info("Payment method is the same");
     }
 }
