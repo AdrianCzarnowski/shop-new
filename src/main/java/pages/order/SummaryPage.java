@@ -27,6 +27,9 @@ public class SummaryPage extends BasePage {
     @FindBy(css = "[title='Orders']")
     private WebElement orderHistory;
 
+    @FindBy(xpath = "//tr[@class='total-value font-weight-bold']")
+    private WebElement totalAmount;
+
 
     public SummaryPage(WebDriver driver) {
         super(driver);
@@ -53,10 +56,16 @@ public class SummaryPage extends BasePage {
         return shippingMethodName.trim();
     }
 
-    public String getPaymentMethod() {
+    public String paymentMethod() {
         String payment = getTextFromElement(paymentMethod).trim();
-        log.info(payment);
+        log.info("payment method " + payment);
         return payment;
+    }
+
+    public double totalAmount() {
+        double totalAm = Double.parseDouble(getTextFromElement(totalAmount).replace("TOTAL  $", "").trim());
+        log.info("total amount is: " + totalAm);
+        return totalAm;
     }
 
     public SummaryPage goToOrderHistory() {

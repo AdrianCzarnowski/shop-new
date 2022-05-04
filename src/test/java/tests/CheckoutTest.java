@@ -7,6 +7,7 @@ import model.User;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pages.base.BasePage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -25,11 +26,7 @@ public class CheckoutTest extends Pages {
         registrationPage.fillForm(user);
 
         for (int i = 0; i < randomProductPage.numberOfRandomProduct - 1; i++) {
-            randomProductPage
-                    .clickRandomCategory()
-                    .clickRandomProduct()
-                    .setRandomQuantityValue()
-                    .clickAddToCartButton();
+            randomProductPage.clickRandomCategory().clickRandomProduct().setRandomQuantityValue().clickAddToCartButton();
             productOrderDetailsPage.clickContinueShopping();
         }
 
@@ -57,18 +54,29 @@ public class CheckoutTest extends Pages {
                 .selectTermsOfService()
                 .clickPlaceOrderBtn();
         summaryPage
-                .checkOrderDetails();
+                .checkOrderDetails()
+                .totalAmount();
         dataCollect
                 .setOrderReference(summaryPage.orderReference());
-        log.info("reference: " + dataCollect.getOrderReference());
+        dataCollect
+                .setTotalAmount(summaryPage.totalAmount());
 
-        assertEquals(dataCollect.getShippingMethodName(), summaryPage.getShippingMethod(), "");
+
+        assertEquals(dataCollect.getShippingMethodName(), summaryPage.getShippingMethod());
         log.info("Shipping methods are the same");
         assertEquals(dataCollect.getPaymentMethod(), System.getProperty("payment_method"));
         log.info("Payment methods are the same");
 
         summaryPage
                 .goToOrderHistory();
+
+        assertEquals(dataCollect.getOrderReference(), orderHistoryPage.orderReference());
+        log.info("Order reference is the same");
+        assertEquals(BasePage.getTodayDate(), orderHistoryPage.orderDate());
+        log.info("Date is correct");
+        assertEquals(dataCollect.getTotalAmount(), orderHistoryPage.orderTotalPrice());
+        log.info("Price are equals");
+
 
     }
 }

@@ -12,6 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Random;
 
@@ -39,6 +41,13 @@ public class BasePage {
 
     public static WebElement getRandomElement(List<WebElement> elements) {
         return elements.get(new Random().nextInt(elements.size()));
+    }
+
+    public static String getTodayDate() {
+        LocalDate localDate = LocalDate.now();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        return dateTimeFormatter.format(localDate);
+
     }
 
     public String getTextFromElement(WebElement element) {

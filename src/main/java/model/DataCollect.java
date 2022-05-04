@@ -14,6 +14,7 @@ public class DataCollect {
     private String shippingMethodName;
     private String paymentMethod;
     private String orderReference;
+    private double totalAmount;
 
     public DataCollect(String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;

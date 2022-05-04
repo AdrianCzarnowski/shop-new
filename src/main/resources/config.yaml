@@ -15,7 +15,8 @@ environment:
     first_product_quantity: 5
     state: Florida
     country: Poland
-    payment_method: Pay by bank wire
+    payment_method_payment_page: Pay by bank wire
+    payment_method_
     waitTime: 15
 
   init:
