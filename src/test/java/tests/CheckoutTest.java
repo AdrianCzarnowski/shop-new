@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class CheckoutTest extends Pages {
     private static Logger log = LoggerFactory.getLogger("UserRegistrationTest.class");
 
@@ -40,7 +42,10 @@ public class CheckoutTest extends Pages {
                 .fillAddressesForm();
         shippingMethodPage
                 .shippingMethodName();
-        shippingMethodPage.clickContinueBtn();
+        shippingMethodPage
+                .checkShippingName();
+        shippingMethodPage
+                .clickContinueBtn();
         paymentPage
                 .selectPayment()
                 .checkTermsOfService()
@@ -49,9 +54,10 @@ public class CheckoutTest extends Pages {
         summaryPage
                 .checkOrderDetails()
                 .getOrderReference()
-                .getSippingMethod();
-        log.info(String.valueOf(DataCollect.getshipName()));
-        assert (String.valueOf(DataCollect.getshipName()).equals(String.valueOf(summaryPage.getSippingMethod())));
+                .getShippingMethod();
+
+        log.info("<<<<<<<<<" + DataCollect.getshipName());
+        assertEquals(DataCollect.getshipName(), (summaryPage.getShippingMethod().trim()));
         log.info("Shipping method is the same");
     }
 }

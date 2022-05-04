@@ -15,8 +15,9 @@ public class DataCollect {
 
     private static Logger log = LoggerFactory.getLogger("DataCollect.class");
     private String shippingMethodName;
+    private String paymentMethod;
 
-    public DataCollect(String shippingMethodName) {
+    public DataCollect(String shippingMethodName {
         this.shippingMethodName = shippingMethodName;
     }
 
@@ -25,6 +26,7 @@ public class DataCollect {
         for (DataCollect data : dataList) {
             name = data.getShippingMethodName();
         }
+        log.info("<<<<<<<<<<<<NAME " + name);
         return name;
     }
 

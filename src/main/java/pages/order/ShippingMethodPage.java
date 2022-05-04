@@ -30,7 +30,7 @@ public class ShippingMethodPage extends BasePage {
     }
 
     public DataCollect shippingMethodName() {
-        String shippingNameText = nameOfShippingMethod.getText();
+        String shippingNameText = getTextFromElement(nameOfShippingMethod);
         log.info(getTextFromElement(nameOfShippingMethod));
         DataCollect dataCollect1 = new DataCollect(shippingNameText);
         return dataCollect1;
@@ -38,7 +38,8 @@ public class ShippingMethodPage extends BasePage {
 
     public void checkShippingName() {
         dataCollect = shippingMethodName();
-        DataCollect data = dataList.get(dataList.indexOf(dataCollect));
+        dataList.add(dataCollect);
+        log.info(String.valueOf(dataCollect));
     }
 
 }

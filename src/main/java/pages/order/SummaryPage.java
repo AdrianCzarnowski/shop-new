@@ -40,11 +40,9 @@ public class SummaryPage extends BasePage {
         return this;
     }
 
-    public SummaryPage getSippingMethod() {
-        getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", "");
-        log.info(getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", ""));
-        return this;
+    public String getShippingMethod() {
+        String shippingMethodName = getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", "");
+        log.info("Shipping method name: " + getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", ""));
+        return shippingMethodName;
     }
-
-
 }
