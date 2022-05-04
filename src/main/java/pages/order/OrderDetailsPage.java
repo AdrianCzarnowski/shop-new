@@ -35,8 +35,6 @@ public class OrderDetailsPage extends BasketPage {
     public OrderDetailsPage details() {
 
         List<String> product = checkOrderDetails();
-        log.info("111 " + productList.get(0).getProductName());
-        log.info("222 " + String.valueOf(productList.get(0).getProductPrice()));
         for (int i = 0; i < product.size(); i++) {
             for (int j = 0; j < productList.size(); j++) {
                 if (product.get(i).contains(productList.get(j).getProductName())

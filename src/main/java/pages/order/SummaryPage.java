@@ -14,7 +14,7 @@ public class SummaryPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("BasePage.class");
     List<String> productList = new ArrayList<>();
-    @FindBy(xpath = "//div[@class='order-line row']")
+    @FindBy(xpath = "//*[@id=\"order-items\"]/div[2]/div")
     private List<WebElement> products;
     @FindBy(css = "#order-details > ul > li:nth-child(1)")
     private WebElement orderNumber;
