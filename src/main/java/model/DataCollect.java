@@ -17,7 +17,7 @@ public class DataCollect {
     private String shippingMethodName;
     private String paymentMethod;
 
-    public DataCollect(String shippingMethodName {
+    public DataCollect(String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
     }
 
