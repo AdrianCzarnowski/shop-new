@@ -15,7 +15,9 @@ environment:
     first_product_quantity: 5
     state: Florida
     country: Poland
+    payment_method: Pay by bank wire
     waitTime: 15
+
   init:
     appUrl: http://146.59.32.4
     active: false

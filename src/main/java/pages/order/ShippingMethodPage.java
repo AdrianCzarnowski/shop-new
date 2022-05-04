@@ -36,10 +36,5 @@ public class ShippingMethodPage extends BasePage {
         return dataCollect1;
     }
 
-//    public void checkShippingName() {
-//        dataCollect = shippingMethodName();
-//        dataList.add(dataCollect);
-//        log.info(String.valueOf(dataCollect));
-//    }
 
 }

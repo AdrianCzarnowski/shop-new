@@ -61,11 +61,10 @@ public class CheckoutTest extends Pages {
                 .getShippingMethod();
         summaryPage
                 .getPaymentMethod();
-//        log.info("<<<<<<<<<" + dataCollect.getshipName());
 
-        assertEquals(dataCollect.getShippingMethodName(), summaryPage.getShippingMethod().trim());
+        assertEquals(dataCollect.getShippingMethodName(), summaryPage.getShippingMethod());
         log.info("Shipping method is the same");
-        assertEquals(dataCollect.getPaymentMethod(), "Pay by bank wire");
+        assertEquals(dataCollect.getPaymentMethod(), System.getProperty("payment_method"));
         log.info("Payment method is the same");
     }
 }

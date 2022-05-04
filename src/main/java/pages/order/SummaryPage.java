@@ -47,7 +47,7 @@ public class SummaryPage extends BasePage {
     public String getShippingMethod() {
         String shippingMethodName = getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", "");
         log.info("Shipping method name: " + getTextFromElement(shippingMethod).replace("Shipping method: ", "").replace("Pick up in-store", ""));
-        return shippingMethodName;
+        return shippingMethodName.trim();
     }
 
     public String getPaymentMethod() {
