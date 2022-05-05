@@ -55,11 +55,7 @@ public class SummaryPage extends BasePage {
         return shippingMethodName.trim();
     }
 
-//    public String getPaymentMethod() {
-//        String payment = getTextFromElement(paymentMethod).trim();
-//        log.info("payment method " + payment);
-//        return payment;
-//    }
+
 
     public double getTotalAmount() {
         double totalAm = Double.parseDouble(getTextFromElement(totalAmount).replace("TOTAL  $", "").trim());
