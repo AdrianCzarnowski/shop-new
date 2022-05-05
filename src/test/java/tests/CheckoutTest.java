@@ -108,6 +108,6 @@ public class CheckoutTest extends Pages {
                 .goToAddressPage();
 
         assertEquals(dataHandler.getAddress(), userAddressPage.userAddress());
-        log.info("Address on invoice and delivery address are the same");
+        log.info("Address on invoice, delivery and account address are the same");
     }
 }
