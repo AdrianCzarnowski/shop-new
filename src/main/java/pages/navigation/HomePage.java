@@ -22,6 +22,4 @@ public class HomePage extends BasePage {
     public String randomProductNameFromHomePage() {
         return randomValueFromList(productsNameList).getText();
     }
-
-
 }

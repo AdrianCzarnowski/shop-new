@@ -11,6 +11,8 @@ import pages.navigation.MenuPage;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 
 public class ArtPage extends BasePage {
 
@@ -27,7 +29,7 @@ public class ArtPage extends BasePage {
     private List<WebElement> displayedProductsPrice;
     @FindBy(xpath = "//div[@id='_desktop_search_filters_clear_all']/button")
     private WebElement clearButton;
-    @FindBy(css = "#category > div")
+    @FindBy(css = "#search_filters > section:nth-child(4) > p")
     private WebElement reload;
 
     public ArtPage(WebDriver driver) {
@@ -49,32 +51,30 @@ public class ArtPage extends BasePage {
             actions.moveByOffset(-10, 0).perform();
             log.info(getTextFromElement(price));
         }
-        clickOnElement(rightSlider);
-        waitToBeInvisible(reload);
+        relaseMouse(rightSlider);
         return this;
     }
 
     public ArtPage secondFilterOfPrices() {
 
-        while (!price.getText().startsWith(System.getProperty("max_value_first_filter"))) {
+        while (!price.getText().startsWith(System.getProperty("min_value_second_filter"))) {
             waitToBeVisible(leftSlider);
             waitToBeClickable(leftSlider);
             clickAndHold(leftSlider);
             actions.moveByOffset(10, 0).perform();
             log.info(getTextFromElement(price));
         }
-        clickOnElement(rightSlider);
-        waitToBeInvisible(reload);
+        relaseMouse(leftSlider);
         return this;
     }
 
     public ArtPage firstFilteredMatchedProducts() {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displayedProductsPrice.size(); j++) {
-            products.add(getTextFromElement(displayedProductsPrice.get(j)));
+            products.add(displayedProductsPrice.get(j).getText());
             log.info("Products: " + getTextFromElement(displayedProductsPrice.get(j)));
             String value = displayedProductsPrice.get(j).getText();
-            assert (value.contains(System.getProperty("min_value_first_filter")));
+            assertThat(value.contains(System.getProperty("min_value_first_filter")));
         }
         log.info("Number of matched products: " + displayedProductsPrice.size());
         return this;
@@ -83,14 +83,15 @@ public class ArtPage extends BasePage {
     public ArtPage secondFilteredMatchedProducts() {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displayedProductsPrice.size(); j++) {
-            products.add(getTextFromElement(displayedProductsPrice.get(j)));
-            log.info("Products: " + getTextFromElement(displayedProductsPrice.get(j)));
+            products.add(displayedProductsPrice.get(j).getText());
+            log.info("Products: " + displayedProductsPrice.get(j).getText());
             String value = displayedProductsPrice.get(j).getText();
             assert (value.contains(System.getProperty("max_value_second_filter")));
         }
         log.info("Number of matched products: " + displayedProductsPrice.size());
         return this;
     }
+
 
     public ArtPage clearFilters() {
         clickOnElement(clearButton);
