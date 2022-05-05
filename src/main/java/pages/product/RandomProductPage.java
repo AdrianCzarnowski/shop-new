@@ -30,7 +30,7 @@ public class RandomProductPage extends BasePage {
     @FindBy(css = " div:nth-child(2) > h1")
     private WebElement selectedProductName;
 
-    @FindBy(xpath = "//li[1]/div/div[3]/div/div[2]/div/div[1]/div/input")
+    @FindBy(xpath = "//input[@name='product-quantity-spin']")
     private WebElement firstProduct;
     @FindBy(css = "h1")
     private WebElement bar;
@@ -63,6 +63,7 @@ public class RandomProductPage extends BasePage {
     }
 
     public RandomProductPage setFirstProductQuantity() {
+        highLightenerMethod(firstProduct);
         clickOnElement(firstProduct);
         firstProduct.sendKeys(Keys.BACK_SPACE);
         sendKeys(firstProduct, String.valueOf(firstProductQuantity), true);

@@ -26,7 +26,7 @@ public class BasketPage extends BasePage {
     @FindBy(css = "div.checkout.cart-detailed-actions.card-block > div > a")
     private WebElement proceedBtn;
 
-    @FindBy(css = ".product-line-grid .cart-line-product-actions i")
+    @FindBy(xpath = "//a[@class='remove-from-cart']")
     private List<WebElement> trashBtn;
 
     public BasketPage(WebDriver driver) {
@@ -73,8 +73,10 @@ public class BasketPage extends BasePage {
     }
 
     public BasketPage clickTrashBtn() {
-        for (int i = 0; i < trashBtn.size(); i++) {
-            clickOnElement(trashBtn.get(i));
+        for (WebElement element : trashBtn) {
+            element = trashBtn.get(0);
+            log.info("Size " + trashBtn.size());
+            clickOnElement(element);
             log.info("Trash btn has been pressed");
             checkCostAfterChange();
         }
