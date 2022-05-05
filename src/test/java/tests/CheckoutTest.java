@@ -25,9 +25,12 @@ public class CheckoutTest extends Pages {
         OrderDataCollect orderDataCollect = new OrderDataCollect();
 
         User user = new UserFactory().getRandomUser();
-        menuPage.clickSingInButton();
-        loginPage.clickNewAccount();
-        registrationPage.fillForm(user);
+        menuPage
+                .clickSingInButton();
+        loginPage
+                .clickNewAccount();
+        registrationPage
+                .fillForm(user);
 
         for (int i = 0; i < randomProductPage.numberOfRandomProduct - 1; i++) {
             randomProductPage
@@ -52,12 +55,12 @@ public class CheckoutTest extends Pages {
         addressPage
                 .fillAddressesForm();
         orderDataCollect
-                .setShippingMethodName(shippingMethodPage.shippingMethodName().getShippingMethodName().trim());
+                .setShippingMethodName(shippingMethodPage.shippingMethodName().getShippingMethodName());
 
         shippingMethodPage
                 .clickContinueBtn();
         orderDataCollect
-                .setPaymentMethod(paymentPage.paymentMethodName());
+                .setPaymentMethod(paymentPage.getPaymentMethodName());
         paymentPage
                 .selectPayment()
                 .checkTermsOfService()
@@ -65,11 +68,11 @@ public class CheckoutTest extends Pages {
                 .clickPlaceOrderBtn();
         summaryPage
                 .checkOrderDetails()
-                .totalAmount();
+                .getTotalAmount();
         orderDataCollect
-                .setOrderReference(summaryPage.orderReference());
+                .setOrderReference(summaryPage.getOrderReference());
         orderDataCollect
-                .setTotalAmount(summaryPage.totalAmount());
+                .setTotalAmount(summaryPage.getTotalAmount());
 
 
         assertEquals(orderDataCollect.getShippingMethodName(), summaryPage.getShippingMethod());
@@ -94,10 +97,11 @@ public class CheckoutTest extends Pages {
         orderHistoryPage
                 .goToDetailsPage();
         orderDetailsPage
-                .details(basketList);
+                .comparisionOfProducts_FromCartToBasket(basketList);
 
         assertEquals(orderDetailsPage.deliveryAddress(), orderDetailsPage.invoiceAddress());
         log.info("Address on invoice and delivery address are the same");
+
         orderDetailsPage
                 .goToAddressPage();
     }

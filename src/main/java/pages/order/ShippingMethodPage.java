@@ -8,12 +8,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
-//import static model.DataCollect.dataList;
 
 public class ShippingMethodPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("ShippingMethodPage.class");
-    public OrderDataCollect orderDataCollect;
     @FindBy(xpath = "//button[@name='confirmDeliveryOption']")
     private WebElement confirmDeliveryOptionBtn;
     @FindBy(css = "[for='delivery_option_1'] .carrier-name")
@@ -32,8 +30,8 @@ public class ShippingMethodPage extends BasePage {
     public OrderDataCollect shippingMethodName() {
         String shippingNameText = getTextFromElement(nameOfShippingMethod).trim();
         log.info(getTextFromElement(nameOfShippingMethod));
-        OrderDataCollect orderDataCollect1 = new OrderDataCollect(shippingNameText);
-        return orderDataCollect1;
+        OrderDataCollect orderDataCollect = new OrderDataCollect(shippingNameText);
+        return orderDataCollect;
     }
 
 

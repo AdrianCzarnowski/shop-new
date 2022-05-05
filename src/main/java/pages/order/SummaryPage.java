@@ -41,12 +41,11 @@ public class SummaryPage extends BasePage {
             waitToBeVisibleAllElements(products);
             productList.add(getTextFromElement(products.get(i)));
         }
-        log.info("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
         log.info(String.valueOf(productList).trim());
         return this;
     }
 
-    public String orderReference() {
+    public String getOrderReference() {
         String orderReference = getTextFromElement(orderNumber).replace("Order reference: ", "");
         return orderReference;
     }
@@ -57,13 +56,13 @@ public class SummaryPage extends BasePage {
         return shippingMethodName.trim();
     }
 
-    public String paymentMethod() {
+    public String getPaymentMethod() {
         String payment = getTextFromElement(paymentMethod).trim();
         log.info("payment method " + payment);
         return payment;
     }
 
-    public double totalAmount() {
+    public double getTotalAmount() {
         double totalAm = Double.parseDouble(getTextFromElement(totalAmount).replace("TOTAL  $", "").trim());
         log.info("total amount is: " + totalAm);
         return totalAm;

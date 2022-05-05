@@ -55,7 +55,7 @@ public class PaymentPage extends BasePage {
         return this;
     }
 
-    public String paymentMethodName() {
+    public String getPaymentMethodName() {
         String paymentMethod = getTextFromElement(payByBankWireText).replace("Pay by ", "").trim();
         log.info(paymentMethod);
         return paymentMethod;

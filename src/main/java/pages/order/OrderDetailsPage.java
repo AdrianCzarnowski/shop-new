@@ -48,7 +48,7 @@ public class OrderDetailsPage extends BasketPage {
         return productLi;
     }
 
-    public OrderDetailsPage details(List<Product> basketList) {
+    public OrderDetailsPage comparisionOfProducts_FromCartToBasket(List<Product> basketList) {
 
         List<Product> product = checkOrderDetails();
 
@@ -69,6 +69,7 @@ public class OrderDetailsPage extends BasketPage {
             assertTrue(String.valueOf(basketProductQuantity).contains(String.valueOf(quantityOrderPage)));
             assertTrue(String.valueOf(basketProductPrice).contains(String.valueOf(priceOrderPage)));
         }
+        log.info("The products in the cart and the products on the OrderDetailsPage are the same");
         return this;
     }
 

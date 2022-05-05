@@ -84,14 +84,12 @@ public class ProductOrderDetailsPage extends BasePage {
     public ProductOrderDetailsPage setBasket() {
 
         for (WebElement productRow : productRows) {
-            highLightenerMethod(productRow);
             String name = productRow.findElement(By.cssSelector(".product-line-info:nth-child(1)")).getText();
             double price = Double.parseDouble(productRow.findElement(By.cssSelector(".product-line-info .price")).getText().replace("$", ""));
             int quantity = Integer.parseInt(productRow.findElement(By.name("product-quantity-spin")).getAttribute("value"));
             Product product = new Product(name, price, quantity);
             basketList.add(product);
         }
-        log.info(String.valueOf(basketList));
         return this;
     }
 
