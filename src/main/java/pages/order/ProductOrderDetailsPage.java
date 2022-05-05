@@ -1,12 +1,16 @@
 package pages.order;
 
 import model.Product;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static model.Product.productList;
 
@@ -25,6 +29,10 @@ public class ProductOrderDetailsPage extends BasePage {
     private WebElement continueShoppingBtn;
     @FindBy(xpath = "//div[@class='cart-content-btn']/a")
     private WebElement proceedBtn;
+    @FindBy(css = ".product-line-grid")
+    private List<WebElement> productRows;
+
+    private List<Product> basketList = new ArrayList<>();
 
     public ProductOrderDetailsPage(WebDriver driver) {
         super(driver);
@@ -61,7 +69,7 @@ public class ProductOrderDetailsPage extends BasePage {
         if (productList.contains(newProduct)) {
             Product productFromList = productList.get(productList.indexOf(newProduct));
             log.info("List contains item");
-            productFromList.addQuantity(newProduct.getQuantity());
+            productFromList.addQuantity((int) newProduct.getQuantity());
             log.info("Quantity updated " + newProduct.getProductName() + " quantity after updated: " + newProduct.getQuantity());
 
         } else {
@@ -71,6 +79,24 @@ public class ProductOrderDetailsPage extends BasePage {
         }
         log.info("Products in list: ");
         productList.forEach(product -> log.info("\t- " + product.toString() + "\n"));
+    }
+
+    public ProductOrderDetailsPage setBasket() {
+
+        for (WebElement productRow : productRows) {
+            highLightenerMethod(productRow);
+            String name = productRow.findElement(By.cssSelector(".product-line-info:nth-child(1)")).getText();
+            double price = Double.parseDouble(productRow.findElement(By.cssSelector(".product-line-info .price")).getText().replace("$", ""));
+            int quantity = Integer.parseInt(productRow.findElement(By.name("product-quantity-spin")).getAttribute("value"));
+            Product product = new Product(name, price, quantity);
+            basketList.add(product);
+        }
+        log.info(String.valueOf(basketList));
+        return this;
+    }
+
+    public List<Product> getBasketList() {
+        return basketList;
     }
 }
 

@@ -15,6 +15,7 @@ public class OrderDataCollect {
     private String paymentMethod;
     private String orderReference;
     private double totalAmount;
+//    private List<String> address;
 
     public OrderDataCollect(String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;

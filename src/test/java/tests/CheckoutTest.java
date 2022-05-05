@@ -3,11 +3,14 @@ package tests;
 import base.Pages;
 import factory.UserFactory;
 import helpers.OrderDataCollect;
+import model.Product;
 import model.User;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -42,6 +45,8 @@ public class CheckoutTest extends Pages {
                 .clickAddToCartButton();
         productOrderDetailsPage
                 .clickProceedToCheckout();
+        final List<Product> basketList = productOrderDetailsPage
+                .setBasket().getBasketList();
         basketPage
                 .clickProceedBtn();
         addressPage
@@ -89,8 +94,11 @@ public class CheckoutTest extends Pages {
         orderHistoryPage
                 .goToDetailsPage();
         orderDetailsPage
-                .details();
+                .details(basketList);
 
-
+        assertEquals(orderDetailsPage.deliveryAddress(), orderDetailsPage.invoiceAddress());
+        log.info("Address on invoice and delivery address are the same");
+        orderDetailsPage
+                .goToAddressPage();
     }
 }

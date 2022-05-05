@@ -34,6 +34,18 @@ public class Product {
         return total;
     }
 
+    public String getProductName() {
+        return productName;
+    }
+
+    public double getProductPrice() {
+        return productPrice;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
     public void addQuantity(int quantity) {
         this.quantity += quantity;
     }
