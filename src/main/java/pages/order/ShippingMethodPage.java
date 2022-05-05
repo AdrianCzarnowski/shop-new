@@ -1,6 +1,6 @@
 package pages.order;
 
-import helpers.OrderDataCollect;
+import handler.DataHandler;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,11 +27,11 @@ public class ShippingMethodPage extends BasePage {
         return this;
     }
 
-    public OrderDataCollect shippingMethodName() {
+    public DataHandler shippingMethodName() {
         String shippingNameText = getTextFromElement(nameOfShippingMethod).trim();
         log.info(getTextFromElement(nameOfShippingMethod));
-        OrderDataCollect orderDataCollect = new OrderDataCollect(shippingNameText);
-        return orderDataCollect;
+        DataHandler dataHandler = new DataHandler(shippingNameText);
+        return dataHandler;
     }
 
 

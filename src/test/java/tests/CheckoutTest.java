@@ -2,7 +2,7 @@ package tests;
 
 import base.Pages;
 import factory.UserFactory;
-import helpers.OrderDataCollect;
+import handler.DataHandler;
 import model.Product;
 import model.User;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ public class CheckoutTest extends Pages {
     @Test
     public void registrationTest() {
 
-        OrderDataCollect orderDataCollect = new OrderDataCollect();
+        DataHandler dataHandler = new DataHandler();
 
         User user = new UserFactory().getRandomUser();
         menuPage
@@ -54,12 +54,12 @@ public class CheckoutTest extends Pages {
                 .clickProceedBtn();
         addressPage
                 .fillAddressesForm();
-        orderDataCollect
+        dataHandler
                 .setShippingMethodName(shippingMethodPage.shippingMethodName().getShippingMethodName());
 
         shippingMethodPage
                 .clickContinueBtn();
-        orderDataCollect
+        dataHandler
                 .setPaymentMethod(paymentPage.getPaymentMethodName());
         paymentPage
                 .selectPayment()
@@ -69,29 +69,29 @@ public class CheckoutTest extends Pages {
         summaryPage
                 .checkOrderDetails()
                 .getTotalAmount();
-        orderDataCollect
+        dataHandler
                 .setOrderReference(summaryPage.getOrderReference());
-        orderDataCollect
+        dataHandler
                 .setTotalAmount(summaryPage.getTotalAmount());
 
 
-        assertEquals(orderDataCollect.getShippingMethodName(), summaryPage.getShippingMethod());
+        assertEquals(dataHandler.getShippingMethodName(), summaryPage.getShippingMethod());
         log.info("Shipping methods are the same");
-        assertEquals(orderDataCollect.getPaymentMethod(), System.getProperty("payment_method_payment_page"));
+        assertEquals(dataHandler.getPaymentMethod(), System.getProperty("payment_method_payment_page"));
         log.info("Payment methods are the same");
 
         summaryPage
                 .goToOrderHistory();
 
-        assertEquals(orderDataCollect.getOrderReference(), orderHistoryPage.orderReference());
+        assertEquals(dataHandler.getOrderReference(), orderHistoryPage.orderReference());
         log.info("Order reference is the same");
         assertEquals(BasePage.getTodayDate(), orderHistoryPage.orderDate());
         log.info("Date is correct");
-        assertEquals(orderDataCollect.getTotalAmount(), orderHistoryPage.orderTotalPrice());
+        assertEquals(dataHandler.getTotalAmount(), orderHistoryPage.orderTotalPrice());
         log.info("Prices are equals");
         assertEquals(System.getProperty("payment_order_history"), orderHistoryPage.orderPayment());
         log.info("Form of payment is the same");
-        assertTrue(orderHistoryPage.orderStatus().contains(orderDataCollect.getPaymentMethod()));
+        assertTrue(orderHistoryPage.orderStatus().contains(dataHandler.getPaymentMethod()));
         log.info("Order status is correct: " + orderHistoryPage.orderStatus());
 
         orderHistoryPage
@@ -99,7 +99,7 @@ public class CheckoutTest extends Pages {
         orderDetailsPage
                 .comparisionOfProducts_FromCartToBasket(basketList);
 
-        orderDataCollect
+        dataHandler
                 .setAddress(orderDetailsPage.getDeliveryAddress());
 
         assertEquals(orderDetailsPage.getDeliveryAddress(), orderDetailsPage.getInvoiceAddress());
@@ -107,7 +107,7 @@ public class CheckoutTest extends Pages {
         orderDetailsPage
                 .goToAddressPage();
 
-        assertEquals(orderDataCollect.getAddress(), userAddressPage.userAddress());
+        assertEquals(dataHandler.getAddress(), userAddressPage.userAddress());
         log.info("Address on invoice and delivery address are the same");
     }
 }
