@@ -101,6 +101,10 @@ public class BasePage {
         actions.clickAndHold(element);
     }
 
+    public void relaseMouse(WebElement element) {
+        actions.release(element).perform();
+    }
+
     public void waitToBeVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }

@@ -24,7 +24,7 @@ public class OrderDetailsPage extends BasketPage {
     @FindBy(css = "#invoice-address > address")
     private WebElement invoiceAddress;
 
-    @FindBy(css = "#footer_account_list > li:nth-child(4)")
+    @FindBy(css = "#footer_account_list > li:nth-child(4) > a")
     private WebElement addressBtn;
 
     public OrderDetailsPage(WebDriver driver) {
@@ -73,19 +73,19 @@ public class OrderDetailsPage extends BasketPage {
         return this;
     }
 
-    public String deliveryAddress() {
+    public String getDeliveryAddress() {
         String delivery = getTextFromElement(deliveryAddress).trim();
         return delivery;
     }
 
-    public String invoiceAddress() {
+    public String getInvoiceAddress() {
         String invoice = getTextFromElement(invoiceAddress).trim();
         return invoice;
     }
 
     public OrderDetailsPage goToAddressPage() {
         scrollToElement(addressBtn);
-        addressBtn.click();
+        clickOnElement(addressBtn);
         return this;
     }
 }

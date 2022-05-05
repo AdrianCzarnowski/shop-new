@@ -8,6 +8,7 @@ import pages.order.*;
 import pages.product.*;
 import pages.user.LoginPage;
 import pages.user.RegistrationPage;
+import pages.user.UserAddressPage;
 
 public class Pages extends TestBase {
     public static SearchPage searchPage;
@@ -29,6 +30,7 @@ public class Pages extends TestBase {
     public static SummaryPage summaryPage;
     public static OrderHistoryPage orderHistoryPage;
     public static OrderDetailsPage orderDetailsPage;
+    public static UserAddressPage userAddressPage;
 
 
     @BeforeEach
@@ -52,6 +54,7 @@ public class Pages extends TestBase {
         summaryPage = new SummaryPage(driver);
         orderHistoryPage = new OrderHistoryPage(driver);
         orderDetailsPage = new OrderDetailsPage(driver);
+        userAddressPage = new UserAddressPage(driver);
 
 
     }

@@ -99,10 +99,15 @@ public class CheckoutTest extends Pages {
         orderDetailsPage
                 .comparisionOfProducts_FromCartToBasket(basketList);
 
-        assertEquals(orderDetailsPage.deliveryAddress(), orderDetailsPage.invoiceAddress());
-        log.info("Address on invoice and delivery address are the same");
+        orderDataCollect
+                .setAddress(orderDetailsPage.getDeliveryAddress());
 
+        assertEquals(orderDetailsPage.getDeliveryAddress(), orderDetailsPage.getInvoiceAddress());
+        
         orderDetailsPage
                 .goToAddressPage();
+
+        assertEquals(orderDataCollect.getAddress(), userAddressPage.userAddress());
+        log.info("Address on invoice and delivery address are the same");
     }
 }

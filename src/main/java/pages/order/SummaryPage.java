@@ -41,7 +41,6 @@ public class SummaryPage extends BasePage {
             waitToBeVisibleAllElements(products);
             productList.add(getTextFromElement(products.get(i)));
         }
-        log.info(String.valueOf(productList).trim());
         return this;
     }
 
