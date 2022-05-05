@@ -55,7 +55,5 @@ public class Pages extends TestBase {
         orderHistoryPage = new OrderHistoryPage(driver);
         orderDetailsPage = new OrderDetailsPage(driver);
         userAddressPage = new UserAddressPage(driver);
-
-
     }
 }
