@@ -9,7 +9,7 @@ public class PriceDropPageTest extends Pages {
     private static Logger log = LoggerFactory.getLogger("SearchResultTest.class");
 
     @Test
-    public void onSaleProducts() {
+    public void saleProducts() {
         footerPage
                 .clickPriceDropButton();
         priceDropPage
