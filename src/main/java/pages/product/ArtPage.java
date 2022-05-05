@@ -29,8 +29,6 @@ public class ArtPage extends BasePage {
     private List<WebElement> displayedProductsPrice;
     @FindBy(xpath = "//div[@id='_desktop_search_filters_clear_all']/button")
     private WebElement clearButton;
-    @FindBy(css = "#search_filters > section:nth-child(4) > p")
-    private WebElement reload;
 
     public ArtPage(WebDriver driver) {
         super(driver);

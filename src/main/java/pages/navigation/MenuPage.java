@@ -20,9 +20,6 @@ public class MenuPage extends BasePage {
     @FindBy(xpath = "//a[@title='Log in to your customer account']")
     public WebElement singInBtn;
 
-    @FindBy(css = "a.account > span")
-    public WebElement account;
-
     public MenuPage(WebDriver driver) {
         super(driver);
     }
