@@ -17,10 +17,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class CheckoutTest extends Pages {
-    private static Logger log = LoggerFactory.getLogger("UserRegistrationTest.class");
+    private static Logger log = LoggerFactory.getLogger("CheckoutTest.class");
 
     @Test
-    public void registrationTest() {
+    public void purchaseAndRegistrationProcessTest() {
 
         DataHandler dataHandler = new DataHandler();
         User user = new UserFactory().getRandomUser();

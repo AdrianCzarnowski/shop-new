@@ -33,6 +33,9 @@ public class RegistrationPage extends BasePage {
     @FindBy(css = "footer > button")
     private WebElement saveBtn;
 
+    @FindBy(xpath = "//div[@class='help-block']")
+    public WebElement alertMsg;
+
     public RegistrationPage(WebDriver driver) {
         super(driver);
     }
@@ -55,5 +58,4 @@ public class RegistrationPage extends BasePage {
         log.info("New user created");
         return this;
     }
-
 }

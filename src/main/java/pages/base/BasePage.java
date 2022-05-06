@@ -130,8 +130,7 @@ public class BasePage {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    public void waitForPageLoaded(){
-       wait.until(driver -> ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete"));
+    public void waitForPageLoaded() {
+        wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
     }
-
 }

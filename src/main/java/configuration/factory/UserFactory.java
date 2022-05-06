@@ -21,7 +21,7 @@ public class UserFactory {
                 .lastName("Kowalski")
                 .email("jankowalski@gmail.com")
                 .password("1qaz@WSX")
-                .birthDate("01.01.1999").userBuilder();
+                .birthDate("01/01/1999").userBuilder();
         return user;
 
     }
