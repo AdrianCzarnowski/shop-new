@@ -6,7 +6,6 @@ import handler.DataHandler;
 import model.Product;
 import model.User;
 
-import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,8 +48,7 @@ public class CheckoutTest extends Pages {
                 .clickAddToCartButton();
         productOrderDetailsPage
                 .clickProceedToCheckout();
-        final List<Product> basketList = productOrderDetailsPage
-                .setBasket().getBasketList();
+        final List<Product> basketList = productOrderDetailsPage.setBasket().getBasketList();
         basketPage
                 .clickProceedBtn();
         addressPage
@@ -68,8 +66,8 @@ public class CheckoutTest extends Pages {
                 .selectTermsOfService()
                 .clickPlaceOrderBtn();
         summaryPage
-                .checkOrderDetails()
-                .getTotalAmount();
+                .checkOrderDetails();
+
         dataHandler
                 .setOrderReference(summaryPage.getOrderReference());
         dataHandler
@@ -79,7 +77,7 @@ public class CheckoutTest extends Pages {
                 "heading",
                 ()->assertEquals(dataHandler.getShippingMethodName(), summaryPage.getShippingMethod()),
                 ()->assertEquals(dataHandler.getPaymentMethod(), System.getProperty("payment_method_payment_page")));
-        log.info("Shipping, payments methods are correct");
+        log.info("Shipping and payments methods are correct");
 
         summaryPage
                 .goToOrderHistory();
@@ -97,7 +95,7 @@ public class CheckoutTest extends Pages {
         orderHistoryPage
                 .goToDetailsPage();
         orderDetailsPage
-                .comparisionOfProducts_FromCartToBasket(basketList);
+                .comparisionOfProductsFromCartToBasket(basketList);
 
         dataHandler
                 .setAddress(orderDetailsPage.getDeliveryAddress());

@@ -10,7 +10,7 @@ import pages.base.BasePage;
 public class LoginPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("LoginPage.class");
-    @FindBy(xpath = "//*[contains(text(), 'No account')]")
+    @FindBy(css=".no-account a")
     public WebElement newAccountBtn;
 
     public LoginPage(WebDriver driver) {

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pages.navigation.FooterPage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class OrderDetailsPage extends BasketPage {
 
     private static Logger log = LoggerFactory.getLogger("OrderHistoryPage.class");
+    FooterPage footerPage = new FooterPage(driver);
 
     @FindBy(xpath = "//table[@id='order-products']//tbody//tr")
     private List<WebElement> productRows;
@@ -24,8 +26,7 @@ public class OrderDetailsPage extends BasketPage {
     @FindBy(css = "#invoice-address > address")
     private WebElement invoiceAddress;
 
-    @FindBy(css = "#footer_account_list > li:nth-child(4) > a")
-    private WebElement addressBtn;
+
 
     public OrderDetailsPage(WebDriver driver) {
         super(driver);
@@ -48,7 +49,7 @@ public class OrderDetailsPage extends BasketPage {
         return productLi;
     }
 
-    public OrderDetailsPage comparisionOfProducts_FromCartToBasket(List<Product> basketList) {
+    public OrderDetailsPage comparisionOfProductsFromCartToBasket(List<Product> basketList) {
 
         List<Product> product = checkOrderDetails();
 
@@ -84,8 +85,8 @@ public class OrderDetailsPage extends BasketPage {
     }
 
     public OrderDetailsPage goToAddressPage() {
-        scrollToElement(addressBtn);
-        clickOnElement(addressBtn);
+        scrollToElement(footerPage.addressBtn);
+        clickOnElement(footerPage.addressBtn);
         return this;
     }
 }

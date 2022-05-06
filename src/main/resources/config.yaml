@@ -29,6 +29,12 @@ environment:
     number_of_addition_to_cart: 3
     number_of_random_add_random_product: 5
     first_product_quantity: 5
+    state: Florida
+    country: Poland
+    payment_method_payment_page: bank wire
+    payment_order_history: Bank transfer
+    waitTime: 15
+
 
 
 

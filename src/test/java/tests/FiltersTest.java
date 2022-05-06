@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class CategoryPageTest extends Pages {
+public class FiltersTest extends Pages {
 
     private static Logger log = LoggerFactory.getLogger("SearchResultTest.class");
 
