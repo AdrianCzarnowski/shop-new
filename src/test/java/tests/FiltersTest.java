@@ -22,11 +22,11 @@ public class FiltersTest extends Pages {
     public void artCategories(){
         artPage
                 .clickArtCategory()
-                .firstFilterOfPrices()
-                .firstFilteredMatchedProducts()
+                .firstPriceFilter(System.getProperty("max_value_first_filter"), Integer.parseInt(System.getProperty("go_to_left")))
+                .countMatchedProducts(System.getProperty("min_value_first_filter"))
                 .clearFilters()
-                .secondFilterOfPrices()
-                .secondFilteredMatchedProducts()
+                .secondPriceFilter(System.getProperty("min_value_second_filter"), Integer.parseInt(System.getProperty("go_to_right")))
+                .countMatchedProducts(System.getProperty("max_value_second_filter"))
                 .clearFilters();
     }
 }

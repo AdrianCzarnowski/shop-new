@@ -1,6 +1,5 @@
 package pages.product;
 
-import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,60 +40,45 @@ public class ArtPage extends BasePage {
         return this;
     }
 
-    public ArtPage firstFilterOfPrices() {
+    public ArtPage firstPriceFilter(String properties, int offset) {
 
-        while (!price.getText().endsWith(System.getProperty("max_value_first_filter"))) {
+        while (!price.getText().endsWith(properties)) {
             waitToBeVisible(rightSlider);
             waitToBeClickable(rightSlider);
             clickAndHold(rightSlider);
-            actions.moveByOffset(-10, 0).perform();
+            actions.moveByOffset(offset, 0).perform();
             log.info(getTextFromElement(price));
         }
         releaseMouse(rightSlider);
         return this;
     }
 
-    public ArtPage secondFilterOfPrices() {
+    public ArtPage secondPriceFilter(String properties, int offset) {
 
-        while (!price.getText().startsWith(System.getProperty("min_value_second_filter"))) {
+        while (!price.getText().startsWith(properties)) {
             waitToBeVisible(leftSlider);
             waitToBeClickable(leftSlider);
             clickAndHold(leftSlider);
-            actions.moveByOffset(10, 0).perform();
+            actions.moveByOffset(offset, 0).perform();
             log.info(getTextFromElement(price));
         }
         releaseMouse(leftSlider);
         return this;
     }
 
-    @SneakyThrows
-    public ArtPage firstFilteredMatchedProducts() {
+    public ArtPage countMatchedProducts(String properties) {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displayedProductsPrice.size(); j++) {
             waitToBeVisible(displayedProductsPrice.get(j));
             products.add(displayedProductsPrice.get(j).getText());
             log.info("Products: " + getTextFromElement(displayedProductsPrice.get(j)));
             String value = displayedProductsPrice.get(j).getText();
-            assertThat(value.contains(System.getProperty("min_value_first_filter")));
+            assertThat(value.contains(properties));
         }
         log.info("Number of matched products: " + displayedProductsPrice.size());
         return this;
     }
 
-    @SneakyThrows
-    public ArtPage secondFilteredMatchedProducts() {
-        List<String> products = new ArrayList<>();
-        for (int j = 0; j < displayedProductsPrice.size(); j++) {
-
-            waitToBeVisible(displayedProductsPrice.get(j));
-            products.add(displayedProductsPrice.get(j).getText());
-            log.info("Products: " + displayedProductsPrice.get(j).getText());
-            String value = displayedProductsPrice.get(j).getText();
-            assert (value.contains(System.getProperty("max_value_second_filter")));
-        }
-        log.info("Number of matched products: " + displayedProductsPrice.size());
-        return this;
-    }
 
     public ArtPage clearFilters() {
         clickOnElement(clearButton);
