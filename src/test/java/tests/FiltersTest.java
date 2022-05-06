@@ -26,8 +26,7 @@ public class FiltersTest extends Pages {
                 .countMatchedProducts(System.getProperty("min_value_first_filter"))
                 .clearFilters()
                 .secondPriceFilter(System.getProperty("min_value_second_filter"), Integer.parseInt(System.getProperty("go_to_right")))
-                .countMatchedProducts(System.getProperty("max_value_second_filter"))
-                .clearFilters();
+                .countMatchedProducts(System.getProperty("max_value_second_filter"));
     }
 }
 

@@ -24,11 +24,11 @@ public class ArtPage extends BasePage {
     @FindBy(css = "a.ui-slider-handle:nth-of-type(2)")
     private WebElement rightSlider;
     @FindBy(css = ".faceted-slider p")
-    private WebElement price;
-    @FindBy(css = "span.price")
+    private WebElement priceRange;
+    @FindBy(xpath = "//span[@class='price']")
     private List<WebElement> displayedProductsPrice;
     @FindBy(xpath = "//div[@id='_desktop_search_filters_clear_all']/button")
-    private WebElement clearButton;
+    private WebElement clearFilterBtn;
 
     public ArtPage(WebDriver driver) {
         super(driver);
@@ -42,12 +42,11 @@ public class ArtPage extends BasePage {
 
     public ArtPage firstPriceFilter(String properties, int offset) {
 
-        while (!price.getText().endsWith(properties)) {
-            waitToBeVisible(rightSlider);
-            waitToBeClickable(rightSlider);
+        while (!priceRange.getText().endsWith(properties)) {
+            waitForPageLoaded();
             clickAndHold(rightSlider);
             actions.moveByOffset(offset, 0).perform();
-            log.info(getTextFromElement(price));
+            log.info(getTextFromElement(priceRange));
         }
         releaseMouse(rightSlider);
         return this;
@@ -55,12 +54,11 @@ public class ArtPage extends BasePage {
 
     public ArtPage secondPriceFilter(String properties, int offset) {
 
-        while (!price.getText().startsWith(properties)) {
-            waitToBeVisible(leftSlider);
-            waitToBeClickable(leftSlider);
+        while (!priceRange.getText().startsWith(properties)) {
+            waitForPageLoaded();
             clickAndHold(leftSlider);
             actions.moveByOffset(offset, 0).perform();
-            log.info(getTextFromElement(price));
+            log.info(getTextFromElement(priceRange));
         }
         releaseMouse(leftSlider);
         return this;
@@ -69,11 +67,12 @@ public class ArtPage extends BasePage {
     public ArtPage countMatchedProducts(String properties) {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displayedProductsPrice.size(); j++) {
+            waitForPageLoaded();
             waitToBeVisible(displayedProductsPrice.get(j));
             products.add(displayedProductsPrice.get(j).getText());
             log.info("Products: " + getTextFromElement(displayedProductsPrice.get(j)));
             String value = displayedProductsPrice.get(j).getText();
-            assertThat(value.contains(properties));
+            softAssert.assertThat(value.contains(properties));
         }
         log.info("Number of matched products: " + displayedProductsPrice.size());
         return this;
@@ -81,7 +80,8 @@ public class ArtPage extends BasePage {
 
 
     public ArtPage clearFilters() {
-        clickOnElement(clearButton);
+        clickOnElement(clearFilterBtn);
+        waitForPageLoaded();
         return this;
     }
 }
