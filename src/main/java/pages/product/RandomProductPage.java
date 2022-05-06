@@ -1,5 +1,6 @@
 package pages.product;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,8 +10,10 @@ import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 import pages.navigation.MenuPage;
 
+
+
 import java.util.Random;
-import java.util.stream.Collectors;
+
 
 public class RandomProductPage extends BasePage {
 
@@ -21,6 +24,7 @@ public class RandomProductPage extends BasePage {
     public final int numberOfRandomProduct = Integer.parseInt(System.getProperty("number_of_random_add_random_product"));
     MenuPage menuPage = new MenuPage(driver);
     CategoryPage categoryPage = new CategoryPage(driver);
+
     @FindBy(css = "#quantity_wanted")
     private WebElement quantity;
     @FindBy(css = "div.add")
@@ -39,15 +43,8 @@ public class RandomProductPage extends BasePage {
         super(driver);
     }
 
-    public RandomProductPage clickRandomCategory() {
-        log.info("Available categories: " + menuPage.categories.stream().map(WebElement::getText).collect(Collectors.toList()));
-        WebElement category = randomValueFromList(menuPage.categories);
-        log.info("Selected category: " + category.getText());
-        clickOnElement(category);
-        return this;
-    }
-
     public RandomProductPage clickRandomProduct() {
+        waitForPageLoaded();
         WebElement product = randomValueFromList(categoryPage.productList);
         clickOnElement(product);
         log.info("Selected product: " + getTextFromElement(selectedProductName));

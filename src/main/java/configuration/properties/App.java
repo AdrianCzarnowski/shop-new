@@ -1,10 +1,10 @@
-package properties;
+package configuration.properties;
 
-import helpers.DriverEnum;
-import model.EnvironmentModel;
+import configuration.helpers.DriverEnum;
+import configuration.model.EnvironmentModel;
+import configuration.properties.reader.YamlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import properties.reader.YamlReader;
 
 import java.util.List;
 import java.util.Map;

@@ -1,10 +1,10 @@
 package tests;
 
 import base.Pages;
-import factory.UserFactory;
-import handler.DataHandler;
-import model.Product;
-import model.User;
+import configuration.factory.UserFactory;
+import configuration.handler.DataHandler;
+import configuration.model.Product;
+import configuration.model.User;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -33,16 +33,17 @@ public class CheckoutTest extends Pages {
                 .fillForm(user);
 
         for (int i = 0; i < randomProductPage.numberOfRandomProduct - 1; i++) {
+            homePage
+                    .goToRandomCategory();
             randomProductPage
-                    .clickRandomCategory()
                     .clickRandomProduct()
                     .setRandomQuantityValue()
                     .clickAddToCartButton();
             productOrderDetailsPage.clickContinueShopping();
         }
-
+        homePage
+                .goToRandomCategory();
         randomProductPage
-                .clickRandomCategory()
                 .clickRandomProduct()
                 .setRandomQuantityValue()
                 .clickAddToCartButton();

@@ -1,4 +1,4 @@
-package model;
+package configuration.model;
 
 import lombok.Data;
 import org.slf4j.Logger;

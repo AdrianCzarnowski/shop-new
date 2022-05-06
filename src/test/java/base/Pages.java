@@ -32,7 +32,8 @@ public class Pages extends TestBase {
     public static OrderHistoryPage orderHistoryPage;
     public static OrderDetailsPage orderDetailsPage;
     public static UserAddressPage userAddressPage;
-    public static BasePage basePage;
+
+
 
 
     @BeforeEach
@@ -57,6 +58,6 @@ public class Pages extends TestBase {
         orderHistoryPage = new OrderHistoryPage(driver);
         orderDetailsPage = new OrderDetailsPage(driver);
         userAddressPage = new UserAddressPage(driver);
-        basePage = new BasePage(driver);
+
     }
 }

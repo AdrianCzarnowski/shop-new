@@ -1,7 +1,7 @@
 package tests;
 
 import base.Pages;
-import model.Product;
+import configuration.model.Product;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,8 +14,9 @@ public class BasketTest extends Pages {
     @Test
     public void addRandomProduct() {
         for (int i = 0; i < randomProductPage.numberOfAdditionToCart; i++) {
+            homePage
+                    .goToRandomCategory();
             randomProductPage
-                    .clickRandomCategory()
                     .clickRandomProduct()
                     .setRandomQuantityValue()
                     .clickAddToCartButton();
@@ -30,8 +31,9 @@ public class BasketTest extends Pages {
     public void basketTest() {
 
         for (int i = 0; i < randomProductPage.numberOfRandomProduct; i++) {
+            homePage
+                    .goToRandomCategory();
             randomProductPage
-                    .clickRandomCategory()
                     .clickRandomProduct()
                     .clickAddToCartButton();
             productOrderDetailsPage

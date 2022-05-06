@@ -1,6 +1,6 @@
 package pages.order;
 
-import model.Product;
+import configuration.model.Product;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ import pages.base.BasePage;
 import java.util.ArrayList;
 import java.util.List;
 
-import static model.Product.productList;
+import static configuration.model.Product.productList;
 
 
 public class ProductOrderDetailsPage extends BasePage {

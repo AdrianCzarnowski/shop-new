@@ -1,4 +1,4 @@
-package factory;
+package configuration.factory;
 
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;

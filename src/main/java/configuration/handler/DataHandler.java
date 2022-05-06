@@ -1,4 +1,4 @@
-package handler;
+package configuration.handler;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

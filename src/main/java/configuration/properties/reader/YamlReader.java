@@ -1,4 +1,4 @@
-package properties.reader;
+package configuration.properties.reader;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import properties.Config;
+import configuration.properties.Config;
 
 import java.io.File;
 import java.io.FileNotFoundException;

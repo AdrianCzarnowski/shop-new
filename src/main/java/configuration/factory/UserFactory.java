@@ -1,6 +1,6 @@
-package factory;
+package configuration.factory;
 
-import model.User;
+import configuration.model.User;
 
 public class UserFactory {
 

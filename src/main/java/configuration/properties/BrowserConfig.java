@@ -1,6 +1,6 @@
-package properties;
+package configuration.properties;
 
-import helpers.DriverEnum;
+import configuration.helpers.DriverEnum;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

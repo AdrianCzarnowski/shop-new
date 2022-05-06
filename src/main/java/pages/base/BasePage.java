@@ -17,6 +17,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Predicate;
 
 
 public class BasePage {
@@ -96,7 +97,8 @@ public class BasePage {
     }
 
     public WebElement randomValueFromList(List<WebElement> elementList) {
-        int size = new Random().nextInt(elementList.size() - 1);
+        waitForPageLoaded();
+        int size = new Random().nextInt(elementList.size());
         return elementList.get(size);
     }
 
@@ -127,4 +129,9 @@ public class BasePage {
     public void scrollToElement(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
+    public void waitForPageLoaded(){
+       wait.until(driver -> ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete"));
+    }
+
 }

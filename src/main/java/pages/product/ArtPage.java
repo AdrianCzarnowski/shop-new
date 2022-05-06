@@ -1,5 +1,6 @@
 package pages.product;
 
+import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -66,9 +67,11 @@ public class ArtPage extends BasePage {
         return this;
     }
 
+    @SneakyThrows
     public ArtPage firstFilteredMatchedProducts() {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displayedProductsPrice.size(); j++) {
+            waitToBeVisible(displayedProductsPrice.get(j));
             products.add(displayedProductsPrice.get(j).getText());
             log.info("Products: " + getTextFromElement(displayedProductsPrice.get(j)));
             String value = displayedProductsPrice.get(j).getText();
@@ -78,9 +81,12 @@ public class ArtPage extends BasePage {
         return this;
     }
 
+    @SneakyThrows
     public ArtPage secondFilteredMatchedProducts() {
         List<String> products = new ArrayList<>();
         for (int j = 0; j < displayedProductsPrice.size(); j++) {
+
+            waitToBeVisible(displayedProductsPrice.get(j));
             products.add(displayedProductsPrice.get(j).getText());
             log.info("Products: " + displayedProductsPrice.get(j).getText());
             String value = displayedProductsPrice.get(j).getText();
@@ -89,7 +95,6 @@ public class ArtPage extends BasePage {
         log.info("Number of matched products: " + displayedProductsPrice.size());
         return this;
     }
-
 
     public ArtPage clearFilters() {
         clickOnElement(clearButton);

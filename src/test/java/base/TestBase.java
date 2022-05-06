@@ -1,11 +1,11 @@
 package base;
 
-import factory.DriverFactory;
+import configuration.factory.DriverFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
-import properties.App;
+import configuration.properties.App;
 
 
 public class TestBase {
