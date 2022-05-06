@@ -60,13 +60,13 @@ public class BasketPage extends BasePage {
         return this;
     }
 
-    public BasketPage clickUpQuantityRandomProduct() {
+    public BasketPage clickUpArrowRandomProduct() {
         clickOnElement(productUpBtn.get(productUpBtn.size() - 1));
         log.info("Product up button has been clicked");
         return this;
     }
 
-    public BasketPage clickDownQuantityRandomProduct() {
+    public BasketPage clickDownArrowRandomProduct() {
         clickOnElement(productDownBtn.get(random.nextInt(productDownBtn.size() - 1)));
         log.info("Product down button has been clicked");
         return this;

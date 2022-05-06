@@ -49,9 +49,9 @@ public class BasketTest extends Pages {
                 .setFirstProductQuantity();
         basketPage
                 .checkCostAfterChange()
-                .clickUpQuantityRandomProduct()
+                .clickUpArrowRandomProduct()
                 .checkCostAfterChange()
-                .clickDownQuantityRandomProduct()
+                .clickDownArrowRandomProduct()
                 .checkCostAfterChange()
                 .clickTrashBtn();
     }

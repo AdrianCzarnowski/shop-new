@@ -17,7 +17,7 @@ public class CategoryPage extends BasePage {
     @FindBy(xpath = "//div[@itemprop='itemListElement']")
     public List<WebElement> productList;
     @FindBy(css = "#js-product-list-header > div > h1")
-    public WebElement title;
+    public WebElement pageTitle;
     MenuPage menuPage = new MenuPage(driver);
     @FindBy(css = "div.col-md-6.hidden-sm-down.total-products")
     private WebElement productQuantity;
@@ -30,7 +30,7 @@ public class CategoryPage extends BasePage {
     }
 
     private void getCategoryName() {
-        String categoryName = getTextFromElement(title);
+        String categoryName = getTextFromElement(pageTitle);
         log.info("Category after click: " + categoryName);
     }
 

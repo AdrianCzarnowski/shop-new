@@ -7,6 +7,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class ProductOnSalePage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("CategoriesPage.class");
@@ -39,10 +42,10 @@ public class ProductOnSalePage extends BasePage {
         double regularPriceValue = Double.parseDouble(regularPrice.getText().substring(1));
         double discountPriceValue = Double.parseDouble(discountPrice.getText().substring(1));
         double priceAfterDiscount = regularPriceValue*(0.8);
-        assert (discountPriceValue == priceAfterDiscount);
+        softAssert.assertThat(discountPriceValue == priceAfterDiscount);
         log.info("Discount price is well calculated" + "" +
                 " Regular price: " + regularPriceValue + "$" + " after 20% off: " + priceAfterDiscount + "$");
-        assert (discountPriceValue < regularPriceValue);
+        softAssert.assertThat(discountPriceValue < regularPriceValue);
         log.info("Regular price is higher than the discounted price");
         return this;
     }

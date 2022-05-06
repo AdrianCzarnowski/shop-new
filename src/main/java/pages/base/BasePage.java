@@ -1,5 +1,6 @@
 package pages.base;
 
+import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +26,7 @@ public class BasePage {
     protected WebDriverWait wait;
     protected Actions actions;
     protected JavascriptExecutor js;
+    protected SoftAssertions softAssert;
 
 
     public BasePage(WebDriver driver) {
@@ -33,6 +35,7 @@ public class BasePage {
         actions = new Actions(driver);
         js = ((JavascriptExecutor) driver);
         PageFactory.initElements(driver, this);
+        softAssert = new SoftAssertions();
     }
 
     public static String getValueFromElement(WebElement element) {
@@ -101,7 +104,7 @@ public class BasePage {
         actions.clickAndHold(element);
     }
 
-    public void relaseMouse(WebElement element) {
+    public void releaseMouse(WebElement element) {
         actions.release(element).perform();
     }
 

@@ -49,7 +49,7 @@ public class ArtPage extends BasePage {
             actions.moveByOffset(-10, 0).perform();
             log.info(getTextFromElement(price));
         }
-        relaseMouse(rightSlider);
+        releaseMouse(rightSlider);
         return this;
     }
 
@@ -62,7 +62,7 @@ public class ArtPage extends BasePage {
             actions.moveByOffset(10, 0).perform();
             log.info(getTextFromElement(price));
         }
-        relaseMouse(leftSlider);
+        releaseMouse(leftSlider);
         return this;
     }
 

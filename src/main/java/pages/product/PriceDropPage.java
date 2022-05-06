@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class PriceDropPage extends BasePage {
 
@@ -43,11 +45,11 @@ public class PriceDropPage extends BasePage {
             WebElement discountValue = categoryPage.productList.get(i).findElement(discountLabel);
             WebElement regularPriceValue = categoryPage.productList.get(i).findElement(regularPrice);
             WebElement discountPriceValue = categoryPage.productList.get(i).findElement(discountPrice);
-            WebElement productNameValue = categoryPage.productList.get(i).findElement(productName);
+            WebElement productNameText = categoryPage.productList.get(i).findElement(productName);
 
             if (discountValue != null && regularPriceValue != null
-                    && discountPriceValue != null && productNameValue != null) {
-                log.info("Product: " + productNameValue.getText());
+                    && discountPriceValue != null && productNameText != null) {
+                log.info("Product: " + productNameText.getText());
                 log.info("Discount: " + discountValue.getText());
                 log.info("Regular price: " + regularPriceValue.getText());
                 log.info("Discount price: " + discountPriceValue.getText());
@@ -69,7 +71,7 @@ public class PriceDropPage extends BasePage {
                     .findElement(discountPrice).getText().substring(1));
             double priceAfterDiscount = regularPriceValue * (0.8);
 
-            assert (discountPriceValue == priceAfterDiscount);
+            assertTrue(discountPriceValue == priceAfterDiscount);
             log.info("Discount price is well calculated" + "" +
                     " Regular price: " + regularPriceValue + "$" + " after 20% off: " + priceAfterDiscount + "$");
             assert (discountPriceValue < regularPriceValue);

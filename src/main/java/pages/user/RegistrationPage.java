@@ -8,12 +8,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
 
+import java.util.List;
+
 public class RegistrationPage extends BasePage {
 
     private static Logger log = LoggerFactory.getLogger("RegistrationPage.class");
 
-    @FindBy(xpath = "//*/section/div[1]/div[1]/label[1]/span")
-    private WebElement gender;
+    @FindBy(css=".custom-radio")
+    private List<WebElement> gender;
     @FindBy(xpath = "//input[@name='firstname']")
     private WebElement firstName;
     @FindBy(xpath = "//input[@name='lastname']")
@@ -25,16 +27,9 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//input[@name='birthday']")
     private WebElement birthday;
 
+    @FindBy (css="input[type=checkbox]")
+    private List<WebElement> checkboxes;
 
-    @FindBy(xpath = "//input[@name='optin']")
-    private WebElement offers;
-    @FindBy(xpath = "//input[@name='customer_privacy']")
-    private WebElement customerPrivacy;
-    @FindBy(xpath = "//input[@name='newsletter']")
-    private WebElement newsletter;
-
-    @FindBy(xpath = "//*/div[10]/div[1]/span/label/input")
-    private WebElement acceptRegulamin;
     @FindBy(css = "footer > button")
     private WebElement saveBtn;
 
@@ -42,19 +37,23 @@ public class RegistrationPage extends BasePage {
         super(driver);
     }
 
+    public void selectCheckBoxes(){
+        for (WebElement checkbox : checkboxes){
+            selectCheckBox(checkbox);
+        }
+    }
+
     public RegistrationPage fillForm(User user) {
-        clickOnElement(gender);
+        clickOnElement(getRandomElement(gender));
         sendKeys(firstName, user.getFirstName(), true);
         sendKeys(lastName, user.getLastName(), true);
         sendKeys(email, user.getEmail(), true);
         sendKeys(password, user.getPassword(), false);
         sendKeys(birthday, user.getBirthDate(), true);
-        selectCheckBox(offers);
-        selectCheckBox(customerPrivacy);
-        selectCheckBox(newsletter);
-        selectCheckBox(acceptRegulamin);
+        selectCheckBoxes();
         clickOnElement(saveBtn);
         log.info("New user created");
         return this;
     }
+
 }

@@ -1,6 +1,7 @@
 package base;
 
 import org.junit.jupiter.api.BeforeEach;
+import pages.base.BasePage;
 import pages.navigation.FooterPage;
 import pages.navigation.HomePage;
 import pages.navigation.MenuPage;
@@ -31,6 +32,7 @@ public class Pages extends TestBase {
     public static OrderHistoryPage orderHistoryPage;
     public static OrderDetailsPage orderDetailsPage;
     public static UserAddressPage userAddressPage;
+    public static BasePage basePage;
 
 
     @BeforeEach
@@ -55,5 +57,6 @@ public class Pages extends TestBase {
         orderHistoryPage = new OrderHistoryPage(driver);
         orderDetailsPage = new OrderDetailsPage(driver);
         userAddressPage = new UserAddressPage(driver);
+        basePage = new BasePage(driver);
     }
 }
