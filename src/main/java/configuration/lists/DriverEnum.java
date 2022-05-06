@@ -1,4 +1,4 @@
-package configuration.helpers;
+package configuration.lists;
 
 public enum DriverEnum {
     CHROME, FIREFOX, IE, EDGE

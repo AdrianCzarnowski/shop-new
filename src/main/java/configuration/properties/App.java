@@ -1,6 +1,6 @@
 package configuration.properties;
 
-import configuration.helpers.DriverEnum;
+import configuration.lists.DriverEnum;
 import configuration.model.EnvironmentModel;
 import configuration.properties.reader.YamlReader;
 import org.slf4j.Logger;

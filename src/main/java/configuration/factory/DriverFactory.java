@@ -1,6 +1,6 @@
 package configuration.factory;
 
-import configuration.helpers.DriverEnum;
+import configuration.lists.DriverEnum;
 import configuration.model.DriverSetup;
 import org.openqa.selenium.WebDriver;
 

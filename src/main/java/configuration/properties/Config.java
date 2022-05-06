@@ -2,7 +2,7 @@ package configuration.properties;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import configuration.model.EnvironmentList;
+import configuration.lists.EnvironmentList;
 
 @Data
 @NoArgsConstructor
